@@ -390,3 +390,8 @@ html.touring .pager{display:none}
 .playsvg .ov .pcch{font:800 9px var(--f-mono); fill:var(--ink); letter-spacing:.06em}
 .podmini .mtoff{fill:var(--muted)} .podmini .mton{fill:var(--pink)}
 .shape .pl .body{stroke-width:2}
+#principles{grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px}
+#principles .dcard{padding:10px 12px; gap:4px}
+#principles .term{font-size:17px}
+#principles .def{font-size:15px}
+@media (min-width:800px){ #principles{grid-template-columns:repeat(4,minmax(0,1fr))} }
