@@ -1,0 +1,883 @@
+{
+  "_howto": "Interactive plays. Each step lists only the players who move (x, y). Positions carry over to the next step. Add a third number 0 to hide a player, e.g. [10, 20, 0]. Pod plays are 300 wide by 250 tall; maul plays are 300 by 200. Player names: use initials (except Hannah), since this repo is public.",
+  "hot": {
+    "title": "HOT",
+    "bg": "pod",
+    "viewBox": "0 0 300 250",
+    "actors": {
+      "d1": {
+        "label": "D",
+        "kind": "def"
+      },
+      "d2": {
+        "label": "D",
+        "kind": "def"
+      },
+      "d3": {
+        "label": "D",
+        "kind": "def"
+      },
+      "d4": {
+        "label": "D",
+        "kind": "def"
+      },
+      "nine": {
+        "label": "9",
+        "name": "Scrum half (9)",
+        "kind": "back"
+      },
+      "lazy": {
+        "label": "Lazy",
+        "kind": "pod"
+      },
+      "lead": {
+        "label": "Lead",
+        "name": "Lead (point)",
+        "kind": "pod"
+      },
+      "plus": {
+        "label": "Plus",
+        "kind": "pod"
+      },
+      "ten": {
+        "label": "10",
+        "name": "Fly half (10)",
+        "kind": "back"
+      },
+      "f1": {
+        "label": "F",
+        "name": "Next pod",
+        "kind": "next"
+      },
+      "f2": {
+        "label": "F",
+        "name": "Next pod",
+        "kind": "next"
+      },
+      "f3": {
+        "label": "F",
+        "name": "Next pod",
+        "kind": "next"
+      },
+      "ball": {
+        "kind": "ball"
+      }
+    },
+    "roles": {
+      "lead": "Receives the ball right in front of the fly half (10) and carries hard and straight.",
+      "plus": "Outside supporter. Runs hard with the lead: first to the ruck, or takes the pop pass.",
+      "lazy": "Inside supporter, close to the ruck. Gets there to support the lead's carry.",
+      "nine": "Passes to the lead.",
+      "ten": "Stands right behind the lead. On HOT the ball goes to the lead, right in front of you.",
+      "f1": "The next pod. Once the first pod runs, move across and up to set up in the same formation.",
+      "f2": "The next pod. Once the first pod runs, move across and up to set up in the same formation.",
+      "f3": "The next pod. Once the first pod runs, move across and up to set up in the same formation."
+    },
+    "steps": [
+      {
+        "name": "Set",
+        "text": "Pod sets up. **Lead (point) is right in front of the fly half (10)**, plus is outside, lazy is inside by the ruck.",
+        "pos": {
+          "d1": [
+            109,
+            20
+          ],
+          "d2": [
+            135,
+            20
+          ],
+          "d3": [
+            166,
+            20
+          ],
+          "d4": [
+            213,
+            20
+          ],
+          "nine": [
+            82,
+            96
+          ],
+          "lazy": [
+            82,
+            144
+          ],
+          "lead": [
+            176,
+            176
+          ],
+          "plus": [
+            216,
+            206
+          ],
+          "ten": [
+            176,
+            216
+          ],
+          "f1": [
+            26,
+            140
+          ],
+          "f2": [
+            16,
+            162
+          ],
+          "f3": [
+            40,
+            162
+          ],
+          "ball": [
+            96,
+            98
+          ]
+        }
+      },
+      {
+        "name": "Pass",
+        "text": "The 9 passes and **the lead (point) catches the ball right in front of the fly half**, on the run.",
+        "pos": {
+          "lead": [
+            176,
+            166
+          ],
+          "ball": [
+            176,
+            154
+          ],
+          "lazy": [
+            96,
+            132
+          ],
+          "plus": [
+            212,
+            192
+          ]
+        }
+      },
+      {
+        "name": "Go",
+        "text": "Lead carries hard and straight with plus and lazy right there. No bananas!",
+        "pos": {
+          "lead": [
+            176,
+            104
+          ],
+          "ball": [
+            176,
+            92
+          ],
+          "lazy": [
+            132,
+            104
+          ],
+          "plus": [
+            204,
+            132
+          ],
+          "d1": [
+            109,
+            28
+          ],
+          "d2": [
+            140,
+            30
+          ],
+          "d3": [
+            170,
+            30
+          ],
+          "d4": [
+            213,
+            28
+          ]
+        }
+      },
+      {
+        "name": "Carry",
+        "text": "Lead carries into contact. Once the first pod runs, the next pod starts moving **across and up**.",
+        "pos": {
+          "lead": [
+            176,
+            58
+          ],
+          "ball": [
+            176,
+            46
+          ],
+          "lazy": [
+            156,
+            74
+          ],
+          "plus": [
+            194,
+            82
+          ],
+          "d2": [
+            150,
+            38
+          ],
+          "d3": [
+            176,
+            34
+          ],
+          "f1": [
+            118,
+            128
+          ],
+          "f2": [
+            104,
+            146
+          ],
+          "f3": [
+            130,
+            146
+          ]
+        }
+      },
+      {
+        "name": "Next pod set",
+        "text": "The next pod is set in the same formation, ready to go again. Conserve energy: across and up, not down and around.",
+        "pos": {
+          "f1": [
+            244,
+            104
+          ],
+          "f2": [
+            226,
+            122
+          ],
+          "f3": [
+            258,
+            128
+          ]
+        }
+      }
+    ]
+  },
+  "flash": {
+    "title": "FLASH",
+    "bg": "pod",
+    "viewBox": "0 0 300 250",
+    "channel": true,
+    "actors": {
+      "d1": {
+        "label": "D",
+        "kind": "def"
+      },
+      "d2": {
+        "label": "D",
+        "kind": "def"
+      },
+      "d3": {
+        "label": "D",
+        "kind": "def"
+      },
+      "d4": {
+        "label": "D",
+        "kind": "def"
+      },
+      "nine": {
+        "label": "9",
+        "name": "Scrum half (9)",
+        "kind": "back"
+      },
+      "lazy": {
+        "label": "Lazy",
+        "kind": "pod"
+      },
+      "lead": {
+        "label": "Lead",
+        "name": "Lead (point)",
+        "kind": "pod"
+      },
+      "plus": {
+        "label": "Plus",
+        "kind": "pod"
+      },
+      "ten": {
+        "label": "10",
+        "name": "Fly half (10)",
+        "kind": "back"
+      },
+      "f1": {
+        "label": "F",
+        "name": "Next pod",
+        "kind": "next"
+      },
+      "f2": {
+        "label": "F",
+        "name": "Next pod",
+        "kind": "next"
+      },
+      "f3": {
+        "label": "F",
+        "name": "Next pod",
+        "kind": "next"
+      },
+      "ball": {
+        "kind": "ball"
+      }
+    },
+    "roles": {
+      "lead": "Run through anyway, to confuse the defense. Do not stop: that's obstruction.",
+      "plus": "Run through anyway, to confuse the defense. Do not stop: that's obstruction.",
+      "lazy": "WAIT until the ball goes to the 10 so you don't block the sacred channel.",
+      "nine": "Passes to the 10 through the sacred channel.",
+      "ten": "Gets the ball from the 9 on FLASH.",
+      "f1": "The next pod, setting up across and up.",
+      "f2": "The next pod, setting up across and up.",
+      "f3": "The next pod, setting up across and up."
+    },
+    "steps": [
+      {
+        "name": "Set",
+        "text": "Same setup as HOT. The black line from the 9 to the 10 is the **sacred channel**.",
+        "pos": {
+          "d1": [
+            109,
+            20
+          ],
+          "d2": [
+            135,
+            20
+          ],
+          "d3": [
+            166,
+            20
+          ],
+          "d4": [
+            213,
+            20
+          ],
+          "nine": [
+            82,
+            96
+          ],
+          "lazy": [
+            82,
+            144
+          ],
+          "lead": [
+            176,
+            176
+          ],
+          "plus": [
+            216,
+            206
+          ],
+          "ten": [
+            176,
+            216
+          ],
+          "f1": [
+            26,
+            140
+          ],
+          "f2": [
+            16,
+            162
+          ],
+          "f3": [
+            40,
+            162
+          ],
+          "ball": [
+            96,
+            98
+          ]
+        },
+        "show": [
+          "channel"
+        ]
+      },
+      {
+        "name": "Run through",
+        "text": "Lead and plus **always run through**, regardless of the call, to confuse the defense. **Lazy waits.**",
+        "pos": {
+          "lead": [
+            176,
+            130
+          ],
+          "plus": [
+            206,
+            150
+          ],
+          "d2": [
+            140,
+            30
+          ],
+          "d3": [
+            170,
+            32
+          ]
+        },
+        "show": [
+          "channel"
+        ]
+      },
+      {
+        "name": "Pass to 10",
+        "text": "The 9 passes to the 10. **DO NOT BLOCK THE SACRED CHANNEL!**",
+        "pos": {
+          "ball": [
+            170,
+            206
+          ],
+          "lead": [
+            176,
+            84
+          ],
+          "plus": [
+            198,
+            108
+          ],
+          "d4": [
+            200,
+            46
+          ]
+        },
+        "show": [
+          "channel"
+        ]
+      },
+      {
+        "name": "Lazy goes",
+        "text": "Ball's with the 10, so the channel is clear and lazy can go. Lead and plus never stop: stopping is obstruction.",
+        "pos": {
+          "lazy": [
+            124,
+            118
+          ],
+          "lead": [
+            176,
+            52
+          ],
+          "plus": [
+            194,
+            72
+          ],
+          "f1": [
+            150,
+            116
+          ],
+          "f2": [
+            136,
+            134
+          ],
+          "f3": [
+            162,
+            134
+          ]
+        }
+      }
+    ]
+  },
+  "tango": {
+    "title": "TANGO",
+    "bg": "maul",
+    "viewBox": "0 0 300 200",
+    "actors": {
+      "m1": {
+        "kind": "them"
+      },
+      "m2": {
+        "kind": "them"
+      },
+      "m3": {
+        "kind": "them"
+      },
+      "m4": {
+        "kind": "them"
+      },
+      "m5": {
+        "kind": "them"
+      },
+      "m6": {
+        "kind": "them"
+      },
+      "m7": {
+        "kind": "them"
+      },
+      "l1": {
+        "label": "L",
+        "name": "Lifter",
+        "kind": "lift"
+      },
+      "j1": {
+        "label": "J",
+        "name": "Jumper",
+        "kind": "jump"
+      },
+      "l2": {
+        "label": "L",
+        "name": "Lifter",
+        "kind": "lift"
+      },
+      "l3": {
+        "label": "L",
+        "name": "Lifter",
+        "kind": "lift"
+      },
+      "j2": {
+        "label": "J",
+        "name": "Jumper",
+        "kind": "jump"
+      },
+      "l4": {
+        "label": "L",
+        "name": "Lifter",
+        "kind": "lift"
+      }
+    },
+    "roles": {
+      "l1": "Move sideways with your pod. You cannot leave the line.",
+      "j1": "Move sideways with your pod. You cannot leave the line.",
+      "l2": "Move sideways with your pod. You cannot leave the line.",
+      "l3": "Move sideways with your pod. You cannot leave the line.",
+      "j2": "Move sideways with your pod. You cannot leave the line.",
+      "l4": "Move sideways with your pod. You cannot leave the line."
+    },
+    "steps": [
+      {
+        "name": "Their maul forms",
+        "text": "They win their lineout and start a maul.",
+        "pos": {
+          "m1": [
+            134,
+            46
+          ],
+          "m2": [
+            156,
+            44
+          ],
+          "m3": [
+            124,
+            66
+          ],
+          "m4": [
+            146,
+            64
+          ],
+          "m5": [
+            168,
+            66
+          ],
+          "m6": [
+            136,
+            86
+          ],
+          "m7": [
+            158,
+            86
+          ],
+          "l1": [
+            75,
+            132
+          ],
+          "j1": [
+            100,
+            132
+          ],
+          "l2": [
+            125,
+            132
+          ],
+          "l3": [
+            185,
+            132
+          ],
+          "j2": [
+            210,
+            132
+          ],
+          "l4": [
+            235,
+            132
+          ]
+        }
+      },
+      {
+        "name": "TANGO!",
+        "text": "**Do not engage. Part the sea.** Only move laterally: you cannot leave the line.",
+        "pos": {
+          "l1": [
+            42,
+            132
+          ],
+          "j1": [
+            67,
+            132
+          ],
+          "l2": [
+            92,
+            132
+          ],
+          "l3": [
+            208,
+            132
+          ],
+          "j2": [
+            233,
+            132
+          ],
+          "l4": [
+            258,
+            132
+          ]
+        }
+      },
+      {
+        "name": "Let it through",
+        "text": "Their maul goes through the gap. Stay in your line.",
+        "pos": {
+          "m1": [
+            134,
+            126
+          ],
+          "m2": [
+            156,
+            124
+          ],
+          "m3": [
+            124,
+            146
+          ],
+          "m4": [
+            146,
+            144
+          ],
+          "m5": [
+            168,
+            146
+          ],
+          "m6": [
+            136,
+            166
+          ],
+          "m7": [
+            158,
+            166
+          ]
+        }
+      }
+    ]
+  },
+  "salsa": {
+    "title": "SALSA",
+    "bg": "maul",
+    "viewBox": "0 0 300 200",
+    "actors": {
+      "m1": {
+        "kind": "them"
+      },
+      "m2": {
+        "kind": "them"
+      },
+      "m3": {
+        "kind": "them"
+      },
+      "m4": {
+        "kind": "them"
+      },
+      "m5": {
+        "kind": "them"
+      },
+      "m6": {
+        "kind": "them"
+      },
+      "m7": {
+        "kind": "them"
+      },
+      "l1": {
+        "label": "L",
+        "name": "Lifter",
+        "kind": "lift"
+      },
+      "j1": {
+        "label": "J",
+        "name": "Jumper",
+        "kind": "jump"
+      },
+      "l2": {
+        "label": "L",
+        "name": "Lifter",
+        "kind": "lift"
+      },
+      "l3": {
+        "label": "L",
+        "name": "Lifter",
+        "kind": "lift"
+      },
+      "j2": {
+        "label": "J",
+        "name": "Jumper",
+        "kind": "jump"
+      },
+      "l4": {
+        "label": "L",
+        "name": "Lifter",
+        "kind": "lift"
+      },
+      "h": {
+        "label": "H",
+        "name": "Hooker",
+        "kind": "hook"
+      },
+      "sh": {
+        "label": "9",
+        "name": "Scrum half",
+        "kind": "back"
+      }
+    },
+    "roles": {
+      "l1": "ENGAGE! Bind on and stop the maul. Stay on your feet.",
+      "j1": "ENGAGE! Bind on and stop the maul. Stay on your feet.",
+      "l2": "ENGAGE! Bind on and stop the maul. Stay on your feet.",
+      "l3": "ENGAGE! Bind on and stop the maul. Stay on your feet.",
+      "j2": "ENGAGE! Bind on and stop the maul. Stay on your feet.",
+      "l4": "ENGAGE! Bind on and stop the maul. Stay on your feet.",
+      "h": "Behind the pods in the maul (as drawn on the forwards' slide).",
+      "sh": "Behind the maul (as drawn on the forwards' slide)."
+    },
+    "steps": [
+      {
+        "name": "Their maul forms",
+        "text": "They win their lineout and start a maul.",
+        "pos": {
+          "m1": [
+            134,
+            46
+          ],
+          "m2": [
+            156,
+            44
+          ],
+          "m3": [
+            124,
+            66
+          ],
+          "m4": [
+            146,
+            64
+          ],
+          "m5": [
+            168,
+            66
+          ],
+          "m6": [
+            136,
+            86
+          ],
+          "m7": [
+            158,
+            86
+          ],
+          "l1": [
+            75,
+            132
+          ],
+          "j1": [
+            100,
+            132
+          ],
+          "l2": [
+            125,
+            132
+          ],
+          "l3": [
+            185,
+            132
+          ],
+          "j2": [
+            210,
+            132
+          ],
+          "l4": [
+            235,
+            132
+          ],
+          "h": [
+            36,
+            170
+          ],
+          "sh": [
+            150,
+            186
+          ]
+        }
+      },
+      {
+        "name": "SALSA!",
+        "text": "**ENGAGE! Stop the maul!**",
+        "pos": {
+          "l1": [
+            124,
+            106
+          ],
+          "j1": [
+            146,
+            108
+          ],
+          "l2": [
+            168,
+            106
+          ],
+          "l3": [
+            128,
+            128
+          ],
+          "j2": [
+            150,
+            130
+          ],
+          "l4": [
+            172,
+            128
+          ],
+          "h": [
+            150,
+            151
+          ],
+          "sh": [
+            150,
+            178
+          ]
+        }
+      },
+      {
+        "name": "Hold it",
+        "text": "5 seconds of no forward progress by the opponent = **turnover to PHINS!** Do NOT bring it down (i.e. attempt to tackle the ball carrier, be a human speed bump). That is dangerous play resulting in a penalty.",
+        "pos": {
+          "m1": [
+            134,
+            42
+          ],
+          "m2": [
+            156,
+            40
+          ],
+          "m3": [
+            124,
+            62
+          ],
+          "m4": [
+            146,
+            60
+          ],
+          "m5": [
+            168,
+            62
+          ],
+          "m6": [
+            136,
+            82
+          ],
+          "m7": [
+            158,
+            82
+          ]
+        }
+      }
+    ]
+  }
+}

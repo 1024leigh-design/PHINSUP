@@ -39,13 +39,14 @@ Almost all the words live in the `data` folder. Open a file, change the text bet
 | `data/vocab.json` | Every vocab card, by tab. `"phins": true` adds the 🐬 badge |
 | `data/scrum.json` | Callouts for the build-by-number scrum |
 | `data/lineout.json` | The example lineout setup and what each number does |
-| `data/shape.json` | 1-3-3-1 settings. Fill `podA` / `podB` with numbers to label the pods |
+| `data/shape.json` | 1-3-3-1 settings, pod roles, HOT/FLASH rules, and backs spots for "Show backs". Fill `podA` / `podB` with numbers to label the pods |
 | `data/penalties.json` | Penalties cheat sheet and golden rules |
 | `data/signals.json` | Ref signal pictures (arm angles) and descriptions |
 | `data/pitch.json` | What each line on The Pitch means |
 | `data/calls.json` | Communication calls |
 | `data/whatif.json` | What If? Lab scenarios, tags, and mini diagrams |
-| `data/playbook.json` | Principles, zones, lineout/scrum/maul calls, kickoff phases, red zone exit |
+| `data/playbook.json` | Principles, zones, lineout/scrum/maul calls (lineout `x` = start spot, `to` = end spot), kickoff phases, red zone exit |
+| `data/plays.json` | The interactive plays: HOT, FLASH, TANGO, SALSA. Each step lists who moves and where |
 | `data/quizzes.json` | Self-check questions for each Section 1 page |
 | `data/videos.json` | "Watch this" clip links for each page |
 
@@ -84,7 +85,7 @@ Search the `data` folder for `HANNAH` to find every placeholder. The big ones:
 - Kickoff receiving/kicking setups and first phases
 - Exiting the red zone
 - More What If? scenarios, and where the 8 goes when J plays 8
-- Backs cards (9 to 15)
+- Backs cards (9 to 15) and our real backs spots ("Show backs" uses a standard backline for now)
 - Club concussion protocol and contacts
 - Video links
 - Confirm: hooker brake foot rule, tackle height rule, "Hold!" meaning

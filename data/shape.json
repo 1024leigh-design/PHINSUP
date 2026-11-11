@@ -1,5 +1,5 @@
 {
-  "_howto": "Fill in podA/podB with numbers once we know who usually goes where, for example \"podA\": [1, 2, 4]. Leave empty to show 'tight five + 8' with no numbers. podCalls are the HOT/FLASH cards on the Our Shape page.",
+  "_howto": "Fill in podA/podB with numbers once we know who usually goes where, for example \"podA\": [1, 2, 4]. Leave empty to show 'tight five + 8' with no numbers. podCalls are the HOT/FLASH cards on the Our Shape page. backs: x/y spots for 9 to 15 when 'Show backs' is on (the diagram is 400 wide; backs sit between y 240 and 345).",
   "edgeLeft": 6,
   "edgeRight": 7,
   "podA": [],
@@ -32,6 +32,7 @@
       "icon": "🔥",
       "diagram": "hot",
       "points": [
+        "Our lead (point) receives the ball **right in front of the fly half (10)**.",
         "Once the first pod begins to run, the second pod can begin moving to set up for the next pod in the same formation (the pink dashed line).",
         "Conserve energy by running across and up, not down and around.",
         "The ball shows where you should catch the ball on your run!"
@@ -49,5 +50,57 @@
       ]
     }
   ],
-  "noBanana": "Don't run in an arc or banana shape (the red line). That wastes time and energy. Instead, wait until the ball is passed out and then run a straight line. [HANNAH: this note was cut off, confirm the rest]"
+  "noBanana": "Don't run in an arc or banana shape (the red line). That wastes time and energy. Instead, wait until the ball is passed out and then run a straight line. [HANNAH: this note was cut off, confirm the rest]",
+  "backsNote": "Typical spots for a standard backline. [HANNAH: confirm our backs structure]",
+  "backs": [
+    {
+      "n": 9,
+      "x": 200,
+      "y": 246,
+      "name": "Scrum half",
+      "where": "At the ruck. Passes to the pods or the 10."
+    },
+    {
+      "n": 10,
+      "x": 160,
+      "y": 274,
+      "name": "Fly half",
+      "where": "Behind the forward pods. On HOT, the lead receives the ball right in front of you."
+    },
+    {
+      "n": 12,
+      "x": 120,
+      "y": 296,
+      "name": "Inside center",
+      "where": "Outside the 10."
+    },
+    {
+      "n": 13,
+      "x": 82,
+      "y": 316,
+      "name": "Outside center",
+      "where": "Outside the 12."
+    },
+    {
+      "n": 11,
+      "x": 34,
+      "y": 332,
+      "name": "Wing",
+      "where": "Wide on one side."
+    },
+    {
+      "n": 14,
+      "x": 366,
+      "y": 316,
+      "name": "Wing",
+      "where": "Wide on the other side."
+    },
+    {
+      "n": 15,
+      "x": 200,
+      "y": 342,
+      "name": "Fullback",
+      "where": "Deep, covering the back field."
+    }
+  ]
 }

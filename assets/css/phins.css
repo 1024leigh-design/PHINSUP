@@ -97,7 +97,7 @@ a.tile:hover{transform:translateY(-3px); box-shadow:0 12px 26px rgba(0,0,0,.12)}
 .tile.soon{background:var(--surface-2); border-style:dashed; border-top-style:solid}
 .tag{align-self:flex-start; font:600 12px var(--f-mono); text-transform:uppercase; letter-spacing:.05em; padding:3px 10px; border-radius:999px; background:var(--green-soft); color:var(--green)}
 .tag.pink{background:var(--pink-soft); color:var(--pink)}
-.tag.todo{background:var(--yellow-soft); color:var(--ink)}
+.tag.tagtodo{background:var(--yellow-soft); color:var(--ink); border:1.5px dashed var(--yellow)}
 
 /* ---------- definition cards ---------- */
 .cards{display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
@@ -303,3 +303,51 @@ html.locked body > :not(#gate){display:none!important}
 .bigletter{display:inline-flex; width:46px; height:46px; border-radius:12px; background:var(--pink); color:#fff; align-items:center; justify-content:center; font:800 28px var(--f-display)}
 :root[data-theme="sparkle"] .bigletter,:root[data-theme="sparkle"] .lodia .lo-j text,:root[data-theme="sparkle"] .podcall .pcs text{color:#2a0717; fill:#2a0717}
 .dcard ul{margin:0; padding-left:20px; display:grid; gap:6px}
+
+/* interactive plays (assets/js/plays.js) */
+.play{display:grid; gap:10px}
+.play .steps-pills{margin:0}
+.play .steps-pills button{padding:0 12px; font-size:15px}
+.playsvg{width:100%; height:auto; display:block; max-height:62vh; background:var(--surface); border:1.5px solid var(--line); border-radius:16px}
+.playsvg .actor{transition:transform .9s ease, opacity .4s ease; cursor:pointer}
+.playsvg.instant .actor{transition:none}
+.playsvg .actor text{font-family:var(--f-display); font-weight:800; pointer-events:none}
+.playsvg .actor:focus{outline:none}
+.playsvg .actor:focus-visible circle{stroke:var(--pink); stroke-width:4}
+.playsvg .k-pod circle,.playsvg .k-lift circle{fill:var(--surface); stroke:var(--green); stroke-width:2.5} .playsvg .k-pod text,.playsvg .k-lift text{fill:var(--ink)}
+.playsvg .k-back circle{fill:var(--pink)} .playsvg .k-back text{fill:#fff}
+.playsvg .k-jump circle{fill:var(--pink); stroke:var(--pink); stroke-width:2.5} .playsvg .k-jump text{fill:#fff}
+.playsvg .k-def circle,.playsvg .k-them circle{fill:var(--ink)} .playsvg .k-def text{fill:var(--bg)} .playsvg .k-def,.playsvg .k-them{cursor:default}
+.playsvg .k-next circle,.playsvg .k-hook circle{fill:var(--yellow-soft); stroke:var(--yellow); stroke-width:2} .playsvg .k-next text,.playsvg .k-hook text{fill:var(--ink)}
+.playsvg .ball ellipse{fill:var(--yellow); stroke:#7a6100; stroke-width:2}
+.playsvg .ball{cursor:default}
+.playsvg .actor.picked circle{stroke:var(--pink); stroke-width:4.5; filter:drop-shadow(0 0 5px var(--hl-glow))}
+:root[data-theme="sparkle"] .playsvg .k-back text,:root[data-theme="sparkle"] .playsvg .k-jump text{fill:#2a0717}
+.playsvg .pcfield{fill:var(--green-soft)}
+.playsvg .pcruck{fill:var(--surface-2); stroke:var(--muted); stroke-width:2} .playsvg .pcrt{fill:var(--muted); font-family:var(--f-display); font-weight:800}
+.playsvg .pcno{fill:none; stroke:#d6233a; stroke-width:2.5; opacity:.7}
+.playsvg .pcnot{font:800 18px var(--f-display); fill:#d6233a}
+.playsvg .guides path{fill:none; stroke:var(--ink); stroke-width:1.4; stroke-dasharray:4 4; opacity:.28}
+.playsvg .guides path.next{stroke:var(--pink); opacity:.5}
+.playsvg .ov .channel{stroke:var(--ink); stroke-width:3.5; fill:none}
+.playsvg .ov .pcch{font:700 9px var(--f-mono); fill:var(--ink)}
+.playsvg .ov{opacity:0; transition:opacity .4s} .playsvg .ov.on{opacity:1}
+.playsvg .tline{stroke:var(--ink); stroke-width:2} .playsvg .tline.dash{stroke-dasharray:4 4; stroke-width:1.5}
+.playsvg .tlab{font:600 8.5px var(--f-mono); fill:var(--muted)}
+.playsvg .lo-o{fill:var(--ink)}
+.tapinfo{font-size:16.5px; color:var(--muted); min-height:1.5em; margin:0}
+.tapinfo b{color:var(--ink)}
+.playcard{display:grid; gap:12px}
+.playcard h3{font-size:24px; display:flex; align-items:center; gap:10px}
+.shape .backs{display:none}
+.shape.withbacks .backs{display:inline}
+.shape .backdot .body{fill:var(--pink-soft); stroke:var(--pink)}
+.backtoggle{margin-top:10px}
+.backsnote{font-size:15.5px; color:var(--muted); margin:4px 0 0}
+.podmini{max-width:190px}
+.podmini .mruck{fill:var(--surface-2); stroke:var(--muted); stroke-width:1.5} .podmini .mrt{fill:var(--muted); font-weight:800}
+.podmini .mback{fill:var(--pink-soft); stroke:var(--pink); stroke-width:1.5} .podmini .mbt{fill:var(--ink)}
+
+.tag.tagtodo{white-space:normal; line-height:1.9; -webkit-box-decoration-break:clone; box-decoration-break:clone}
+p .tag,li .tag{display:inline}
+.shape .backdot.on .body{fill:var(--pink); stroke:var(--pink)}

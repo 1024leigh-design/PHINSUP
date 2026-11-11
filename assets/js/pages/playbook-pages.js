@@ -1,32 +1,41 @@
 /* Renders the Phins Playbook call pages from data/playbook.json. Each page has one container. */
 Phins.ready(function(){
   var E = Phins.esc, R = Phins.rich;
-  // Lineout call diagram: touch line, dashed 5m line, hooker (H) in touch, their line (dark), our lifters (L) and jumper (J).
-  function loDiagram(c){
-    var h = '<svg class="lodia" viewBox="0 0 272 150" role="img" aria-label="Lineout ' + E(c.letter) + ' diagram">' +
-      '<line x1="27" y1="8" x2="27" y2="142" stroke="var(--ink)" stroke-width="2"/><line x1="82" y1="8" x2="82" y2="142" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="4 4"/>' +
-      '<text x="27" y="146" font-size="8" text-anchor="middle">touch</text><text x="82" y="146" font-size="8" text-anchor="middle">5m</text>';
-    [[60,40],[95,62],[130,62],[165,62],[228,62]].forEach(function(o){ h += '<circle class="lo-o" cx="' + o[0] + '" cy="' + o[1] + '" r="10"/>'; });
-    h += '<g class="lo-h"><circle cx="15" cy="84" r="11"/><text x="15" y="88" font-size="11" text-anchor="middle">H</text></g>';
-    (c.arrows || []).forEach(function(a){ h += '<line x1="' + a[0] + '" y1="' + a[2] + '" x2="' + a[1] + '" y2="' + a[2] + '" stroke="var(--pink)" stroke-width="2.5" marker-end="url(#lo-ah)"/>'; });
-    (c.players || []).forEach(function(p){ h += '<g class="' + (p.t === "J" ? "lo-j" : "lo-l") + '"><circle cx="' + p.x + '" cy="104" r="13"/><text x="' + p.x + '" y="108.5" font-size="12" text-anchor="middle">' + E(p.t) + '</text></g>'; });
-    return h + '<defs><marker id="lo-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--pink)"/></marker></defs></svg>';
+  // Lineout call as an interactive play: set, move, lift and throw.
+  function loPlay(c){
+    var actors = {h:{label:"H", name:"Hooker", kind:"hook"}, ball:{kind:"ball"}}, set = {h:[15,84], ball:[15,70]}, move = {}, lift = {}, roles = {h:"Throws straight down the middle to the jumper."}, jx = 0;
+    c.players.forEach(function(p, i){
+      var k = "p" + i, j = p.t === "J";
+      actors[k] = {label:p.t, name:j ? "Jumper" : "Lifter", kind:j ? "jump" : "lift"};
+      set[k] = [p.x, 104]; move[k] = [p.to != null ? p.to : p.x, 104];
+      roles[k] = j ? "Jumper. Go up, catch or tap the ball." : "Lifter. Lift on the thighs/shorts, hold, and bring the jumper down safely.";
+      if (j){ jx = move[k][0]; lift[k] = [jx, 72]; }
+    });
+    lift.ball = [jx, 56];
+    return {title:"Lineout " + c.letter, bg:"lineout", viewBox:"0 0 285 150", actors:actors, roles:roles, steps:[
+      {name:"Set", text:"Line up. J = jumper, L = lifter, H = hooker.", pos:set},
+      {name:"Move", text:c.how, pos:move},
+      {name:"Lift & throw", text:"Lift on the thighs/shorts. The hooker throws straight down the middle to the jumper.", pos:lift}]};
   }
+
   Phins.load("playbook").then(function(d){
     var el;
     if ((el = document.getElementById("lineoutcalls"))) el.innerHTML = d.lineoutCalls.map(function(c){
       return '<article class="dcard is-phins"><h3 class="term"><span class="bigletter">' + E(c.letter) + '</span>' + E(c.pod) +
-        (c.tbd ? ' <span class="tag todo">to be confirmed</span>' : '') + '</h3>' + loDiagram(c) +
-        '<p>' + R(c.how) + '</p>' + (c.example ? '<p><b>Example call:</b> ' + E(c.example) + '</p>' : '') + '</article>';
+        (c.tbd ? ' <span class="tag tagtodo">to be confirmed</span>' : '') + '</h3>' +
+        '<p>' + R(c.how) + '</p>' + (c.example ? '<p><b>Example call:</b> ' + E(c.example) + '</p>' : '') + '<div class="loplay" data-i="' + d.lineoutCalls.indexOf(c) + '"></div></article>';
     }).join("");
+    if (el) el.querySelectorAll(".loplay").forEach(function(box){ PhinsPlay(box, loPlay(d.lineoutCalls[+box.getAttribute("data-i")])); });
     if ((el = document.getElementById("scrumcalls"))) el.innerHTML = d.scrumCalls.map(function(c){
       return '<article class="dcard is-phins"><h3 class="term">🤝 ' + R(c.name) + '</h3><p><b>Means:</b> ' + R(c.means) + '</p><p><b>Who does what:</b> ' + R(c.who) + '</p></article>';
     }).join("");
     if ((el = document.getElementById("maulcalls"))) el.innerHTML = d.maulCalls.map(function(c){
       return '<article class="dcard is-phins"><span class="tag' + (c.side === "Defense" ? " pink" : "") + '">' + E(c.side || "") + '</span><h3 class="term"><span class="ic" aria-hidden="true">' + E(c.icon || "🧱") + '</span>' + E(c.name) + '</h3>' +
         (c.points ? '<ul>' + c.points.map(function(p){ return '<li>' + R(p) + '</li>'; }).join("") + '</ul>' : '<p>' + R(c.means || "") + '</p>') +
-        (c.example ? '<p><b>Example call:</b> ' + E(c.example) + '</p>' : '') + '</article>';
+        (c.example ? '<p><b>Example call:</b> ' + E(c.example) + '</p>' : '') + (c.play ? '<div class="maulplay" data-play="' + E(c.play) + '"></div>' : '') + '</article>';
     }).join("");
+    var mbox = el;
+    if (mbox && mbox.querySelector(".maulplay")) Phins.load("plays").then(function(pl){ mbox.querySelectorAll(".maulplay").forEach(function(box){ var k = box.getAttribute("data-play"); if (pl[k]) PhinsPlay(box, pl[k]); }); });
     if ((el = document.getElementById("redzone"))) el.innerHTML = d.redZoneExit.map(function(s){ return '<li><span>' + R(s.step) + '</span></li>'; }).join("");
     if ((el = document.getElementById("kosetup"))){
       var K = d.kickoff, i = 0;

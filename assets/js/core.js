@@ -66,7 +66,7 @@
   // Text from data files may contain **bold** and [TODO: ...] markers. Everything else is escaped.
   function rich(s){
     return esc(s).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>")
-      .replace(/\[(HANNAH[^\]]*)\]/g,'<span class="tag todo">$1</span>');
+      .replace(/\[(HANNAH[^\]]*)\]/g,'<span class="tag tagtodo">$1</span>');
   }
   var cache = {};
   function load(name){

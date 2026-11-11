@@ -79,19 +79,23 @@
       "players": [
         {
           "t": "L",
-          "x": 100
+          "x": 100,
+          "to": 100
         },
         {
           "t": "J",
-          "x": 130
+          "x": 130,
+          "to": 124
         },
         {
           "t": "L",
-          "x": 160
+          "x": 160,
+          "to": 148
         },
         {
           "t": "L",
-          "x": 230
+          "x": 230,
+          "to": 230
         }
       ]
     },
@@ -103,19 +107,23 @@
       "players": [
         {
           "t": "L",
-          "x": 100
+          "x": 100,
+          "to": 140
         },
         {
           "t": "J",
-          "x": 165
+          "x": 165,
+          "to": 165
         },
         {
           "t": "L",
-          "x": 198
+          "x": 198,
+          "to": 190
         },
         {
           "t": "L",
-          "x": 230
+          "x": 230,
+          "to": 230
         }
       ],
       "arrows": [
@@ -134,19 +142,23 @@
       "players": [
         {
           "t": "L",
-          "x": 100
+          "x": 100,
+          "to": 100
         },
         {
           "t": "L",
-          "x": 142
+          "x": 142,
+          "to": 152
         },
         {
           "t": "J",
-          "x": 177
+          "x": 177,
+          "to": 177
         },
         {
           "t": "L",
-          "x": 211
+          "x": 211,
+          "to": 202
         }
       ]
     },
@@ -159,19 +171,23 @@
       "players": [
         {
           "t": "L",
-          "x": 100
+          "x": 100,
+          "to": 100
         },
         {
           "t": "L",
-          "x": 190
+          "x": 190,
+          "to": 214
         },
         {
           "t": "J",
-          "x": 220
+          "x": 220,
+          "to": 240
         },
         {
           "t": "L",
-          "x": 254
+          "x": 254,
+          "to": 266
         }
       ],
       "arrows": [
@@ -198,7 +214,8 @@
       "points": [
         "Do not engage, part the sea.",
         "Only move laterally, you cannot leave the line."
-      ]
+      ],
+      "play": "tango"
     },
     {
       "name": "SALSA",
@@ -208,7 +225,8 @@
         "ENGAGE! Stop the maul!",
         "5 seconds of no forward progress by the opponent = turnover to PHINS!",
         "Do NOT bring it down (i.e. attempt to tackle the ball carrier, be a human speed bump). That is dangerous play resulting in a penalty."
-      ]
+      ],
+      "play": "salsa"
     },
     {
       "name": "Lineout call + M word",
@@ -246,5 +264,5 @@
       "step": "[HANNAH TO PROVIDE: how we get out of our own 22]"
     }
   ],
-  "lineoutHowto": "x = left to right position on the diagram (touch line is at 27, the dashed 5m line at 82). arrows: [from x, to x, height]. Leave example empty to hide it. Player names: use initials (except Hannah), since this repo is public."
+  "lineoutHowto": "x = where each player starts, to = where they end up after the call (touch line is at 27, the dashed 5m line at 82, right edge 285). Leave example empty to hide it. Player names: use initials (except Hannah), since this repo is public."
 }
