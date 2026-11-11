@@ -12,7 +12,7 @@
 (function(){
   "use strict";
   var uid = 0;
-  var R = {pod:18, back:15, def:11, next:16, ball:0, them:10, jump:13, lift:13, hook:11};
+  var R = {pod:14, back:12, def:9, next:13, ball:0, them:10, jump:13, lift:13, hook:11};
 
   function bg(kind, id, def){
     var h = "";
@@ -41,10 +41,10 @@
 
   function actorSvg(key, a){
     if (a.kind === "ruck") return '<g class="actor k-ruck" data-a="' + key + '" aria-hidden="true"><rect x="-26" y="-13" width="52" height="26" rx="9"/><text x="0" y="4" text-anchor="middle" font-size="11">Ruck</text></g>';
-    if (a.kind === "ball") return '<g class="actor ball" data-a="' + key + '"><ellipse cx="0" cy="0" rx="10" ry="6.5"/></g>';
+    if (a.kind === "ball") return '<g class="actor ball" data-a="' + key + '"><ellipse cx="0" cy="0" rx="8" ry="5.5"/></g>';
     var r = a.r || R[a.kind] || 13, lab = a.label || "", long = lab.length > 2;
     return '<g class="actor k-' + a.kind + '" data-a="' + key + '"' + (a.kind === "them" || a.kind === "def" ? ' aria-hidden="true"' : ' tabindex="0" role="button" aria-label="' + Phins.esc(lab) + '"') + '>' +
-      '<circle cx="0" cy="0" r="' + r + '"/>' + (lab ? '<text x="0" y="' + (long ? 3.2 : 4.5) + '" text-anchor="middle" font-size="' + (long ? 8.5 : 12) + '">' + Phins.esc(lab) + '</text>' : '') + '</g>';
+      '<circle cx="0" cy="0" r="' + r + '"/>' + (lab ? '<text x="0" y="' + (long ? 2.6 : 4) + '" text-anchor="middle" font-size="' + (long ? 7 : 11) + '">' + Phins.esc(lab) + '</text>' : '') + '</g>';
   }
 
   window.PhinsPlay = function(el, def){
@@ -59,6 +59,7 @@
       '<svg class="playsvg" viewBox="' + (def.viewBox || "0 0 300 250") + '" role="group" aria-label="' + E(def.title || "Play") + ' diagram. Tap a player to see their job.">' +
       '<defs><marker id="ah' + id + '" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--ink)"/></marker></defs>' +
       bg(def.bg, id, def) + Object.keys(def.actors).map(function(k){ return actorSvg(k, def.actors[k]); }).join("") + '</svg>' +
+      ((def.bg === "pod" || def.bg === "phase") ? '<p class="scalenote">Not to scale. Distances aren\'t exact here: on the field, you vibe it out.</p>' : '') +
       '<div class="infopanel playcap" aria-live="polite"></div><p class="tapinfo" aria-live="polite"></p></div>';
     el.innerHTML = h;
     var svg = el.querySelector("svg"), cap = el.querySelector(".playcap"), tap = el.querySelector(".tapinfo"), bPlay = el.querySelector('[data-act="play"]');

@@ -308,7 +308,7 @@ html.locked body > :not(#gate){display:none!important}
 .play{display:grid; gap:10px}
 .play .steps-pills{margin:0}
 .play .steps-pills button{padding:0 12px; font-size:15px}
-.playsvg{width:100%; height:auto; display:block; max-height:62vh; background:var(--surface); border:1.5px solid var(--line); border-radius:16px}
+.playsvg{width:100%; height:auto; display:block; max-height:70vh; background:var(--surface); border:1.5px solid var(--line); border-radius:16px}
 .playsvg .actor{transition:transform .9s ease, opacity .4s ease; cursor:pointer}
 .playsvg.instant .actor{transition:none}
 .playsvg .actor text{font-family:var(--f-display); font-weight:800; pointer-events:none}
@@ -381,3 +381,5 @@ html.touring .pager{display:none}
 .shape.withbacks .fnums{display:none}
 .rolecard{max-width:560px; gap:12px} .rolecard .podmini{max-width:320px; margin:0 auto; display:block}
 .podmini circle,.podmini text{transition:fill .3s}
+.scalenote{font-size:14.5px; color:var(--muted); margin:-4px 0 0; font-style:italic}
+.playsvg .k-next text{font-size:7px}
