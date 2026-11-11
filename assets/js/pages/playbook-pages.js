@@ -37,14 +37,11 @@ Phins.ready(function(){
     }).join("");
     var mbox = el;
     if (mbox && mbox.querySelector(".maulplay")) Phins.load("plays").then(function(pl){ mbox.querySelectorAll(".maulplay").forEach(function(box){ var k = box.getAttribute("data-play"); if (pl[k]) PhinsPlay(box, pl[k]); }); });
+    if ((el = document.getElementById("exitcalls"))) el.innerHTML = (d.exitCalls || []).map(function(c){ return '<article class="dcard is-phins"><h3 class="term">' + E(c.name) + '</h3><p class="def">' + R(c.text) + '</p></article>'; }).join("");
     if ((el = document.getElementById("redzone"))) el.innerHTML = d.redZoneExit.map(function(s){ return '<li><span>' + R(s.step) + '</span></li>'; }).join("");
-    if ((el = document.getElementById("kosetup"))){
-      var K = d.kickoff, i = 0;
-      document.getElementById("korecv").innerHTML = R(K.receiving);
-      document.getElementById("kokick").innerHTML = R(K.kicking);
-      var show = function(){ el.innerHTML = '<h3><span class="num">' + (i+1) + '</span>' + E(K.phases[i].name) + '</h3><p>' + R(K.phases[i].text) + '</p>'; document.getElementById("kobtn").textContent = i < K.phases.length - 1 ? "Next phase ⏭" : "Start over ↺"; };
-      document.getElementById("kobtn").addEventListener("click", function(){ i = (i + 1) % K.phases.length; show(); });
-      show();
+    if (document.getElementById("korecv")){
+      document.getElementById("korecv").innerHTML = R(d.kickoff.receiving);
+      document.getElementById("kokick").innerHTML = R(d.kickoff.kicking);
     }
   }).catch(function(){ var m = document.getElementById("main"); m.insertAdjacentHTML("beforeend", '<div class="todo">Could not load playbook.json.</div>'); });
 });

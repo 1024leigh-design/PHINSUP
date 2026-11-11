@@ -432,6 +432,18 @@
           "term": "Drop goal",
           "def": "Did you know you can kick for 3 points, kind of like a field goal in football? Drop the ball and kick it through the posts in open play. It's harder and less common, but it's an option!",
           "see": "scoring.html"
+        },
+        {
+          "term": "DOG",
+          "phins": true,
+          "def": "Red zone exit call (any type of dog): a box kick off the ruck.",
+          "see": "exit-red-zone.html"
+        },
+        {
+          "term": "EAGLE",
+          "phins": true,
+          "def": "Red zone exit call: a pass and kick from the 10, 12, or 15.",
+          "see": "exit-red-zone.html"
         }
       ]
     },

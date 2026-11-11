@@ -235,27 +235,82 @@
     }
   ],
   "kickoff": {
-    "receiving": "Exploded scrum: front row (1, 2, 3) up front by the 10m line (the 40), locks (4, 5) back, flankers (6, 7) watch the sidelines, the 9 in the middle with the 15 behind them. [HANNAH: confirm where the 8 goes, and add the other backs]",
-    "kicking": "[HANNAH TO PROVIDE: our kicking setup]",
-    "phases": [
+    "receiving": "Think of it as an exploded scrum. [HANNAH: confirm where the 8 goes, and add the other backs]",
+    "kicking": "Kicks are called by number. Odd numbers go left, even numbers go right. 1 and 2 are short kicks, 3 and 4 are long kicks.",
+    "zones": [
       {
-        "name": "Phase 1",
-        "text": "[HANNAH TO PROVIDE]"
+        "n": 1,
+        "side": "left",
+        "len": "short",
+        "text": "Short kick to the left."
       },
       {
-        "name": "Phase 2",
-        "text": "[HANNAH TO PROVIDE]"
+        "n": 2,
+        "side": "right",
+        "len": "short",
+        "text": "Short kick to the right."
       },
       {
-        "name": "Phase 3",
-        "text": "[HANNAH TO PROVIDE]"
+        "n": 3,
+        "side": "left",
+        "len": "long",
+        "text": "Long kick to the left."
+      },
+      {
+        "n": 4,
+        "side": "right",
+        "len": "long",
+        "text": "Long kick to the right."
+      }
+    ],
+    "chase": [
+      {
+        "k": "W",
+        "name": "Wings",
+        "text": "On the sidelines."
+      },
+      {
+        "k": "F",
+        "name": "Forwards",
+        "text": "A mix of forwards and backs on each side of the kicker."
+      },
+      {
+        "k": "B",
+        "name": "Backs",
+        "text": "A mix of forwards and backs on each side of the kicker."
+      },
+      {
+        "k": "P",
+        "name": "Pinch-in forward",
+        "text": "A forward near the kicker who pinches in, so they can't throw the ball back to the other side of the field."
+      },
+      {
+        "k": "K",
+        "name": "Kicker",
+        "text": "Kicks from the center of halfway."
       }
     ]
   },
   "redZoneExit": [
     {
-      "step": "[HANNAH TO PROVIDE: how we get out of our own 22]"
+      "step": "**Set play first.** If we have a set play (scrum or lineout) in our own defensive 22, do the set play."
+    },
+    {
+      "step": "**Run one pod.** Then run one pod off the ruck."
+    },
+    {
+      "step": "**Then immediately EAGLE or DOG** to get out."
     }
   ],
-  "lineoutHowto": "Everyone starts in the same 4 spots (x 100, 140, 180, 220: front lifter, two lifter/jumpers, back lifter). jumper = which player jumps (0 = front). to = where each player ends up after the call. Player names: use initials (except Hannah), since this repo is public."
+  "lineoutHowto": "Everyone starts in the same 4 spots (x 100, 140, 180, 220: front lifter, two lifter/jumpers, back lifter). jumper = which player jumps (0 = front). to = where each player ends up after the call. Player names: use initials (except Hannah), since this repo is public.",
+  "exitCalls": [
+    {
+      "name": "DOG",
+      "text": "Any type of dog is a **box kick off the ruck**."
+    },
+    {
+      "name": "EAGLE",
+      "text": "A **pass and kick** from the 10, 12, or 15."
+    }
+  ]
 }

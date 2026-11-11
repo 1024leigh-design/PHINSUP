@@ -384,3 +384,5 @@ html.touring .pager{display:none}
 .scalenote{font-size:14.5px; color:var(--muted); margin:-4px 0 0; font-style:italic}
 .playsvg .k-next text{font-size:7px}
 .techcards{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))} .techcards ul{font-size:16.5px}
+.kchip{display:inline-flex; width:26px; height:26px; border-radius:50%; align-items:center; justify-content:center; font:800 12px var(--f-display); border:2px solid var(--green); background:var(--surface)}
+.kchip.W{border-color:var(--pink); background:var(--pink-soft)} .kchip.P{border-color:#7a6100; background:var(--yellow)} .kchip.K{border-color:var(--pink); background:var(--pink); color:#fff}

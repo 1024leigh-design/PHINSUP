@@ -25,6 +25,12 @@
     } else if (kind === "phase"){
       h += '<rect x="0" y="0" width="400" height="260" rx="12" class="pcfield"/>' +
         '<line x1="10" y1="34" x2="390" y2="34" class="tline dash"/><text x="200" y="24" text-anchor="middle" class="tlab">THEIR DEFENSE ↑</text>';
+    } else if (kind === "kickrecv"){
+      h += '<rect x="0" y="0" width="400" height="300" rx="12" class="pcfield"/>' +
+        '<line x1="10" y1="24" x2="390" y2="24" class="tline"/><text x="386" y="18" text-anchor="end" class="tlab">HALFWAY</text>' +
+        '<line x1="10" y1="76" x2="390" y2="76" class="tline dash"/><text x="386" y="70" text-anchor="end" class="tlab">10m (THE 40)</text>' +
+        '<line x1="10" y1="262" x2="390" y2="262" class="tline"/><text x="386" y="256" text-anchor="end" class="tlab">OUR 22</text>' +
+        '<text x="14" y="292" class="tlab">WE ATTACK THIS WAY ↑</text>';
     } else if (kind === "maul"){
       h += '<rect x="0" y="0" width="300" height="200" rx="12" class="pcfield"/>' +
         '<line x1="20" y1="6" x2="20" y2="194" class="tline"/><line x1="55" y1="6" x2="55" y2="194" class="tline dash"/>' +
