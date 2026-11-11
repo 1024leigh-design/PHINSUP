@@ -42,13 +42,13 @@ Phins.ready(function(){
 Phins.ready(function(){
   var box = document.getElementById("kophases"), tabs = document.getElementById("kotabs");
   if (!box) return;
-  var F = {1:[160,100],2:[200,100],3:[240,100],4:[180,138],5:[220,138],8:[200,168],6:[50,118],7:[350,118],9:[200,204],10:[262,214],15:[200,240]};
+  var F = {1:[120,100],2:[200,100],3:[280,100],4:[150,140],5:[250,140],8:[200,170],6:[50,170],7:[350,170],9:[200,204],10:[262,214],15:[200,240],11:[42,240],14:[358,240]};
   var LAND = {sl:{name:"Short left", at:[112,116]}, sr:{name:"Short right", at:[288,116]}, ll:{name:"Long left", at:[110,232]}, lr:{name:"Long right", at:[290,232]}};
   var FWD = [1,2,3,4,5,6,7,8];
   function d2(a, b){ var dx = a[0]-b[0], dy = a[1]-b[1]; return dx*dx + dy*dy; }
   function build(key){
     var L = LAND[key].at, left = L[0] < 200, actors = {}, roles = {}, set = {}, them = {};
-    Object.keys(F).forEach(function(n){ actors["p" + n] = {label:String(n), name:"Number " + n, kind:(n == 9 || n == 10 || n == 15) ? "back" : "lift"}; set["p" + n] = F[n]; });
+    Object.keys(F).forEach(function(n){ actors["p" + n] = {label:String(n), name:"Number " + n, kind:(n == 9 || n == 10 || n == 15 || n == 11 || n == 14) ? "back" : "lift"}; set["p" + n] = F[n]; });
     for (var t = 0; t < 6; t++){ actors["t" + t] = {kind:"them"}; set["t" + t] = [60 + t*56, 16]; }
     actors.ball = {kind:"ball"}; set.ball = [200, 10];
     actors = Object.assign({ruck:{kind:"ruck"}}, actors);
@@ -62,7 +62,7 @@ Phins.ready(function(){
     var podPool = FWD.filter(function(n){ return used.indexOf(n) < 0; }).sort(function(a, b){ return d2(F[a], C) - d2(F[b], C); });
     var pod = (used.indexOf(flank) < 0 ? [flank] : []).concat(podPool.filter(function(n){ return n !== flank; })).slice(0, 3);
     var dir = left ? 1 : -1;                 // pod builds toward the middle of the field
-    var LZ = [C[0], C[1] + 40], LD = [C[0] + dir*72, C[1] + 22], PL = [C[0] + dir*112, C[1] + 34], TEN = [C[0] + dir*72, C[1] + 64];
+    var LZ = [C[0], C[1] + 40], LD = [C[0] + dir*72, C[1] + 22], PL = [C[0] + dir*112, C[1] + 34], TEN = [C[0] + dir*72, C[1] + 48];
     var podSpots = [LZ, LD, PL], podNames = [["Lazy","pod"],["Lead","pod"],["Plus","pod"]];
     roles["p" + catcher] = "Closest to the ball, so you catch it and go in.";
     ruckers.forEach(function(n){ roles["p" + n] = "One of the two ruckers. Before kickoff, confirm with the catcher that you'll ruck for them."; });
