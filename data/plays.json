@@ -879,5 +879,302 @@
         }
       }
     ]
+  },
+  "phase": {
+    "title": "One phase",
+    "bg": "phase",
+    "viewBox": "0 0 400 260",
+    "actors": {
+      "d1": {
+        "label": "D",
+        "kind": "def"
+      },
+      "d2": {
+        "label": "D",
+        "kind": "def"
+      },
+      "d3": {
+        "label": "D",
+        "kind": "def"
+      },
+      "d4": {
+        "label": "D",
+        "kind": "def"
+      },
+      "d5": {
+        "label": "D",
+        "kind": "def"
+      },
+      "ruck1": {
+        "kind": "ruck"
+      },
+      "ruck2": {
+        "kind": "ruck"
+      },
+      "nine": {
+        "label": "9",
+        "name": "Scrum half (9)",
+        "kind": "back"
+      },
+      "ten": {
+        "label": "10",
+        "name": "Fly half (10)",
+        "kind": "back"
+      },
+      "lazy": {
+        "label": "Lazy",
+        "kind": "pod"
+      },
+      "lead": {
+        "label": "Lead",
+        "kind": "pod"
+      },
+      "plus": {
+        "label": "Plus",
+        "kind": "pod"
+      },
+      "nlazy": {
+        "label": "Lazy",
+        "name": "Next pod: lazy",
+        "kind": "next"
+      },
+      "nlead": {
+        "label": "Lead",
+        "name": "Next pod: lead",
+        "kind": "next"
+      },
+      "nplus": {
+        "label": "Plus",
+        "name": "Next pod: plus",
+        "kind": "next"
+      },
+      "ball": {
+        "kind": "ball"
+      }
+    },
+    "roles": {
+      "lazy": "Inside supporter. Sets up behind the ruck, then gets to the next ruck to support.",
+      "lead": "Sets up out from the 9, right in front of the 10. Takes the pass and carries hard and straight.",
+      "plus": "Outside supporter, on the far side of the lead from the ruck. First to the ruck, or takes the pop pass.",
+      "nine": "Plays the ball from the back of the ruck to the pod.",
+      "ten": "Stays behind the lead, which keeps our spacing.",
+      "nlazy": "The next pod. Sets up off the new ruck in the same shape.",
+      "nlead": "The next pod. Sets up off the new ruck in the same shape.",
+      "nplus": "The next pod. Sets up off the new ruck in the same shape."
+    },
+    "steps": [
+      {
+        "name": "Set up",
+        "text": "A ruck has formed. The pod sets up off it: **lazy behind the ruck**, **lead** out from the 9, **plus on the far side** of the lead from the ruck. The 10 is behind the lead.",
+        "pos": {
+          "d1": [
+            60,
+            52
+          ],
+          "d2": [
+            130,
+            52
+          ],
+          "d3": [
+            196,
+            52
+          ],
+          "d4": [
+            262,
+            52
+          ],
+          "d5": [
+            330,
+            52
+          ],
+          "ruck1": [
+            110,
+            112
+          ],
+          "ruck2": [
+            196,
+            104,
+            0
+          ],
+          "nine": [
+            110,
+            146
+          ],
+          "ball": [
+            124,
+            142
+          ],
+          "lazy": [
+            110,
+            192
+          ],
+          "lead": [
+            196,
+            170
+          ],
+          "plus": [
+            244,
+            184
+          ],
+          "ten": [
+            196,
+            226
+          ],
+          "nlazy": [
+            300,
+            206
+          ],
+          "nlead": [
+            336,
+            196
+          ],
+          "nplus": [
+            372,
+            206
+          ]
+        }
+      },
+      {
+        "name": "Pass",
+        "text": "The 9 passes to the lead.",
+        "pos": {
+          "ball": [
+            196,
+            156
+          ],
+          "lead": [
+            196,
+            166
+          ]
+        }
+      },
+      {
+        "name": "Carry",
+        "text": "The lead carries hard and straight. Plus and lazy go with them. **Never go alone.**",
+        "pos": {
+          "lead": [
+            196,
+            106
+          ],
+          "ball": [
+            196,
+            94
+          ],
+          "plus": [
+            226,
+            124
+          ],
+          "lazy": [
+            164,
+            130
+          ],
+          "d3": [
+            196,
+            78
+          ]
+        }
+      },
+      {
+        "name": "Tackle",
+        "text": "The lead is tackled, goes to ground, and places the ball back toward us.",
+        "pos": {
+          "lead": [
+            196,
+            98
+          ],
+          "d3": [
+            204,
+            84
+          ],
+          "ball": [
+            196,
+            120
+          ]
+        }
+      },
+      {
+        "name": "New ruck",
+        "text": "Plus and lazy get there and win the ruck. The 9 gets behind it. **Never let someone go alone.**",
+        "pos": {
+          "ruck2": [
+            196,
+            104,
+            1
+          ],
+          "lead": [
+            196,
+            98,
+            0
+          ],
+          "d3": [
+            204,
+            84,
+            0
+          ],
+          "plus": [
+            196,
+            104,
+            0
+          ],
+          "lazy": [
+            216,
+            132
+          ],
+          "ruck1": [
+            110,
+            112,
+            0
+          ],
+          "nine": [
+            196,
+            138
+          ],
+          "ball": [
+            208,
+            136
+          ]
+        }
+      },
+      {
+        "name": "Next phase",
+        "text": "The next pod sets up off the new ruck in the same shape: lazy behind the ruck, lead out from the 9, plus on the far side. The 10 moves behind the new lead.",
+        "pos": {
+          "nlazy": [
+            196,
+            182
+          ],
+          "nlead": [
+            276,
+            170
+          ],
+          "nplus": [
+            322,
+            184
+          ],
+          "ten": [
+            276,
+            226
+          ],
+          "lazy": [
+            150,
+            150
+          ]
+        }
+      },
+      {
+        "name": "Go again",
+        "text": "The 9 passes to the new lead and the next phase starts. Other teams use lots of different systems, so **on defense we have to adjust** to what they do.",
+        "pos": {
+          "ball": [
+            276,
+            156
+          ],
+          "nlead": [
+            276,
+            164
+          ]
+        }
+      }
+    ]
   }
 }

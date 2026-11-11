@@ -1,5 +1,5 @@
 {
-  "_howto": "Fill in podA/podB with numbers once we know who usually goes where, for example \"podA\": [1, 2, 4]. Leave empty to show 'tight five + 8' with no numbers. podCalls are the HOT/FLASH cards on the Our Shape page. backs: x/y spots for 9 to 15 when 'Show backs' is on (the diagram is 400 wide; backs sit between y 240 and 345).",
+  "_howto": "podLabel = the text over the pods. Fill in podA/podB with numbers once we know who usually goes where, for example \"podA\": [1, 2, 4]. Leave empty to show 'tight five + 8' with no numbers. podCalls are the HOT/FLASH cards on the Our Shape page. backs: x/y spots for 9 to 15 when 'Show backs' is on (the diagram is 400 wide; backs sit between y 250 and 345).",
   "edgeLeft": 6,
   "edgeRight": 7,
   "podA": [],
@@ -51,51 +51,52 @@
     {
       "n": 9,
       "x": 200,
-      "y": 246,
+      "y": 256,
       "name": "Scrum half",
       "where": "At the ruck. Passes to the pods or the 10."
     },
     {
       "n": 10,
-      "x": 160,
-      "y": 274,
+      "x": 166,
+      "y": 280,
       "name": "Fly half",
       "where": "Behind the forward pods. On HOT, the lead receives the ball right in front of you."
     },
     {
       "n": 12,
-      "x": 120,
-      "y": 296,
+      "x": 132,
+      "y": 298,
       "name": "Inside center",
       "where": "Outside the 10."
     },
     {
       "n": 13,
-      "x": 82,
-      "y": 316,
+      "x": 100,
+      "y": 318,
       "name": "Outside center",
       "where": "Outside the 12."
     },
     {
       "n": 11,
-      "x": 34,
-      "y": 332,
+      "x": 44,
+      "y": 300,
       "name": "Wing",
       "where": "Wide on one side."
     },
     {
       "n": 14,
-      "x": 366,
-      "y": 316,
+      "x": 356,
+      "y": 300,
       "name": "Wing",
       "where": "Wide on the other side."
     },
     {
       "n": 15,
       "x": 200,
-      "y": 342,
+      "y": 338,
       "name": "Fullback",
       "where": "Deep, covering the back field."
     }
-  ]
+  ],
+  "podLabel": "Pods: 1, 2, 3, 4, 5 and 8"
 }

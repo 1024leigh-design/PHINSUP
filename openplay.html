@@ -7,20 +7,11 @@
 <title>Open Play · Phins</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;600&display=swap">
-<link rel="stylesheet" href="assets/css/phins.css?v=11111850">
-<script src="assets/js/config.js?v=11111850"></script>
-<script src="assets/js/core.js?v=11111850"></script>
-<script src="assets/js/shape.js?v=11111850"></script><script src="assets/js/pages/openplay.js?v=11111850"></script>
-<style>
-#phasesvg .lab{font:600 11px var(--f-mono); fill:var(--muted); letter-spacing:.06em}
-.actor{transition:transform .8s ease}
-.actor.next .body{fill:var(--yellow-soft)}
-.actor.down .body{fill:var(--surface-2); stroke-dasharray:4 3}
-.def .body{fill:var(--surface-2)}
-#pills{gap:6px}
-#pills button{padding:0 12px; font-size:15px}
-#phasecap{min-height:96px}
-</style>
+<link rel="stylesheet" href="assets/css/phins.css?v=11111854">
+<script src="assets/js/config.js?v=11111854"></script>
+<script src="assets/js/core.js?v=11111854"></script>
+<script src="assets/js/plays.js?v=11111854"></script><script src="assets/js/shape.js?v=11111854"></script><script src="assets/js/pages/openplay.js?v=11111854"></script>
+
 </head>
 <body>
 <main class="wrap" id="main" data-page="openplay" data-section="1">
@@ -29,21 +20,16 @@
     <h1>Open Play</h1>
   </header>
 
-  <ul class="keys">
-    <li><b>Cycle</b><span>Carry &rarr; tackle &rarr; ruck &rarr; ball out &rarr; next phase.</span></li>
+  <ul class="keys cols3">
+    <li><b>Phase</b><span>Carry &rarr; tackle &rarr; ruck &rarr; ball out &rarr; next phase.</span></li>
     <li><b>Pods</b><span>Forwards work in pods of 3: lead, plus, lazy.</span></li>
     <li><b>Channel</b><span>Never block the sacred channel (the pass from the 9 to the 10).</span></li>
   </ul>
   <div class="banner"><div><b>Never go alone. Never let someone go alone.</b></div></div>
 
   <section aria-labelledby="h-phase">
-    <div class="sec"><h2 id="h-phase">One phase, step by step</h2></div>
-    <div class="btnrow" style="margin-bottom:10px"><button class="btn" id="p-play" type="button">▶ Play</button><button class="btn ghost" id="p-next" type="button">⏭ Next step</button></div>
-    <div class="numrow" id="pills" aria-label="Steps"></div>
-    <figure class="diagram">
-      <svg id="phasesvg" viewBox="0 0 400 260" role="img" aria-label="Animated diagram of one phase. The caption below describes each step."></svg>
-    </figure>
-    <div class="infopanel" id="phasecap" aria-live="polite"></div>
+    <div class="sec"><h2 id="h-phase">One phase, step by step</h2><p>Tap a player to see their job</p></div>
+    <div id="phaseplay"></div>
   </section>
 
   <section aria-labelledby="h-where">
@@ -54,11 +40,6 @@
   </section>
 
   <details class="more"><summary>Learn More 🤓</summary><div class="body">
-    <h3>Onside and offside in open play</h3>
-    <ul>
-      <li>In general play you're offside if you're in front of a teammate who has the ball (or just kicked it) and you get involved.</li>
-      <li>Once a ruck forms, the offside line is the hindmost foot. If you're not in the ruck, get behind it.</li>
-    </ul>
     <h3>Defense basics</h3>
     <ul>
       <li><b>Line speed:</b> move up together, fast.</li>

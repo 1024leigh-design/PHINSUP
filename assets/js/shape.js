@@ -5,21 +5,25 @@ window.PhinsShape = function(svg, row, info){
   var E = Phins.esc;
   Phins.load("shape").then(function(d){
     var A = d.podA || [], B = d.podB || [], backs = d.backs || [], showBacks = false, picked = 0;
-    var spots = {edgeL:[48,110], edgeR:[352,110]}, tri = [[0,-24],[-26,20],[26,20]];
-    var h = '<line x1="8" y1="20" x2="8" y2="350" class="fieldline"/><line x1="392" y1="20" x2="392" y2="350" class="fieldline"/>' +
+    // Edges (sideline to the 15m line) are shaded. Flankers sit out there, in line with the backs. Pods are in the middle.
+    var spots = {edgeL:[48,176], edgeR:[352,176]}, tri = [[0,-22],[-24,18],[24,18]];
+    var h = '<rect x="8" y="30" width="78" height="320" class="edgezone"/><rect x="314" y="30" width="78" height="320" class="edgezone"/>' +
+      '<text x="47" y="46" text-anchor="middle" class="lab">EDGE</text><text x="353" y="46" text-anchor="middle" class="lab">EDGE</text>' +
+      '<line x1="8" y1="20" x2="8" y2="350" class="fieldline"/><line x1="392" y1="20" x2="392" y2="350" class="fieldline"/>' +
       '<text x="200" y="22" text-anchor="middle" class="lab">ATTACKING THIS WAY ↑</text>';
     function dot(cls, x, y, label, n){
-      return '<g class="pl ' + cls + '"' + (n ? ' data-n="' + n + '"' : '') + '><circle class="body" cx="' + x + '" cy="' + y + '" r="17"/>' +
-        (label !== "" ? '<text x="' + x + '" y="' + (y + 6) + '" text-anchor="middle" font-size="17">' + E(label) + '</text>' : '') + '</g>';
+      return '<g class="pl ' + cls + '"' + (n ? ' data-n="' + n + '"' : '') + '><circle class="body" cx="' + x + '" cy="' + y + '" r="16"/>' +
+        (label !== "" ? '<text x="' + x + '" y="' + (y + 6) + '" text-anchor="middle" font-size="16">' + E(label) + '</text>' : '') + '</g>';
     }
     h += dot("edge", spots.edgeL[0], spots.edgeL[1], d.edgeLeft, d.edgeLeft) + dot("edge", spots.edgeR[0], spots.edgeR[1], d.edgeRight, d.edgeRight);
-    [[148,"A",A],[252,"B",B]].forEach(function(p){
-      h += '<rect class="podbox" data-pod="' + p[1] + '" x="' + (p[0]-50) + '" y="62" width="100" height="98" rx="26"/>';
-      tri.forEach(function(t, i){ var n = p[2][i]; h += dot("inpod", p[0]+t[0], 110+t[1], n || "", n || 0); });
+    h += '<text x="200" y="62" text-anchor="middle" class="podlab">' + E(d.podLabel || "1, 2, 3, 4, 5 and 8") + '</text>';
+    [[152,"A",A],[248,"B",B]].forEach(function(p){
+      h += '<rect class="podbox" data-pod="' + p[1] + '" x="' + (p[0]-44) + '" y="72" width="88" height="88" rx="24"/>';
+      tri.forEach(function(t, i){ var n = p[2][i]; h += dot("inpod", p[0]+t[0], 116+t[1], n || "", n || 0); });
     });
-    [[48,"1"],[148,"3"],[252,"3"],[352,"1"]].forEach(function(l){ h += '<text x="' + l[0] + '" y="196" text-anchor="middle" class="big">' + l[1] + '</text>'; });
+    [[48,"1"],[152,"3"],[248,"3"],[352,"1"]].forEach(function(l){ h += '<text x="' + l[0] + '" y="' + (l[0] === 48 || l[0] === 352 ? 222 : 192) + '" text-anchor="middle" class="big">' + l[1] + '</text>'; });
     h += '<g class="backs">' + backs.map(function(b){ return dot("backdot", b.x, b.y, b.n, b.n); }).join("") +
-      '<text x="200" y="224" text-anchor="middle" class="lab">BACKS (TYPICAL SPOTS)</text></g>';
+      '<text x="200" y="240" text-anchor="middle" class="lab">BACKS (TYPICAL SPOTS)</text></g>';
     svg.innerHTML = h;
 
     // toggle + number buttons
@@ -32,7 +36,7 @@ window.PhinsShape = function(svg, row, info){
 
     function setBacks(on){
       showBacks = on;
-      svg.setAttribute("viewBox", on ? "0 0 400 358" : "0 0 400 210");
+      svg.setAttribute("viewBox", on ? "0 0 400 358" : "0 0 400 236");
       svg.classList.toggle("withbacks", on);
       tg.textContent = on ? "Hide backs" : "Show backs (whole team)";
       tg.setAttribute("aria-pressed", on ? "true" : "false");
@@ -55,7 +59,7 @@ window.PhinsShape = function(svg, row, info){
       picked = n;
       if (n > 8 && !showBacks) setBacks(true);
       var r = paint(n), t, title = "Number " + n;
-      if (r.edge) t = "You're usually the <b>1</b> on an edge of our 1-3-3-1. " + Phins.rich(d.edges || "");
+      if (r.edge) t = "You're usually the <b>1</b> on an edge of our 1-3-3-1, out with the backs. " + Phins.rich(d.edges || "");
       else if (r.center) t = (r.inA || r.inB ? "You're usually in center pod " + (r.inA ? "A" : "B") + ". " : "You're in one of the two center pods (the <b>3s</b>). ") + "The tight five are in a center pod, and the 8 usually joins them. You carry the ball in a pod of 3.";
       else {
         var b = backs.filter(function(x){ return x.n === n; })[0];

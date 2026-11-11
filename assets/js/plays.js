@@ -12,7 +12,7 @@
 (function(){
   "use strict";
   var uid = 0;
-  var R = {pod:15, back:14, def:11, next:10, ball:0, them:10, jump:13, lift:13, hook:11};
+  var R = {pod:18, back:15, def:11, next:16, ball:0, them:10, jump:13, lift:13, hook:11};
 
   function bg(kind, id, def){
     var h = "";
@@ -22,6 +22,9 @@
         '<path d="M72 184 C 95 250, 215 262, 252 196" class="pcno"/><text x="262" y="214" class="pcnot">NO!</text>' +
         '<g class="guides"><path d="M92 132 L160 74"/><path d="M176 168 L176 40"/><path d="M214 196 L190 76"/><path d="M50 160 L258 84" class="next"/></g>';
       if (def.channel) h += '<g data-ov="channel" class="ov"><path d="M90 104 L166 200" class="channel" marker-end="url(#ah' + id + ')"/><text x="98" y="170" class="pcch" transform="rotate(60 98 170)">sacred channel</text></g>';
+    } else if (kind === "phase"){
+      h += '<rect x="0" y="0" width="400" height="260" rx="12" class="pcfield"/>' +
+        '<line x1="10" y1="34" x2="390" y2="34" class="tline dash"/><text x="200" y="24" text-anchor="middle" class="tlab">THEIR DEFENSE ↑</text>';
     } else if (kind === "maul"){
       h += '<rect x="0" y="0" width="300" height="200" rx="12" class="pcfield"/>' +
         '<line x1="20" y1="6" x2="20" y2="194" class="tline"/><line x1="55" y1="6" x2="55" y2="194" class="tline dash"/>' +
@@ -37,10 +40,11 @@
   }
 
   function actorSvg(key, a){
+    if (a.kind === "ruck") return '<g class="actor k-ruck" data-a="' + key + '" aria-hidden="true"><rect x="-26" y="-13" width="52" height="26" rx="9"/><text x="0" y="4" text-anchor="middle" font-size="11">Ruck</text></g>';
     if (a.kind === "ball") return '<g class="actor ball" data-a="' + key + '"><ellipse cx="0" cy="0" rx="10" ry="6.5"/></g>';
     var r = a.r || R[a.kind] || 13, lab = a.label || "", long = lab.length > 2;
     return '<g class="actor k-' + a.kind + '" data-a="' + key + '"' + (a.kind === "them" || a.kind === "def" ? ' aria-hidden="true"' : ' tabindex="0" role="button" aria-label="' + Phins.esc(lab) + '"') + '>' +
-      '<circle cx="0" cy="0" r="' + r + '"/>' + (lab ? '<text x="0" y="' + (long ? 3.5 : 4.5) + '" text-anchor="middle" font-size="' + (long ? 9 : 12) + '">' + Phins.esc(lab) + '</text>' : '') + '</g>';
+      '<circle cx="0" cy="0" r="' + r + '"/>' + (lab ? '<text x="0" y="' + (long ? 3.2 : 4.5) + '" text-anchor="middle" font-size="' + (long ? 8.5 : 12) + '">' + Phins.esc(lab) + '</text>' : '') + '</g>';
   }
 
   window.PhinsPlay = function(el, def){
