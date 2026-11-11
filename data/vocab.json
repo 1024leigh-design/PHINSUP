@@ -250,9 +250,10 @@
           "def": "Defense that sprints up fast to shut attackers down early."
         },
         {
-          "term": "Fold",
-          "def": "Running around behind a ruck to get back into the defensive line.",
-          "key": true
+          "term": "Shift",
+          "def": "Running around behind a ruck to get back into the defensive line. (Some teams call this folding.)",
+          "key": true,
+          "phins": true
         },
         {
           "term": "Hold the line",

@@ -1,5 +1,5 @@
 {
-  "_howto": "podLabel = the text over the pods. Fill in podA/podB with numbers once we know who usually goes where, for example \"podA\": [1, 2, 4]. Leave empty to show 'tight five + 8' with no numbers. podCalls are the HOT/FLASH cards on the Our Shape page. backs: x/y spots for 9 to 15 when 'Show backs' is on (the diagram is 400 wide; backs sit between y 250 and 345).",
+  "_howto": "podLabel = the text over the pods. Fill in podA/podB with numbers to label pod spots. backs: x/y spots for 9 to 15 when 'Show backs' is on (diagram is 400 wide by 236 tall; edges are x 8 to 86 and 314 to 392).",
   "edgeLeft": 6,
   "edgeRight": 7,
   "podA": [],
@@ -22,7 +22,7 @@
       "text": "The inside supporter, close to the ruck and a few feet behind the 9. Least running to get there, still gets to the ruck and supports."
     }
   ],
-  "edges": "Flankers don't get into the pods as much. They hang out on the edges: from the sideline to the 15m line on either side.",
+  "edges": "Flankers don't get into the pods as much. They hang out on the edges (sideline to the 15m line), in a line of three with two backs.",
   "podCalls": [
     {
       "name": "HOT",
@@ -46,56 +46,56 @@
     }
   ],
   "noBanana": "Don't run in an arc or banana shape (the red line). That wastes time and energy. Instead, wait until the ball is passed out and then run a straight line. [HANNAH: this note was cut off, confirm the rest]",
-  "backsNote": "Typical spots for a standard backline. [HANNAH: confirm our backs structure]",
+  "backsNote": "Whole team: the 11 and 13 join the 6 in a line of three on one edge, the 14 and 15 join the 7 on the other edge, and the 10 and 12 are bridges between the pods. The 9 is at the ruck.",
   "backs": [
     {
       "n": 9,
       "x": 200,
-      "y": 256,
+      "y": 206,
       "name": "Scrum half",
-      "where": "At the ruck. Passes to the pods or the 10."
+      "where": "At the ruck."
     },
     {
       "n": 10,
-      "x": 166,
-      "y": 280,
+      "x": 112,
+      "y": 206,
       "name": "Fly half",
-      "where": "Behind the forward pods. On HOT, the lead receives the ball right in front of you."
+      "where": "A bridge between the pods."
     },
     {
       "n": 12,
-      "x": 132,
-      "y": 298,
+      "x": 288,
+      "y": 206,
       "name": "Inside center",
-      "where": "Outside the 10."
-    },
-    {
-      "n": 13,
-      "x": 100,
-      "y": 318,
-      "name": "Outside center",
-      "where": "Outside the 12."
+      "where": "A bridge between the pods."
     },
     {
       "n": 11,
-      "x": 44,
-      "y": 300,
+      "x": 18,
+      "y": 176,
       "name": "Wing",
-      "where": "Wide on one side."
+      "where": "On the edge, in a line of three with the 6 and 13."
+    },
+    {
+      "n": 13,
+      "x": 48,
+      "y": 176,
+      "name": "Outside center",
+      "where": "On the edge, in a line of three with the 6 and 11."
     },
     {
       "n": 14,
-      "x": 356,
-      "y": 300,
+      "x": 382,
+      "y": 176,
       "name": "Wing",
-      "where": "Wide on the other side."
+      "where": "On the edge, in a line of three with the 7 and 15."
     },
     {
       "n": 15,
-      "x": 200,
-      "y": 338,
+      "x": 352,
+      "y": 176,
       "name": "Fullback",
-      "where": "Deep, covering the back field."
+      "where": "On the edge, in a line of three with the 7 and 14."
     }
   ],
   "podLabel": "Pods: 1, 2, 3, 4, 5 and 8"

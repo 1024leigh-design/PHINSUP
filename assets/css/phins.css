@@ -378,3 +378,6 @@ html.touring .pager{display:none}
 @media (min-width:600px){ .keys.cols3{grid-template-columns:repeat(3,minmax(0,1fr))} }
 .shape .edgezone{fill:var(--yellow-soft); opacity:.7}
 .shape .podlab{font:800 15px var(--f-display); fill:var(--green)}
+.shape.withbacks .fnums{display:none}
+.rolecard{max-width:560px; gap:12px} .rolecard .podmini{max-width:320px; margin:0 auto; display:block}
+.podmini circle,.podmini text{transition:fill .3s}

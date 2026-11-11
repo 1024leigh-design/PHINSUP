@@ -7,15 +7,16 @@
     },
     {
       "call": "\"Hold!\"",
-      "means": "Stay where you are and hold your spot. [HANNAH: confirm the Phins meaning]"
+      "means": "We're waiting for the \"Ball's out!\" call. Hold your spot until then."
     },
     {
       "call": "\"Up!\"",
       "means": "Defense, move up together. Line speed!"
     },
     {
-      "call": "\"Folding!\"",
-      "means": "I'm running around behind the ruck to get back into the line."
+      "call": "\"Shift!\"",
+      "means": "I'm running around behind the ruck to get back into the line.",
+      "phins": true
     },
     {
       "call": "\"Pod!\"",
