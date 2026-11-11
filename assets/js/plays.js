@@ -34,7 +34,7 @@
       h += '<rect x="0" y="0" width="285" height="150" rx="12" class="pcfield"/>' +
         '<line x1="27" y1="8" x2="27" y2="142" class="tline"/><line x1="82" y1="8" x2="82" y2="142" class="tline dash"/>' +
         '<text x="27" y="147" class="tlab" text-anchor="middle">touch</text><text x="82" y="147" class="tlab" text-anchor="middle">5m</text>';
-      [[60,40],[95,58],[130,58],[165,58],[228,58]].forEach(function(o){ h += '<circle class="lo-o" cx="' + o[0] + '" cy="' + o[1] + '" r="10"/>'; });
+      [[60,40],[100,58],[140,58],[180,58],[220,58]].forEach(function(o){ h += '<circle class="lo-o" cx="' + o[0] + '" cy="' + o[1] + '" r="10"/>'; });
     }
     return h;
   }
@@ -50,8 +50,11 @@
   window.PhinsPlay = function(el, def){
     var id = ++uid, E = Phins.esc, cur = 0, timer = null, pos = [];
     // work out every actor's position at every step (carry-over)
-    var last = {};
-    def.steps.forEach(function(s, i){ Object.keys(s.pos || {}).forEach(function(k){ last[k] = s.pos[k]; }); pos[i] = JSON.parse(JSON.stringify(last)); });
+    var last = {}, lastLab = {}, labs = [];
+    def.steps.forEach(function(s, i){
+      Object.keys(s.pos || {}).forEach(function(k){ last[k] = s.pos[k]; }); pos[i] = JSON.parse(JSON.stringify(last));
+      Object.keys(s.relabel || {}).forEach(function(k){ lastLab[k] = s.relabel[k]; }); labs[i] = JSON.parse(JSON.stringify(lastLab));
+    });
 
     var h = '<div class="play">' +
       '<div class="btnrow"><button type="button" class="btn small" data-act="play">▶ Play</button><button type="button" class="btn small ghost" data-act="next">⏭ Next step</button><button type="button" class="btn small ghost" data-act="restart">↺ Start over</button></div>' +
@@ -71,6 +74,10 @@
         if (!xy){ g.style.opacity = 0; return; }
         g.style.opacity = xy[2] === 0 ? 0 : 1;
         g.style.transform = "translate(" + xy[0] + "px," + xy[1] + "px)";
+        var a = def.actors[k], lb = labs[i][k];
+        var kind = lb ? lb[1] : a.kind, label = lb ? lb[0] : (a.label || "");
+        if (a.kind !== "ball" && a.kind !== "ruck") g.setAttribute("class", "actor k-" + kind + (g.classList.contains("picked") ? " picked" : ""));
+        var tx = g.querySelector("text"); if (tx && tx.textContent !== label){ tx.textContent = label; tx.setAttribute("font-size", label.length > 2 ? 7 : 11); tx.setAttribute("y", label.length > 2 ? 2.6 : 4); }
       });
       var ovs = svg.querySelectorAll("[data-ov]");
       for (var j = 0; j < ovs.length; j++) ovs[j].classList.toggle("on", (s.show || []).indexOf(ovs[j].getAttribute("data-ov")) >= 0);

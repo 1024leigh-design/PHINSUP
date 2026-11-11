@@ -383,3 +383,4 @@ html.touring .pager{display:none}
 .podmini circle,.podmini text{transition:fill .3s}
 .scalenote{font-size:14.5px; color:var(--muted); margin:-4px 0 0; font-style:italic}
 .playsvg .k-next text{font-size:7px}
+.techcards{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))} .techcards ul{font-size:16.5px}

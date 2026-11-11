@@ -3,19 +3,20 @@ Phins.ready(function(){
   var E = Phins.esc, R = Phins.rich;
   // Lineout call as an interactive play: set, move, lift and throw.
   function loPlay(c){
-    var actors = {h:{label:"H", name:"Hooker", kind:"hook"}, ball:{kind:"ball"}}, set = {h:[15,84], ball:[15,70]}, move = {}, lift = {}, roles = {h:"Throws straight down the middle to the jumper."}, jx = 0;
+    var NAMES = ["Front lifter", "Lifter / jumper", "Lifter / jumper", "Back lifter"], LAB = ["L", "L/J", "L/J", "L"];
+    var actors = {h:{label:"H", name:"Hooker", kind:"hook"}, ball:{kind:"ball"}}, set = {h:[15,84], ball:[15,70]}, move = {}, rel = {}, roles = {h:"Throws straight down the middle to the jumper."}, jx = 0;
     c.players.forEach(function(p, i){
-      var k = "p" + i, j = p.t === "J";
-      actors[k] = {label:p.t, name:j ? "Jumper" : "Lifter", kind:j ? "jump" : "lift"};
+      var k = "p" + i, j = i === c.jumper;
+      actors[k] = {label:LAB[i], name:NAMES[i], kind:"lift"};
       set[k] = [p.x, 104]; move[k] = [p.to != null ? p.to : p.x, 104];
-      roles[k] = j ? "Jumper. Go up, catch or tap the ball." : "Lifter. Lift on the thighs/shorts, hold, and bring the jumper down safely.";
-      if (j){ jx = move[k][0]; lift[k] = [jx, 72]; }
+      rel[k] = j ? ["J", "jump"] : ["L", "lift"];
+      roles[k] = (j ? "On this call, you're the jumper. " : "On this call, you lift. ") + "Everyone starts in the same spot; the call decides who jumps and who moves.";
+      if (j) jx = move[k][0];
     });
-    lift.ball = [jx, 56];
     return {title:"Lineout " + c.letter, bg:"lineout", viewBox:"0 0 285 150", actors:actors, roles:roles, steps:[
-      {name:"Set", text:"Line up. J = jumper, L = lifter, H = hooker.", pos:set},
-      {name:"Move", text:c.how, pos:move},
-      {name:"Lift & throw", text:"Lift on the thighs/shorts. The hooker throws straight down the middle to the jumper.", pos:lift}]};
+      {name:"Set", text:"We always start in the same spot: four players, equally spaced. L = lifter, L/J = lifter or jumper, H = hooker.", pos:set},
+      {name:"Move", text:c.how, pos:move, relabel:rel},
+      {name:"Throw", text:"The lifters lift, the jumper goes up, and the hooker throws straight down the middle to the jumper.", pos:{ball:[jx, 92]}}]};
   }
 
   Phins.load("playbook").then(function(d){
@@ -27,7 +28,7 @@ Phins.ready(function(){
     }).join("");
     if (el) el.querySelectorAll(".loplay").forEach(function(box){ PhinsPlay(box, loPlay(d.lineoutCalls[+box.getAttribute("data-i")])); });
     if ((el = document.getElementById("scrumcalls"))) el.innerHTML = d.scrumCalls.map(function(c){
-      return '<article class="dcard is-phins"><h3 class="term">' + R(c.name) + '</h3><p><b>Means:</b> ' + R(c.means) + '</p><p><b>Who does what:</b> ' + R(c.who) + '</p></article>';
+      return '<article class="dcard is-phins"><h3 class="term">' + R(c.name) + '</h3><p>' + R(c.means) + '</p>' + (c.who ? '<p>' + R(c.who) + '</p>' : '') + '</article>';
     }).join("");
     if ((el = document.getElementById("maulcalls"))) el.innerHTML = d.maulCalls.map(function(c){
       return '<article class="dcard is-phins"><span class="tag' + (c.side === "Defense" ? " pink" : "") + '">' + E(c.side || "") + '</span><h3 class="term">' + E(c.name) + '</h3>' +

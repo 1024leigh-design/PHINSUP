@@ -76,136 +76,125 @@
     {
       "letter": "P",
       "pod": "Front pod",
-      "how": "Jumper and back lifter meet the front lifter. The front lifter does not move.",
+      "how": "Front pod. The jumper and the back lifter meet the front lifter. The front lifter does not move.",
       "example": "Pepperoni Pizza!",
       "players": [
         {
-          "t": "L",
           "x": 100,
           "to": 100
         },
         {
-          "t": "J",
-          "x": 130,
+          "x": 140,
           "to": 124
         },
         {
-          "t": "L",
-          "x": 160,
+          "x": 180,
           "to": 148
         },
         {
-          "t": "L",
-          "x": 230,
-          "to": 230
+          "x": 220,
+          "to": 220
         }
-      ]
+      ],
+      "jumper": 1
     },
     {
       "letter": "H",
       "pod": "Front pod",
-      "how": "The front lifter moves back to lift the jumper.",
+      "how": "Front pod. The front lifter moves back to lift the jumper.",
       "example": "Hannah Hartman!",
       "players": [
         {
-          "t": "L",
           "x": 100,
+          "to": 118
+        },
+        {
+          "x": 140,
           "to": 140
         },
         {
-          "t": "J",
-          "x": 165,
-          "to": 165
+          "x": 180,
+          "to": 162
         },
         {
-          "t": "L",
-          "x": 198,
-          "to": 190
-        },
-        {
-          "t": "L",
-          "x": 230,
-          "to": 230
+          "x": 220,
+          "to": 220
         }
       ],
-      "arrows": [
-        [
-          118,
-          147,
-          120
-        ]
-      ]
+      "jumper": 1
     },
     {
       "letter": "I",
       "pod": "Back pod",
-      "how": "The second person becomes a lifter and turns to lift the jumper.",
+      "how": "Back pod. The second person becomes a lifter and turns to lift the jumper.",
       "example": "Ice Cream!",
       "players": [
         {
-          "t": "L",
           "x": 100,
           "to": 100
         },
         {
-          "t": "L",
-          "x": 142,
-          "to": 152
+          "x": 140,
+          "to": 158
         },
         {
-          "t": "J",
-          "x": 177,
-          "to": 177
+          "x": 180,
+          "to": 180
         },
         {
-          "t": "L",
-          "x": 211,
+          "x": 220,
           "to": 202
         }
-      ]
+      ],
+      "jumper": 2
     },
     {
       "letter": "N",
       "pod": "Back pod",
-      "how": "The second person becomes a lifter and turns to lift the jumper. The pod is farther back.",
+      "how": "Back pod. The second person becomes a lifter and turns to lift the jumper. The pod moves farther back.",
       "example": "N!",
       "tbd": true,
       "players": [
         {
-          "t": "L",
           "x": 100,
           "to": 100
         },
         {
-          "t": "L",
-          "x": 190,
-          "to": 214
+          "x": 140,
+          "to": 184
         },
         {
-          "t": "J",
+          "x": 180,
+          "to": 206
+        },
+        {
           "x": 220,
-          "to": 240
-        },
-        {
-          "t": "L",
-          "x": 254,
-          "to": 266
+          "to": 228
         }
       ],
-      "arrows": [
-        [
-          208,
-          232,
-          142
-        ]
-      ]
+      "jumper": 2
     }
   ],
   "scrumCalls": [
     {
-      "name": "[HANNAH TO PROVIDE: call name]",
-      "means": "[HANNAH TO PROVIDE: what it means]",
-      "who": "[HANNAH TO PROVIDE: who does what]"
+      "name": "PONY",
+      "means": "We don't push. We only engage and hold our weight.",
+      "who": "Used when the other team keeps pushing early and we need the ref to see it more clearly."
+    },
+    {
+      "name": "LOCK OUT",
+      "means": "Lock out on our offensive scrums so we don't get pushed back.",
+      "who": ""
+    },
+    {
+      "name": "Push, two, three",
+      "means": "Our pushing cadence: \"Push, two, three. Push, two, three.\"",
+      "who": "**Push** = extend your hips and knees. **Two, three** = reset your feet."
+    },
+    {
+      "name": "PIERRE",
+      "means": "Our eight man pick: the 8 picks the ball up from the base of the scrum. [HANNAH: confirm the name]",
+      "who": ""
     }
   ],
   "maulCalls": [
@@ -263,5 +252,5 @@
       "step": "[HANNAH TO PROVIDE: how we get out of our own 22]"
     }
   ],
-  "lineoutHowto": "x = where each player starts, to = where they end up after the call (touch line is at 27, the dashed 5m line at 82, right edge 285). Leave example empty to hide it. Player names: use initials (except Hannah), since this repo is public."
+  "lineoutHowto": "Everyone starts in the same 4 spots (x 100, 140, 180, 220: front lifter, two lifter/jumpers, back lifter). jumper = which player jumps (0 = front). to = where each player ends up after the call. Player names: use initials (except Hannah), since this repo is public."
 }

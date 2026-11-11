@@ -367,6 +367,24 @@
           "phins": true,
           "def": "Maul defense call off their lineout. ENGAGE! Stop the maul!",
           "see": "mauls.html"
+        },
+        {
+          "term": "PONY",
+          "phins": true,
+          "def": "Scrum call: we don't push, we only engage and hold our weight. Used when the other team keeps pushing early.",
+          "see": "scrum-calls.html"
+        },
+        {
+          "term": "LOCK OUT",
+          "phins": true,
+          "def": "Scrum call: lock out on our offensive scrums so we don't get pushed back.",
+          "see": "scrum-calls.html"
+        },
+        {
+          "term": "PIERRE",
+          "phins": true,
+          "def": "Our eight man pick call.",
+          "see": "scrum-calls.html"
         }
       ]
     },
