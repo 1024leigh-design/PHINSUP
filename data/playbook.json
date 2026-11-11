@@ -227,8 +227,9 @@
       "points": [
         "ENGAGE!",
         "We bring our jumper down. The jumper and two lifters are the first three in, staying tight.",
-        "Everyone else folds in, binding on the back, and drives forward.",
-        "Recycle if we're not moving, getting pushed back, or turning.",
+        "The player at the back of the lineout is the **stripper**: they strip the ball from the jumper.",
+        "Everyone else folds in, binding on the back. As they fold in, the stripper moves to the back of the maul with the ball.",
+        "Drive forward. Recycle if we're not moving, getting pushed back, or turning.",
         "5 seconds of no forward progress by us = turnover to THEM. Present the ball to the 9 to prevent that."
       ],
       "play": "maulattack"

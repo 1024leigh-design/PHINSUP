@@ -385,6 +385,12 @@
           "phins": true,
           "def": "Our eight man pick call.",
           "see": "scrum-calls.html"
+        },
+        {
+          "term": "Stripper",
+          "phins": true,
+          "def": "In our maul, the player from the back of the lineout who strips the ball from the jumper, then moves to the back of the maul.",
+          "see": "mauls.html"
         }
       ]
     },

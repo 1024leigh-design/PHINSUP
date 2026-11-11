@@ -1255,6 +1255,11 @@
         "name": "Back lifter",
         "kind": "lift"
       },
+      "s": {
+        "label": "S",
+        "name": "Stripper",
+        "kind": "lift"
+      },
       "p1": {
         "label": "F",
         "name": "Forward",
@@ -1285,19 +1290,20 @@
       }
     },
     "roles": {
-      "j1": "Catch it, come down, and stay tight with your two lifters. You're one of the first three in.",
+      "j1": "Catch it and come down. The stripper takes the ball from you. You and your two lifters are the first three in, staying tight.",
       "l1": "Bring the jumper down and stay tight. One of the first three in.",
       "l2": "Bring the jumper down and stay tight. One of the first three in.",
       "p1": "Fold in and bind on the back. Drive forward.",
       "p2": "Fold in and bind on the back. Drive forward.",
       "p3": "Fold in and bind on the back. Drive forward.",
       "h": "After the throw, fold in and bind on the back. Drive forward.",
-      "nine": "Stay behind the maul, ready for the ball."
+      "nine": "Stay behind the maul, ready for the ball.",
+      "s": "The stripper: you're at the back of the lineout. Strip the ball from the jumper, then move to the back of the maul as everyone folds in."
     },
     "steps": [
       {
         "name": "Catch",
-        "text": "Our jumper catches the throw.",
+        "text": "Our jumper catches the throw. The player at the back of the lineout is the **stripper**.",
         "pos": {
           "m1": [
             110,
@@ -1331,16 +1337,20 @@
             174,
             112
           ],
+          "s": [
+            204,
+            112
+          ],
           "ball": [
             150,
             92
           ],
           "p1": [
-            220,
+            230,
             150
           ],
           "p2": [
-            244,
+            252,
             164
           ],
           "p3": [
@@ -1353,13 +1363,13 @@
           ],
           "nine": [
             150,
-            186
+            188
           ]
         }
       },
       {
         "name": "First three",
-        "text": "We bring our jumper down. **The jumper and the two lifters are the first three in**, staying tight.",
+        "text": "We bring our jumper down. **The jumper and the two lifters are the first three in**, staying tight. The **stripper strips the ball** from the jumper.",
         "pos": {
           "l1": [
             134,
@@ -1373,22 +1383,26 @@
             166,
             100
           ],
+          "s": [
+            150,
+            124
+          ],
           "ball": [
             150,
-            118
+            132
           ]
         }
       },
       {
         "name": "Fold in",
-        "text": "Everyone else **folds in, binding on the back**.",
+        "text": "Everyone else **folds in, binding on the back**. As they fold in, the **stripper moves to the back** of the maul with the ball.",
         "pos": {
           "p1": [
-            140,
+            138,
             124
           ],
           "p2": [
-            160,
+            162,
             124
           ],
           "p3": [
@@ -1398,6 +1412,18 @@
           "h": [
             150,
             156
+          ],
+          "s": [
+            150,
+            172
+          ],
+          "ball": [
+            150,
+            180
+          ],
+          "nine": [
+            150,
+            196
           ]
         }
       },
@@ -1417,16 +1443,12 @@
             166,
             76
           ],
-          "ball": [
-            150,
-            94
-          ],
           "p1": [
-            140,
+            138,
             100
           ],
           "p2": [
-            160,
+            162,
             100
           ],
           "p3": [
@@ -1437,9 +1459,17 @@
             150,
             132
           ],
+          "s": [
+            150,
+            148
+          ],
+          "ball": [
+            150,
+            156
+          ],
           "nine": [
             150,
-            162
+            174
           ],
           "m1": [
             112,
@@ -1465,15 +1495,11 @@
       },
       {
         "name": "Use it",
-        "text": "5 seconds of no forward progress by us = **turnover to them**. Present the ball to the 9 to prevent that.",
+        "text": "5 seconds of no forward progress by us = **turnover to them**. The stripper presents the ball to the 9 to prevent that.",
         "pos": {
           "ball": [
             150,
-            150
-          ],
-          "nine": [
-            150,
-            160
+            170
           ]
         }
       }
