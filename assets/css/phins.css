@@ -368,3 +368,4 @@ html.touring .lostbtn{bottom:96px}
 @media (max-width:560px){ .tourbar .btn.small{flex:1 1 auto} }
 html.touring .pager{display:none}
 @media (max-width:560px){ html.touring .lostbtn{bottom:140px} }
+.linkbtn{border:0; background:none; padding:0; color:var(--green); font-weight:700; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit}

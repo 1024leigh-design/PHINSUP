@@ -1,5 +1,5 @@
 {
-  "_howto": "Each tab has a list of terms. Fields: term, def, icon (optional emoji), see (optional page link), phins (true = Phins team term, gets the dolphin badge).",
+  "_howto": "Each tab has a list of terms. Fields: term, def, icon (optional), see (optional page link), phins (true = Phins team term, gets the dolphin badge), key (true = shown as a key word on the Through the field tour).",
   "tabs": [
     {
       "id": "breakdown",
@@ -42,12 +42,14 @@
           "def": "General term for everything that happens at the tackle and ruck."
         },
         {
-          "term": "Jackal / Pilfer",
-          "def": "A player on their feet grabbing the ball at the tackle before a ruck forms. Legal only before the ruck forms."
+          "term": "Jackal",
+          "def": "A player on their feet grabbing the ball at the tackle before a ruck forms. Legal only before the ruck forms.",
+          "key": true
         },
         {
           "term": "Clean out",
-          "def": "Driving opponents away from the ball at the ruck."
+          "def": "Driving opponents away from the ball at the ruck.",
+          "key": true
         },
         {
           "term": "Counter ruck",
@@ -60,7 +62,8 @@
         },
         {
           "term": "Hindmost foot",
-          "def": "The back foot of the last player in the ruck. It sets the offside line."
+          "def": "The back foot of the last player in the ruck. It sets the offside line.",
+          "key": true
         },
         {
           "term": "The gate",
@@ -89,7 +92,8 @@
         },
         {
           "term": "Phase",
-          "def": "Each new attack after a ruck. Phase 1, phase 2, and so on."
+          "def": "Each new attack after a ruck. Phase 1, phase 2, and so on.",
+          "key": true
         },
         {
           "term": "Pod",
@@ -153,11 +157,13 @@
         },
         {
           "term": "Gain line",
-          "def": "Imaginary line across the field where the last breakdown was. Getting past it = going forward."
+          "def": "Imaginary line across the field where the last breakdown was. Getting past it = going forward.",
+          "key": true
         },
         {
           "term": "Pick and go",
-          "def": "Picking the ball up from the base of a ruck and charging straight forward."
+          "def": "Picking the ball up from the base of a ruck and charging straight forward.",
+          "key": true
         },
         {
           "term": "Crash ball",
@@ -165,11 +171,13 @@
         },
         {
           "term": "Pop pass",
-          "def": "A short, soft pass to a teammate right next to you, usually in contact."
+          "def": "A short, soft pass to a teammate right next to you, usually in contact.",
+          "key": true
         },
         {
           "term": "Offload",
-          "def": "Passing the ball while being tackled."
+          "def": "Passing the ball while being tackled.",
+          "key": true
         },
         {
           "term": "Dummy",
@@ -180,12 +188,38 @@
           "def": "A player running close to the carrier, ready for a pass or to protect the ball."
         },
         {
+          "term": "Unders",
+          "def": "Running a line toward the ruck.",
+          "key": true
+        },
+        {
+          "term": "Overs",
+          "def": "Running a line away from the ruck.",
+          "key": true
+        },
+        {
+          "term": "Flat / Deep",
+          "def": "Flat means you're close to the gain line. Deep means you're far back from it.",
+          "key": true
+        },
+        {
+          "term": "Switch",
+          "def": "The ball carrier runs across the field and a teammate cuts back behind them in the other direction to take the pass. Changes the direction of attack.",
+          "key": true
+        },
+        {
+          "term": "Loop",
+          "def": "You pass the ball, then run around behind the player you passed to and get it back on their outside.",
+          "key": true
+        },
+        {
           "term": "Latch",
           "def": "A teammate binding onto the carrier to drive them forward."
         },
         {
           "term": "Blindside / Openside",
-          "def": "The short side of the field from a breakdown / the wide side."
+          "def": "The short side of the field from a breakdown / the wide side.",
+          "key": true
         }
       ]
     },
@@ -204,7 +238,8 @@
         },
         {
           "term": "Line speed",
-          "def": "How fast the defensive line moves up."
+          "def": "How fast the defensive line moves up.",
+          "key": true
         },
         {
           "term": "Drift defense",
@@ -216,11 +251,8 @@
         },
         {
           "term": "Fold",
-          "def": "Running around behind a ruck to get back into the defensive line."
-        },
-        {
-          "term": "Guard / Pillar",
-          "def": "Defenders standing right next to the ruck to stop pick and go."
+          "def": "Running around behind a ruck to get back into the defensive line.",
+          "key": true
         },
         {
           "term": "Hold the line",
@@ -271,8 +303,8 @@
         },
         {
           "term": "Crouch, Bind, Set",
-          "def": "The ref's three calls to set up a scrum.",
-          "see": "scrum.html"
+          "def": "The ref's three calls to set up a scrum: crouch (get low), bind (props grip the opposing props), set (come together).",
+          "see": "scrum.html?cbs=1"
         },
         {
           "term": "Lineout",

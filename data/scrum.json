@@ -1,17 +1,165 @@
 {
   "_howto": "Callouts for the build-by-number scrum. side = where the callout sits on wide screens (left, right, top, bottom).",
   "players": [
-    {"n": 1, "name": "Loosehead Prop", "side": "left", "text": "Head goes outside the opposing tighthead. Bind on your hooker."},
-    {"n": 2, "name": "Hooker", "side": "top", "text": "Head goes between your two props. Bind over both props. You hook the ball back."},
-    {"n": 3, "name": "Tighthead Prop", "side": "right", "text": "Head goes between the opposing loosehead and hooker. Bind on your hooker."},
-    {"n": 4, "name": "Lock", "side": "left", "text": "Head goes in the gap between your hooker and loosehead. Shoulders on the prop's and hooker's hips. Bind with the other lock."},
-    {"n": 5, "name": "Lock", "side": "right", "text": "Head goes in the gap between your hooker and tighthead. Shoulders on the hips. Bind with the other lock."},
-    {"n": 6, "name": "Flanker", "side": "left", "text": "Bind on the outside of a lock. Shoulder on the prop. Be ready to get off fast on defense."},
-    {"n": 7, "name": "Flanker", "side": "right", "text": "Same as 6 on the other side. Get off quickly and pressure the opposition."},
-    {"n": 8, "name": "Number Eight", "side": "bottom", "text": "Head goes between your two locks. You control the ball at the base."}
+    {
+      "n": 1,
+      "name": "Loosehead Prop",
+      "side": "left",
+      "text": "Head goes outside the opposing tighthead. Bind on your hooker.",
+      "more": [
+        "**Prop battles:** don't let your opponent collapse you. Keep your hips up, back flat, and bind tight on your hooker.",
+        "**Boring in** means angling your push inward instead of straight. Refs penalize it, so push straight and watch for it from your opponent.",
+        "If your opponent isn't holding their own weight (leaning on you), don't hold them up. Stay square and on your feet. If they go down because they weren't supporting themselves, that's on them. Never pull down or collapse a scrum on purpose: it's a penalty and can cause serious neck injuries.",
+        "On Bind, your left arm binds on their tighthead's jersey (back or side)."
+      ]
+    },
+    {
+      "n": 2,
+      "name": "Hooker",
+      "side": "top",
+      "text": "Head goes between your two props. Bind over both props. You hook the ball back.",
+      "more": [
+        "We use the brake foot rule. Ask your coach to show you the brake foot position.",
+        "Your props hold you up so you can strike. Hook the ball back with your foot when the 9 puts it in.",
+        "Bind over both props and stay tight so there's no gap."
+      ]
+    },
+    {
+      "n": 3,
+      "name": "Tighthead Prop",
+      "side": "right",
+      "text": "Head goes between the opposing loosehead and hooker. Bind on your hooker.",
+      "more": [
+        "You're the cornerstone. If the tighthead goes backward, the scrum goes backward.",
+        "**Prop battles:** you take pressure from two heads. Keep your hips up, back flat, and stay square.",
+        "Watch for their loosehead **boring in** (angling inward onto your hooker). Push straight yourself.",
+        "If your opponent isn't holding their own weight, don't hold them up. Stay square and on your feet. Never pull down or collapse a scrum on purpose: it's a penalty and can cause serious neck injuries.",
+        "On Bind, your right arm binds on their loosehead's jersey (back or side)."
+      ]
+    },
+    {
+      "n": 4,
+      "name": "Lock",
+      "side": "left",
+      "text": "Head goes in the gap between your hooker and loosehead. Shoulders on the prop's and hooker's hips. Bind with the other lock.",
+      "more": [
+        "**Setting your feet:** start with both knees on the ground. Only start with one knee down if you have good mobility.",
+        "**Don't launch forward on \"Set.\"** No pushing early. Hold, then push straight once the ball is in.",
+        "Bind tight with the other lock, and keep your shoulders under the front row's hips."
+      ]
+    },
+    {
+      "n": 5,
+      "name": "Lock",
+      "side": "right",
+      "text": "Head goes in the gap between your hooker and tighthead. Shoulders on the hips. Bind with the other lock.",
+      "more": [
+        "**Setting your feet:** start with both knees on the ground. Only start with one knee down if you have good mobility.",
+        "**Don't launch forward on \"Set.\"** No pushing early. Hold, then push straight once the ball is in.",
+        "Bind tight with the other lock, and keep your shoulders under the front row's hips."
+      ]
+    },
+    {
+      "n": 6,
+      "name": "Flanker",
+      "side": "left",
+      "text": "Bind on the outside of a lock. Shoulder on the prop. Be ready to get off fast on defense.",
+      "more": [
+        "**Defense vs offense:** on defense, your job is to get off fast once the ball is out and pressure them. On offense, stay bound and help hold the shape.",
+        "Sometimes flankers push into the prop. Some props prefer that doesn't happen because it can mess up the shape. Talk to your prop.",
+        "Keep your feet out of the way of the locks and the ball.",
+        "Stay bound with your arm until the ball is out."
+      ]
+    },
+    {
+      "n": 7,
+      "name": "Flanker",
+      "side": "right",
+      "text": "Same as 6 on the other side. Get off quickly and pressure the opposition.",
+      "more": [
+        "**Defense vs offense:** on defense, your job is to get off fast once the ball is out and pressure them. On offense, stay bound and help hold the shape.",
+        "Sometimes flankers push into the prop. Some props prefer that doesn't happen because it can mess up the shape. Talk to your prop.",
+        "Keep your feet out of the way of the locks and the ball.",
+        "Stay bound with your arm until the ball is out."
+      ]
+    },
+    {
+      "n": 8,
+      "name": "Number Eight",
+      "side": "bottom",
+      "text": "Head goes between your two locks. You control the ball at the base.",
+      "more": [
+        "Only the 8 can pick the ball up from the base of the scrum (the eight man pick).",
+        "Use your feet to control the ball at the base while you and the 9 decide what happens next.",
+        "Stay bound between the locks until you play the ball."
+      ]
+    }
   ],
   "notInScrum": {
     "9": "The 9 isn't bound in the scrum. They put the ball in, then follow it to the back to play it.",
     "backs": "Backs aren't in the scrum. They stand back, at least 5 meters behind the back foot of the scrum, until the ball is out."
+  },
+  "cbs": {
+    "_howto": "Crouch / Bind / Set popup. stages: what changes. players: what each of OUR players does at each stage.",
+    "stages": [
+      {
+        "name": "Crouch",
+        "gap": 34,
+        "text": "Both front rows crouch, close together but not touching yet. Everyone behind is already bound on. Hips just above knees, back flat, chin up."
+      },
+      {
+        "name": "Bind",
+        "gap": 22,
+        "text": "Each prop binds on the prop across from them, gripping the back or side of their jersey. Still no contact between heads, and no pushing."
+      },
+      {
+        "name": "Set",
+        "gap": 0,
+        "text": "The front rows come together and the heads interlock. The scrum holds still and square. No pushing until the 9 puts the ball in. Then the hooker hooks it back."
+      }
+    ],
+    "players": {
+      "1": [
+        "Crouch with your shoulders above your hips. You're already bound on your hooker.",
+        "Bind on their tighthead (their 3) with your left arm, on the back or side of their jersey.",
+        "Come together with your head outside their tighthead. Hold square and steady."
+      ],
+      "2": [
+        "Crouch, bound over both props. Get your feet ready.",
+        "Stay bound over both props. Feet ready.",
+        "Head between your props, brake foot in place. Strike when the 9 puts the ball in."
+      ],
+      "3": [
+        "Crouch with your shoulders above your hips. You're already bound on your hooker.",
+        "Bind on their loosehead (their 1) with your right arm, on the back or side of their jersey.",
+        "Head between their loosehead and hooker. Hold square: if you go backward, the scrum goes backward."
+      ],
+      "4": [
+        "Knees set (both down, or one only if you have good mobility). Shoulders on the front row's hips. Bound with your lock.",
+        "Hold your position. Don't push yet.",
+        "Don't launch forward on Set! Hold, then push straight once the ball is in."
+      ],
+      "5": [
+        "Knees set (both down, or one only if you have good mobility). Shoulders on the front row's hips. Bound with your lock.",
+        "Hold your position. Don't push yet.",
+        "Don't launch forward on Set! Hold, then push straight once the ball is in."
+      ],
+      "6": [
+        "Bound on the outside of your lock, shoulder on the prop.",
+        "Hold. Stay bound.",
+        "Hold and stay bound until the ball is out."
+      ],
+      "7": [
+        "Bound on the outside of your lock, shoulder on the prop.",
+        "Hold. Stay bound.",
+        "Hold and stay bound until the ball is out."
+      ],
+      "8": [
+        "Head between the locks, bound on.",
+        "Hold. Stay bound.",
+        "Hold. Control the ball at the base once it comes back."
+      ]
+    },
+    "them": "The other team. Their front row lines up opposite ours: their loosehead (1) is across from our tighthead (3)."
   }
 }

@@ -216,5 +216,6 @@
 
   document.addEventListener("DOMContentLoaded", function(){ if (isUnlocked()) start(); else gate(); });
 
-  window.Phins = {esc:esc, rich:rich, load:load, param:param, ready:ready, pageId:pageId, loadFail:loadFail, reduced:reduced, PAGES:PAGES};
+  function touring(){ return sget("phins-tour") === "1" || param("tour") === "1"; }
+  window.Phins = {touring:touring, esc:esc, rich:rich, load:load, param:param, ready:ready, pageId:pageId, loadFail:loadFail, reduced:reduced, PAGES:PAGES};
 })();

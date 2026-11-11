@@ -1,14 +1,22 @@
 /* Quick Vocab: tabs of definition cards plus a search that filters across every tab. ?q=word and ?tab=id work. */
 Phins.ready(function(){
   var tabsEl = document.getElementById("tabs"), out = document.getElementById("vcards"), inp = document.getElementById("q"), count = document.getElementById("count");
-  var data, cur;
+  var data, cur, keyOnly = false;
   Phins.load("vocab").then(function(d){
+    // virtual first tab: key words (the ones marked "key": true)
+    var keys = []; d.tabs.forEach(function(t){ t.terms.forEach(function(x){ if (x.key) keys.push(x); }); });
+    d.tabs.unshift({id:"key", label:"Key words", terms:keys});
     data = d;
     tabsEl.innerHTML = d.tabs.map(function(t, i){
       return '<button type="button" role="tab" id="tab-' + t.id + '" aria-controls="vcards" data-tab="' + t.id + '">' + Phins.esc(t.label) + '</button>';
     }).join("");
     var q = Phins.param("q"), tab = Phins.param("tab");
-    cur = (d.tabs.filter(function(t){ return t.id === tab; })[0] || d.tabs[0]).id;
+    cur = (d.tabs.filter(function(t){ return t.id === tab; })[0] || d.tabs[Phins.touring() ? 0 : 1]).id;
+    if (Phins.touring() && !q && !tab){
+      keyOnly = true; cur = "key";
+      document.getElementById("keyintro").hidden = false; tabsEl.hidden = true; document.getElementById("searchform").hidden = true;
+      document.getElementById("showall").addEventListener("click", function(){ keyOnly = false; document.getElementById("keyintro").hidden = true; tabsEl.hidden = false; document.getElementById("searchform").hidden = false; show(); });
+    }
     if (q){ inp.value = q; }
     show();
   }).catch(function(){ Phins.loadFail(out, "vocab.json"); });

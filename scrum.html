@@ -18,8 +18,33 @@
 #panel{grid-area:panel}
 #scrumsvg{max-height:58vh}
 #scrumsvg .lab{font:600 12px var(--f-mono); letter-spacing:.06em; fill:var(--muted)}
-#scrumsvg .ghosthead{fill:var(--surface-2); stroke:var(--line); stroke-width:2; stroke-dasharray:5 4}
+.opp .body{fill:#1f3a5f; stroke:#14263f; stroke-width:2} .opp .head{fill:#3d5f8c; stroke:#14263f; stroke-width:2} .opp text{fill:#fff; font-family:var(--f-display); font-weight:800} .opp .bindline{stroke:#7f9cc4}
+.opp.on .body{stroke:var(--pink); stroke-width:4}
+.legend{display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:12px; font-size:15px; color:var(--muted)}
+.legend span{display:inline-flex; align-items:center; gap:6px}
+.legend svg{width:34px; height:20px; flex-shrink:0}
+.lg-body{fill:var(--green-soft); stroke:var(--green); stroke-width:2.5} .lg-head{fill:var(--surface); stroke:var(--green); stroke-width:2.5}
+.lg-bind{fill:none; stroke:var(--pink); stroke-width:3; stroke-linecap:round} .lg-opp{fill:#1f3a5f}
+
+.cmore{margin-top:8px; border-top:1.5px dashed var(--line); padding-top:6px}
+.cmore summary{cursor:pointer; font-weight:700; color:var(--green); font-size:16px; min-height:36px; display:flex; align-items:center}
+.cmore ul{margin:6px 0 0; padding-left:18px; display:grid; gap:6px; font-size:16px}
+#cbs{width:min(900px,96vw); max-height:94vh; border:0; border-radius:20px; padding:16px; background:var(--bg); color:var(--ink); box-shadow:0 20px 60px rgba(0,0,0,.35)}
+#cbs::backdrop{background:rgba(5,20,14,.55)}
+#cbs .dhead{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:6px}
+#cbs .x{border:0; background:var(--surface-2); border-radius:50%; width:44px; height:44px; font-size:26px; cursor:pointer; color:var(--ink)}
+#cbspills button{padding:0 12px; font-size:15px} #cbspills .nextst{background:var(--green); color:var(--on-green); border-color:var(--green)}
+.cbsgrid{display:grid; gap:14px; grid-template-columns:minmax(0,1fr)}
+@media (min-width:760px){ .cbsgrid{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); align-items:start} }
+#cbssvg{width:100%; height:auto; max-height:60vh; background:var(--surface); border:1.5px solid var(--line); border-radius:16px}
+#cbssvg .lab{font:600 12px var(--f-mono); letter-spacing:.06em; fill:var(--muted)}
+#cbssvg .midline{stroke:var(--line); stroke-width:2; stroke-dasharray:6 6}
+#cbssvg .crossbind{fill:none; stroke:var(--pink); stroke-width:3.5; stroke-linecap:round}
+#cbssvg [data-n]{cursor:pointer}
+.cbsinfo{font-size:17px; margin-top:10px; min-height:3em}
+.lgsmall{font-size:14px; color:var(--muted); margin-top:6px}
 .sp{transition:opacity .45s ease, transform .45s ease; transform-box:fill-box; transform-origin:center}
+#cbssvg .pl,#cbssvg .opp{transition:none}
 .sp.hidden{opacity:0; transform:translateY(16px) scale(.92); pointer-events:none}
 .sp .bindline{opacity:.8}
 .controls{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:6px 0 12px}
@@ -63,55 +88,67 @@
 
   <ul class="keys">
     <li><b>Who</b><span>All 8 forwards from each team.</span></li>
-    <li><b>When</b><span>To restart after small mistakes (knock-on, forward pass) and some other stoppages.</span></li>
-    <li><b>Shape</b><span>3-4-1: front row, then locks + flankers, then the 8.</span></li>
-    <li><b>Calls</b><span>Crouch, Bind, Set (the ref calls these).</span></li>
+    <li><b>When</b><span>To restart after small mistakes, like a knock-on or forward pass.</span></li>
+    <li><b>Shape: 3-2-3</b><span>3 in the front row (props + hooker), 2 in the second row (locks), 3 in the back row (flankers + 8).</span></li>
+    <li><b>Body position</b><span>Everyone: hips just above knees, back flat, chin up.</span></li>
+    <li><b>The calls</b><span>The ref calls Crouch, Bind, Set. <button type="button" class="linkbtn" data-open-cbs>What do they mean?</button></span></li>
   </ul>
+  <p style="margin-top:12px"><button type="button" class="btn pink" data-open-cbs>See Crouch, Bind, Set with both teams</button></p>
 
   <section aria-labelledby="h-build">
-    <div class="sec"><h2 id="h-build">Build a scrum, one number at a time</h2></div>
-    <div class="controls" role="group" aria-label="Scrum animation controls">
-      <button class="btn" id="b-play" type="button">▶ Play</button>
-      <button class="btn ghost" id="b-next" type="button">⏭ Next player</button>
-      <button class="btn ghost small" id="b-replay" type="button">↺ Replay</button>
+    <div class="sec"><h2 id="h-build">Build a scrum, one player at a time</h2></div>
+    <div class="controls" role="group" aria-label="Build the scrum">
+      <button class="btn" id="b-add" type="button">Add the 1</button>
       <button class="btn ghost small" id="b-all" type="button">Show all</button>
+      <button class="btn ghost small" id="b-reset" type="button">Start over</button>
       <span class="status" id="status" aria-live="polite"></span>
     </div>
     <div class="stage" id="stage">
       <div class="slots" id="slots-top"></div>
       <div class="slots" id="slots-left"></div>
       <figure class="diagram dia">
-        <svg id="scrumsvg" viewBox="60 175 380 340" role="group" aria-label="Top-down scrum diagram. Tap a player to see their job."></svg>
+        <svg id="scrumsvg" viewBox="60 175 380 340" role="group" aria-label="Scrum seen from above. Tap a player to see their job."></svg>
       </figure>
       <div class="slots" id="slots-right"></div>
       <div class="slots" id="slots-bottom"></div>
       <div id="panel" aria-live="polite"></div>
       <svg id="leader" aria-hidden="true"></svg>
     </div>
-    <div class="numrow mchips" id="chips" aria-label="Players shown so far"></div>
+    <div class="numrow mchips" id="chips" aria-label="Players added so far"></div>
+    <div class="legend" aria-label="How to read the diagram">
+      <span><svg viewBox="0 0 40 22" aria-hidden="true"><rect x="2" y="3" width="36" height="16" rx="7" class="lg-body"/></svg>A player, seen from above (shoulders and back)</span>
+      <span><svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="8" class="lg-head"/></svg>Their head</span>
+      <span><svg viewBox="0 0 40 22" aria-hidden="true"><path d="M3 15 Q20 3 37 15" class="lg-bind"/></svg>A bind (arms)</span>
+      <span><svg viewBox="0 0 40 22" aria-hidden="true"><rect x="2" y="3" width="36" height="16" rx="7" class="lg-opp"/></svg>The other team</span>
+    </div>
   </section>
 
   <details class="more"><summary>Learn More 🤓</summary><div class="body">
     <h3>Loosehead vs tighthead</h3>
     <p>The loosehead (1) has one opponent's head next to theirs. The tighthead (3) has two, so they take pressure from both sides. <a href="positions.html?n=1">See the Prop card &rarr;</a></p>
-    <h3>Binding by position</h3>
-    <ul>
-      <li><b>Props:</b> bind on your hooker.</li>
-      <li><b>Hooker:</b> bind over both props.</li>
-      <li><b>Locks:</b> bind with each other, shoulders on the front row's hips.</li>
-      <li><b>Flankers:</b> bind on the outside of a lock, and stay bound with your arm until the ball is out.</li>
-      <li><b>8:</b> pack between the locks.</li>
-    </ul>
-    <h3>Body height and flat backs</h3>
-    <p>Hips just above knees, back flat, chin up.</p>
     <h3>Hooking vs channeling to the 8</h3>
     <p>The hooker hooks the ball back with their foot. It then travels back through the scrum to the base, where the 8 controls it until it's time to play.</p>
     <h3>When can each player break off?</h3>
     <ul><li>Flankers stay bound until the ball is out.</li><li>The 8 can pick the ball up from the base (the eight man pick).</li></ul>
-    <h3>Hooker brake foot rule</h3>
-    <p><span class="tag tagtodo">HANNAH: confirm</span></p>
+    <h3>Brake foot</h3>
+    <p>We use the brake foot rule. Hookers, ask your coach to show you the brake foot position.</p>
+    <p>Each player's own technique tips are in their <b>Learn more</b> when you tap them in the build above.</p>
     <p><a class="btn small pink" href="scrum-calls.html">See it: Phins scrum calls</a></p>
   </div></details>
+
+  <dialog id="cbs" aria-labelledby="cbs-title">
+    <div class="dhead"><h2 id="cbs-title">Crouch, Bind, Set</h2><button type="button" class="x" aria-label="Close">&times;</button></div>
+    <div class="numrow" id="cbspills" role="group" aria-label="Pick a call"></div>
+    <div class="cbsgrid">
+      <svg id="cbssvg" viewBox="60 14 420 534" role="group" aria-label="Both teams in a scrum. Tap a player."></svg>
+      <div>
+        <div class="infopanel" id="cbstext" aria-live="polite" style="margin-top:0"></div>
+        <p class="cbsinfo" id="cbsinfo" aria-live="polite"></p>
+        <p class="lgsmall">Green = us, navy = the other team, pink line = a bind.</p>
+      </div>
+    </div>
+  </dialog>
+
   <section><div data-quiz="scrum"></div></section>
 </main>
 </body>

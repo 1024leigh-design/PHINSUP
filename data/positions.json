@@ -55,7 +55,7 @@
       ],
       "group": "forwards",
       "name": "Locks",
-      "job": "You push straight through your props in the scrum. In the lineout you could lift, jump, or be in the back pod, depending on the call. In open play you're in a center pod and carry the ball in a pod of 3.",
+      "job": "The engine room. You push straight through your props in the scrum. In the lineout you could lift, jump, or be in the back pod, depending on the call. In open play you're in a center pod and carry the ball in a pod of 3.",
       "where": [
         "scrum",
         "lineout",
@@ -64,6 +64,7 @@
       "more": {
         "title": "Lock details",
         "points": [
+          "Locks are usually taller, so if you're tall this is a great spot for you. But anyone can play anything!",
           "In the scrum your head goes in the gap between your hooker and a prop, and your shoulders push on the front row's hips. Your power goes straight forward.",
           "Setting your feet: start with both knees on the ground. Only start with one knee down if you have good mobility.",
           "Don't launch forward on \"Set.\" No pushing early.",
