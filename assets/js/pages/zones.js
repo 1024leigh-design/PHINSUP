@@ -27,6 +27,6 @@ Phins.ready(function(){
     function hit(e){ var t = e.target.closest("[data-id]"); if (t) pick(t.getAttribute("data-id")); }
     svg.addEventListener("click", hit); row.addEventListener("click", hit);
     svg.addEventListener("keydown", function(e){ if (e.key === "Enter" || e.key === " "){ e.preventDefault(); hit(e); } });
-    info.innerHTML = "<p>👆 Tap a zone.</p>";
+    info.innerHTML = "<p>Tap a zone.</p>";
   }).catch(function(){ Phins.loadFail(info, "playbook.json"); });
 });

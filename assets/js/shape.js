@@ -34,14 +34,14 @@ window.PhinsShape = function(svg, row, info){
       showBacks = on;
       svg.setAttribute("viewBox", on ? "0 0 400 358" : "0 0 400 210");
       svg.classList.toggle("withbacks", on);
-      tg.textContent = on ? "➖ Hide backs" : "➕ Show backs (whole team)";
+      tg.textContent = on ? "Hide backs" : "Show backs (whole team)";
       tg.setAttribute("aria-pressed", on ? "true" : "false");
       note.hidden = !on;
       var bb = row.querySelectorAll(".isback"); for (var i = 0; i < bb.length; i++) bb[i].hidden = !on;
     }
     tg.addEventListener("click", function(){ setBacks(!showBacks); if (!showBacks && picked > 8) clear(); });
 
-    function clear(){ picked = 0; paint(0); info.innerHTML = "<p>👆 Pick your number to see where you usually are.</p>"; }
+    function clear(){ picked = 0; paint(0); info.innerHTML = "<p>Pick your number to see where you usually are.</p>"; }
     function paint(n){
       var inA = A.indexOf(n) >= 0, inB = B.indexOf(n) >= 0, edge = n === d.edgeLeft || n === d.edgeRight, center = !edge && n >= 1 && n <= 8;
       var gs = svg.querySelectorAll(".pl");
@@ -56,7 +56,7 @@ window.PhinsShape = function(svg, row, info){
       if (n > 8 && !showBacks) setBacks(true);
       var r = paint(n), t, title = "Number " + n;
       if (r.edge) t = "You're usually the <b>1</b> on an edge of our 1-3-3-1. " + Phins.rich(d.edges || "");
-      else if (r.center) t = (r.inA || r.inB ? "You're usually in center pod " + (r.inA ? "A" : "B") + ". " : "You're in one of the two center pods (the <b>3s</b>). ") + "The tight five are ALWAYS in a center pod, and the 8 usually joins them. You carry the ball in a pod of 3.";
+      else if (r.center) t = (r.inA || r.inB ? "You're usually in center pod " + (r.inA ? "A" : "B") + ". " : "You're in one of the two center pods (the <b>3s</b>). ") + "The tight five are in a center pod, and the 8 usually joins them. You carry the ball in a pod of 3.";
       else {
         var b = backs.filter(function(x){ return x.n === n; })[0];
         title = b ? n + " · " + b.name : "Backs";

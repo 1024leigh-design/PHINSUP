@@ -3,37 +3,30 @@
   "principles": [
     {
       "title": "Be adjustable.",
-      "icon": "🔄",
       "text": "Plans break. Adjust and keep going."
     },
     {
       "title": "Work together.",
-      "icon": "🤝",
       "text": "Nobody wins a ruck alone."
     },
     {
       "title": "Never go alone.",
-      "icon": "🐬",
       "text": "Always have support."
     },
     {
       "title": "Never let someone go alone.",
-      "icon": "💚",
       "text": "If a teammate carries, you're there."
     },
     {
       "title": "Stay out of the channel.",
-      "icon": "🚫",
       "text": "The sacred channel is the pass from the 9 to the 10. Don't block it."
     },
     {
       "title": "Flexibility over labels.",
-      "icon": "🏷️",
       "text": "Your number is a starting point, not a cage."
     },
     {
       "title": "Get to the ruck.",
-      "icon": "🏃",
       "text": "No matter where you're coming from."
     }
   ],
@@ -210,7 +203,6 @@
     {
       "name": "TANGO",
       "side": "Defense",
-      "icon": "💃",
       "points": [
         "Do not engage, part the sea.",
         "Only move laterally, you cannot leave the line."
@@ -220,7 +212,6 @@
     {
       "name": "SALSA",
       "side": "Defense",
-      "icon": "🌶️",
       "points": [
         "ENGAGE! Stop the maul!",
         "5 seconds of no forward progress by the opponent = turnover to PHINS!",
@@ -231,7 +222,6 @@
     {
       "name": "Lineout call + M word",
       "side": "Offense",
-      "icon": "🧱",
       "example": "Pizza Margherita, Hannah's Mom",
       "points": [
         "ENGAGE!",

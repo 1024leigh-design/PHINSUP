@@ -4,11 +4,9 @@
     {
       "id": "breakdown",
       "label": "Breakdown",
-      "icon": "🧱",
       "terms": [
         {
           "term": "Tackle",
-          "icon": "💥",
           "def": "A player with the ball is held by an opponent and brought to ground.",
           "see": "tackling.html"
         },
@@ -36,7 +34,6 @@
         },
         {
           "term": "Ruck",
-          "icon": "🧱",
           "def": "Ball is on the ground and at least one player from each team is on their feet, over the ball, in contact. No hands allowed.",
           "see": "openplay.html"
         },
@@ -46,7 +43,6 @@
         },
         {
           "term": "Jackal / Pilfer",
-          "icon": "🦊",
           "def": "A player on their feet grabbing the ball at the tackle before a ruck forms. Legal only before the ruck forms."
         },
         {
@@ -59,29 +55,24 @@
         },
         {
           "term": "Seal off",
-          "icon": "🚫",
           "def": "Diving or falling over the ball to protect it. Illegal. Stay on your feet.",
           "see": "penalties.html"
         },
         {
           "term": "Hindmost foot",
-          "icon": "🦶",
           "def": "The back foot of the last player in the ruck. It sets the offside line."
         },
         {
           "term": "The gate",
-          "icon": "🚪",
           "def": "You must join a ruck or tackle from directly behind it, \"through the gate,\" not from the side."
         },
         {
           "term": "\"Use it!\"",
-          "icon": "📣",
           "def": "Ref telling the 9 to play the ball now.",
           "see": "signals.html"
         },
         {
           "term": "\"Ball's out\"",
-          "icon": "📣",
           "def": "Ball has left the ruck, so the ruck is over and defenders can go.",
           "see": "calls.html"
         }
@@ -90,7 +81,6 @@
     {
       "id": "attack",
       "label": "Attack & Open Play",
-      "icon": "🏃",
       "terms": [
         {
           "term": "Open play",
@@ -103,7 +93,6 @@
         },
         {
           "term": "Pod",
-          "icon": "🐬",
           "phins": true,
           "def": "A group of 3 forwards who work together to carry, support, and ruck. Our pods are lead, plus, and lazy.",
           "see": "shape.html"
@@ -134,21 +123,18 @@
         },
         {
           "term": "Sacred channel",
-          "icon": "🚫",
           "phins": true,
           "def": "The passing line from the scrum half (9) to the 10. DO NOT BLOCK THE SACRED CHANNEL! The lazy waits for the ball to reach the 10 so the channel stays clear.",
           "see": "shape.html"
         },
         {
           "term": "HOT",
-          "icon": "🔥",
           "phins": true,
           "def": "Pod call. Once the first pod runs, the second pod sets up for the next pod in the same formation.",
           "see": "shape.html"
         },
         {
           "term": "FLASH",
-          "icon": "⚡",
           "phins": true,
           "def": "Pod call. The ball goes to the 10 through the sacred channel. Lead and plus still run through to confuse the defense.",
           "see": "shape.html"
@@ -163,7 +149,6 @@
         },
         {
           "term": "Slow ball",
-          "icon": "🐢",
           "def": "Ball that takes a long time to come out of the ruck. Gives the defense time to set."
         },
         {
@@ -207,7 +192,6 @@
     {
       "id": "defense",
       "label": "Defense",
-      "icon": "🛡️",
       "terms": [
         {
           "term": "Offside line",
@@ -220,7 +204,6 @@
         },
         {
           "term": "Line speed",
-          "icon": "⚡",
           "def": "How fast the defensive line moves up."
         },
         {
@@ -252,7 +235,6 @@
     {
       "id": "setpiece",
       "label": "Set Piece",
-      "icon": "🤝",
       "terms": [
         {
           "term": "Set piece",
@@ -260,7 +242,6 @@
         },
         {
           "term": "Scrum",
-          "icon": "🤝",
           "def": "8 forwards from each team bind and push to restart play after small mistakes like a knock-on.",
           "see": "scrum.html"
         },
@@ -290,13 +271,11 @@
         },
         {
           "term": "Crouch, Bind, Set",
-          "icon": "📣",
           "def": "The ref's three calls to set up a scrum.",
           "see": "scrum.html"
         },
         {
           "term": "Lineout",
-          "icon": "🙌",
           "def": "Restart after the ball goes out of bounds. Two lines of players, the hooker throws the ball in.",
           "see": "lineout.html"
         },
@@ -340,14 +319,12 @@
         },
         {
           "term": "TANGO",
-          "icon": "💃",
           "phins": true,
           "def": "Maul defense call off their lineout. Do not engage, part the sea. Only move laterally.",
           "see": "mauls.html"
         },
         {
           "term": "SALSA",
-          "icon": "🌶️",
           "phins": true,
           "def": "Maul defense call off their lineout. ENGAGE! Stop the maul!",
           "see": "mauls.html"
@@ -357,7 +334,6 @@
     {
       "id": "kicking",
       "label": "Kicking & Restarts",
-      "icon": "🦶",
       "terms": [
         {
           "term": "Kickoff",
@@ -414,7 +390,6 @@
     {
       "id": "ref",
       "label": "Ref & Game Flow",
-      "icon": "🙋",
       "terms": [
         {
           "term": "Advantage",
@@ -447,12 +422,10 @@
         },
         {
           "term": "Sin bin / Yellow card",
-          "icon": "🟨",
           "def": "10 minutes off the field. Your team plays a player down."
         },
         {
           "term": "Red card",
-          "icon": "🟥",
           "def": "Sent off for the rest of the match."
         },
         {
@@ -467,7 +440,6 @@
         },
         {
           "term": "\"Hands off!\" / \"Release!\" / \"Roll away!\"",
-          "icon": "📣",
           "def": "Ref warnings. Do it immediately."
         }
       ]

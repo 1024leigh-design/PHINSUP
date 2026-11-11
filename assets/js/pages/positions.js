@@ -27,11 +27,11 @@ Phins.ready(function(){
 
   for (var i = 0; i < segBtns.length; i++) segBtns[i].addEventListener("click", function(){ setGroup(this.getAttribute("data-group")); active = 0; paint(); card.innerHTML = hint(); });
 
-  function hint(){ return '<div class="infopanel"><p>👆 Tap a number to see that position\'s card.</p></div>'; }
+  function hint(){ return '<div class="infopanel"><p>Tap a number to see that position\'s card.</p></div>'; }
   function setGroup(g){
     group = g;
     for (var i = 0; i < segBtns.length; i++) segBtns[i].setAttribute("aria-pressed", segBtns[i].getAttribute("data-group") === g ? "true" : "false");
-    banner.innerHTML = '<span class="ic" aria-hidden="true">' + (g === "forwards" ? "🏷️" : "🔜") + '</span><div>' + R(g === "forwards" ? data.forwardsBanner : data.backsBanner) + '</div>';
+    banner.innerHTML = '<div>' + R(g === "forwards" ? data.forwardsBanner : data.backsBanner) + '</div>';
     paint();
     if (!active) card.innerHTML = hint();
   }

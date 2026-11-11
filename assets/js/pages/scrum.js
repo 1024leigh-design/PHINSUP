@@ -88,7 +88,7 @@ Phins.ready(function(){
     if (active) panel.innerHTML = calloutHtml(P[active], "div");
     else if (note) panel.innerHTML = '<div class="callout"><p>' + Phins.rich(note) + '</p></div>';
     else if (shown === 0) panel.innerHTML = '<p class="hint">Press <b>▶ Play</b> to build the scrum, or <b>⏭ Next player</b> to go one at a time.</p>';
-    else panel.innerHTML = '<p class="hint">👆 Tap any player to see their job.</p>';
+    else panel.innerHTML = '<p class="hint">Tap any player to see their job.</p>';
     var c = "";
     for (var k = 1; k <= shown; k++) c += '<button type="button" data-pick="' + k + '" aria-pressed="' + (k === active) + '">' + k + '</button>';
     chips.innerHTML = c;

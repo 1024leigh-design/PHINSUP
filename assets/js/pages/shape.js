@@ -23,10 +23,10 @@ Phins.ready(function(){
     document.getElementById("edges").innerHTML = R(d.edges || "");
     document.getElementById("nobanana").innerHTML = R(d.noBanana || "");
     roles.innerHTML = d.roles.map(function(x){
-      return '<article class="dcard is-phins">' + podMini(x.role) + '<h3 class="term"><span class="ic" aria-hidden="true">' + E(x.icon) + '</span>' + E(x.role) + '</h3><p class="def">' + R(x.text) + '</p></article>';
+      return '<article class="dcard is-phins">' + podMini(x.role) + '<h3 class="term">' + E(x.role) + '</h3><p class="def">' + R(x.text) + '</p></article>';
     }).join("");
     calls.innerHTML = (d.podCalls || []).map(function(c, i){
-      return '<article class="dcard is-phins playcard"><h3><span class="ic" aria-hidden="true">' + E(c.icon) + '</span>' + E(c.name) + '</h3>' +
+      return '<article class="dcard is-phins playcard"><h3>' + E(c.name) + '</h3>' +
         '<div data-play="' + E(c.diagram) + '"></div>' +
         '<details class="more" style="margin-top:0"><summary>The rules for ' + E(c.name) + '</summary><div class="body"><ul>' + c.points.map(function(p){ return '<li>' + R(p) + '</li>'; }).join("") + '</ul></div></details></article>';
     }).join("");

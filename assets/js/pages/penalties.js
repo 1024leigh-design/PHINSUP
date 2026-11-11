@@ -4,7 +4,7 @@ Phins.ready(function(){
   Promise.all([Phins.load("penalties"), Phins.load("signals")]).then(function(r){
     var d = r[0], sig = {}; r[1].signals.forEach(function(s){ sig[s.key] = s; });
     var COL = {penalty:"var(--pink)", freekick:"var(--yellow)", scrum:"var(--green)", choice:"var(--green)"};
-    oc.innerHTML = d.outcomes.map(function(o){ return '<article class="dcard" style="--c:' + COL[o.type] + '"><h3 class="term"><span class="ic" aria-hidden="true">' + E(o.icon) + '</span>' + E(o.name) + '</h3><p class="def">' + R(o.text) + '</p></article>'; }).join("");
+    oc.innerHTML = d.outcomes.map(function(o){ return '<article class="dcard" style="--c:' + COL[o.type] + '"><h3 class="term">' + E(o.name) + '</h3><p class="def">' + R(o.text) + '</p></article>'; }).join("");
     gold.innerHTML = d.golden.map(function(g){ return '<li>' + E(g) + '</li>'; }).join("");
     cards.innerHTML = d.cards.map(function(c){
       var s = sig[c.signal];

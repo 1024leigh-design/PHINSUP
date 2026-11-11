@@ -96,9 +96,9 @@
     function who(k){
       var all = svg.querySelectorAll(".actor"); for (var i = 0; i < all.length; i++) all[i].classList.toggle("picked", all[i].getAttribute("data-a") === k);
       var txt = (def.roles || {})[k];
-      tap.innerHTML = txt ? '👆 <b>' + E(def.actors[k].name || def.actors[k].label) + ':</b> ' + Phins.rich(txt) : "";
+      tap.innerHTML = txt ? '<b>' + E(def.actors[k].name || def.actors[k].label) + ':</b> ' + Phins.rich(txt) : "";
     }
-    tap.innerHTML = def.tapHint === false ? "" : "👆 Tap any player to see their job.";
+    tap.innerHTML = def.tapHint === false ? "" : "Tap any player to see their job.";
     svg.classList.add("instant"); go(0);   // first paint: no sliding in from the corner
     requestAnimationFrame(function(){ requestAnimationFrame(function(){ svg.classList.remove("instant"); }); });
     return {go:go};

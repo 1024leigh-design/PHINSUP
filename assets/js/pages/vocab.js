@@ -5,7 +5,7 @@ Phins.ready(function(){
   Phins.load("vocab").then(function(d){
     data = d;
     tabsEl.innerHTML = d.tabs.map(function(t, i){
-      return '<button type="button" role="tab" id="tab-' + t.id + '" aria-controls="vcards" data-tab="' + t.id + '">' + Phins.esc(t.icon + " " + t.label) + '</button>';
+      return '<button type="button" role="tab" id="tab-' + t.id + '" aria-controls="vcards" data-tab="' + t.id + '">' + Phins.esc(t.label) + '</button>';
     }).join("");
     var q = Phins.param("q"), tab = Phins.param("tab");
     cur = (d.tabs.filter(function(t){ return t.id === tab; })[0] || d.tabs[0]).id;

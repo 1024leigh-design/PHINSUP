@@ -27,12 +27,12 @@
       "q": "In open play, where are the tight five?",
       "options": [
         "On the edges",
-        "Always in a center pod",
+        "In a center pod",
         "Behind the backs",
         "Wherever they want"
       ],
       "answer": 1,
-      "why": "The tight five are always in a center pod and carry the ball in a pod of 3."
+      "why": "The tight five are in a center pod and carry the ball in a pod of 3."
     },
     {
       "q": "On the Phins, do locks always jump in the lineout?",

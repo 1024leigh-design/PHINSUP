@@ -45,7 +45,7 @@ Phins.ready(function(){
     svg.addEventListener("click", hit); row.addEventListener("click", hit);
     svg.addEventListener("keydown", function(e){ if ((e.key === "Enter" || e.key === " ") && e.target.closest(".pl")){ e.preventDefault(); hit(e); } });
     var hl = parseInt(Phins.param("highlight"), 10);
-    if (hl >= 1 && hl <= 15) pick(hl); else info.innerHTML = '<p>👆 Tap a number to see that job. ' + Phins.rich(d.note) + '</p>';
+    if (hl >= 1 && hl <= 15) pick(hl); else info.innerHTML = '<p>Tap a number to see that job. ' + Phins.rich(d.note) + '</p>';
     document.getElementById("lonote").innerHTML = Phins.rich(d.note);
   }).catch(function(){ Phins.loadFail(info, "lineout.json"); });
 });

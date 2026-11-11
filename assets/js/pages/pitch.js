@@ -33,6 +33,6 @@ Phins.ready(function(){
     }
     function hit(e){ var t = e.target.closest("[data-id]"); if (t) pick(t.getAttribute("data-id")); }
     svg.addEventListener("click", hit); row.addEventListener("click", hit);
-    info.innerHTML = "<p>👆 Tap a line on the field, or a button below.</p>";
+    info.innerHTML = "<p>Tap a line on the field, or a button below.</p>";
   }).catch(function(){ Phins.loadFail(info, "pitch.json"); });
 });

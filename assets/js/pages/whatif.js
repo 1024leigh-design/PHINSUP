@@ -26,8 +26,8 @@ Phins.ready(function(){
     var list = data.scenarios.filter(function(s){ return tag === "All" || s.tags.indexOf(tag) >= 0; });
     grid.innerHTML = list.length ? list.map(function(s, i){
       if (s.placeholder) return '<div class="wcard soon"><p class="wq">' + R(s.q) + '</p><p class="def">' + R(s.fix) + '</p></div>';
-      return '<div class="wcard" data-i="' + i + '"><button type="button" class="wflip" aria-expanded="false"><span class="wq">🧪 ' + R(s.q) + '</span><span class="whint">Tap to see the fix</span></button>' +
-        '<div class="wback" hidden><p class="wfix">✅ ' + R(s.fix) + '</p>' +
+      return '<div class="wcard" data-i="' + i + '"><button type="button" class="wflip" aria-expanded="false"><span class="wq">' + R(s.q) + '</span><span class="whint">Tap to see the fix</span></button>' +
+        '<div class="wback" hidden><p class="wfix">' + R(s.fix) + '</p>' +
         ((s.before || s.after) ? '<div class="wpair">' + mini(s.before, "Before") + mini(s.after, "After") + '</div><p class="wlegend">' + E(data.legend || "") + '</p>' : '') +
         '<div class="wtags">' + s.tags.map(function(t){ return '<span class="tag">' + E(t) + '</span>'; }).join("") + '</div>' +
         '<p class="wfoot">' + R(data.footer) + '</p></div></div>';

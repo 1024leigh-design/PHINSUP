@@ -9,19 +9,16 @@
     {
       "role": "Lead",
       "short": "Ld",
-      "icon": "🎯",
       "text": "The lead ball carrier. First to get the ball."
     },
     {
       "role": "Plus",
       "short": "Pl",
-      "icon": "➕",
       "text": "The outside supporter. Main supporter of the lead: first to the ruck, or takes the pop pass."
     },
     {
       "role": "Lazy",
       "short": "Lz",
-      "icon": "😎",
       "text": "The inside supporter, close to the ruck and a few feet behind the 9. Least running to get there, still gets to the ruck and supports."
     }
   ],
@@ -29,7 +26,6 @@
   "podCalls": [
     {
       "name": "HOT",
-      "icon": "🔥",
       "diagram": "hot",
       "points": [
         "Our lead (point) receives the ball **right in front of the fly half (10)**.",
@@ -40,7 +36,6 @@
     },
     {
       "name": "FLASH",
-      "icon": "⚡",
       "diagram": "flash",
       "points": [
         "The black line to the 10 shows the **sacred channel**. DO NOT BLOCK THE SACRED CHANNEL!",

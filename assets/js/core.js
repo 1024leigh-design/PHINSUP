@@ -26,6 +26,34 @@
     ]
   };
 
+  /* ---------- "Through the field": guided Next, Next, Next through every page ---------- */
+  var TOUR = ["positions","vocab","scrum","lineout","openplay","kickoffs","pitch","penalties","scoring","tackling","signals","first-match","safety","calls",
+              "playbook","shape","zones","lineout-calls","scrum-calls","mauls","kickoff-setup","exit-red-zone","whatif"];
+  function pageTitle(id){ var all = PAGES["1"].concat(PAGES["2"]); for (var i = 0; i < all.length; i++) if (all[i][0] === id) return all[i][1]; return id; }
+  function tourBar(){
+    var id = pageId();
+    if (param("tour") === "1"){ sset("phins-tour", "1"); }
+    if (param("tour") === "0" || id === "home"){ if (param("tour") === "0") sset("phins-tour", ""); }
+    if (sget("phins-tour") !== "1") return;
+    var i = TOUR.indexOf(id);
+    if (i >= 0) sset("phins-tour-at", String(i));
+    var at = i >= 0 ? i : parseInt(sget("phins-tour-at") || "0", 10);
+    var bar = document.createElement("nav"); bar.className = "tourbar"; bar.setAttribute("aria-label", "Through the field");
+    if (i < 0){
+      bar.innerHTML = '<div class="in"><span class="tlabel">Through the field</span><a class="btn small" href="' + TOUR[at] + '.html">Back to the tour: ' + esc(pageTitle(TOUR[at])) + '</a><button type="button" class="tx">Exit</button></div>';
+    } else {
+      var prev = i > 0 ? TOUR[i-1] : null, next = i < TOUR.length - 1 ? TOUR[i+1] : null;
+      bar.innerHTML = '<div class="in">' +
+        '<span class="tlabel">Through the field <b>' + (i+1) + ' of ' + TOUR.length + '</b></span>' +
+        '<div class="tprog" aria-hidden="true"><i style="width:' + Math.round((i+1)/TOUR.length*100) + '%"></i></div>' +
+        (prev ? '<a class="btn small ghost" href="' + prev + '.html">&larr; Back</a>' : '') +
+        (next ? '<a class="btn small" href="' + next + '.html">Next: ' + esc(pageTitle(next)) + ' &rarr;</a>' : '<a class="btn small pink" href="index.html?tour=0">Finish!</a>') +
+        '<button type="button" class="tx">Exit</button></div>';
+    }
+    document.body.appendChild(bar); root.classList.add("touring");
+    bar.querySelector(".tx").addEventListener("click", function(){ sset("phins-tour", ""); bar.remove(); root.classList.remove("touring"); });
+  }
+
   /* ---------- password gate ---------- */
   function hash(s){ var h = 5381; for (var i = 0; i < s.length; i++){ h = ((h << 5) + h + s.charCodeAt(i)) | 0; } return "v1-" + (h >>> 0).toString(36); }
   var KEY = hash(String(CFG.password));
@@ -85,9 +113,9 @@
     var h = document.createElement("header"); h.className = "topbar";
     h.innerHTML = '<div class="in"><a class="brand" href="index.html" aria-label="Phins home">🐬 <span>Phins</span></a>' +
       '<nav class="navlinks" aria-label="Main">' +
-      '<a href="basics.html"' + (sec === "1" || id === "basics" ? ' aria-current="page"' : '') + '>🌱 <span class="long">Rugby </span>Basics</a>' +
-      '<a href="playbook.html"' + (sec === "2" ? ' aria-current="page"' : '') + '>🐬 Playbook</a>' +
-      '<a href="vocab.html"' + (id === "vocab" ? ' aria-current="page"' : '') + '>🔎 Vocab</a></nav>' +
+      '<a href="basics.html"' + (sec === "1" || id === "basics" ? ' aria-current="page"' : '') + '><span class="long">Rugby </span>Basics</a>' +
+      '<a href="playbook.html"' + (sec === "2" ? ' aria-current="page"' : '') + '>Playbook</a>' +
+      '<a href="vocab.html"' + (id === "vocab" ? ' aria-current="page"' : '') + '>Vocab</a></nav>' +
       '<div class="seg" role="group" aria-label="Theme"><button type="button" data-theme-btn="classic">Classic</button><button type="button" data-theme-btn="sparkle" aria-label="Sparkle theme">✨<span class="long"> Sparkle</span></button></div></div>';
     document.body.insertBefore(h, document.body.firstChild);
     h.querySelector(".seg").addEventListener("click", function(e){
@@ -121,13 +149,13 @@
       var qs = all[id];
       if (!qs || !qs.length){ el.innerHTML = '<div class="todo">Quiz questions for this page go in data/quizzes.json under "' + esc(id) + '".</div>'; return; }
       var done = 0, right = 0;
-      var h = '<div class="quiz" aria-labelledby="qh-' + esc(id) + '"><h2 id="qh-' + esc(id) + '">✅ Self-check</h2>';
+      var h = '<details class="more selfcheck"><summary>Self-check: ' + qs.length + ' quick questions</summary><div class="quiz">';
       qs.forEach(function(q, qi){
         h += '<div class="q" data-qi="' + qi + '"><p class="qt">' + (qi+1) + '. ' + rich(q.q) + '</p><div class="opts">';
         q.options.forEach(function(o, oi){ h += '<button type="button" data-oi="' + oi + '">' + rich(o) + '</button>'; });
         h += '</div><div class="fb" aria-live="polite" hidden></div></div>';
       });
-      h += '<p class="score" aria-live="polite" hidden></p></div>';
+      h += '<p class="score" aria-live="polite" hidden></p></div></details>';
       el.innerHTML = h;
       el.addEventListener("click", function(e){
         var b = e.target.closest(".opts button"); if (!b || b.disabled) return;
@@ -137,23 +165,11 @@
         if (!ok) b.classList.add("wrong");
         var fb = qd.querySelector(".fb"); fb.hidden = false; fb.className = "fb " + (ok ? "good" : "bad");
         var extra = (!ok && q.feedback && q.feedback[oi]) ? " " + rich(q.feedback[oi]) : "";
-        fb.innerHTML = "<b>" + (ok ? "Yes! 🎉" : "Not quite.") + "</b>" + extra + " " + rich(q.why || "");
+        fb.innerHTML = "<b>" + (ok ? "Yes!" : "Not quite.") + "</b>" + extra + " " + rich(q.why || "");
         done++; if (ok) right++;
-        if (done === qs.length){ var s = el.querySelector(".score"); s.hidden = false; s.textContent = "You got " + right + " of " + qs.length + ". " + (right === qs.length ? "Legend! 🐬" : "Rugby is chaos. Try the page again anytime. 💚"); }
+        if (done === qs.length){ var s = el.querySelector(".score"); s.hidden = false; s.textContent = "You got " + right + " of " + qs.length + ". " + (right === qs.length ? "Legend!" : "Rugby is chaos. Try the page again anytime."); }
       });
     }).catch(function(){ loadFail(el, "quizzes.json"); });
-  }
-
-  /* ---------- "Watch this" clip slots ---------- */
-  function videos(el){
-    var id = el.getAttribute("data-videos") || pageId();
-    load("videos").then(function(all){
-      var v = all[id] || [];
-      var h = '<section aria-labelledby="vh-' + esc(id) + '"><div class="sec"><h2 id="vh-' + esc(id) + '">🎬 Watch this</h2></div>';
-      if (!v.length) h += '<div class="todo">[HANNAH TO PROVIDE] clip links for this page. Add them to data/videos.json under "' + esc(id) + '".</div>';
-      else { h += '<div class="grid">'; v.forEach(function(x){ h += '<a class="tile" href="' + esc(x.url) + '" target="_blank" rel="noopener"><span class="ic">▶️</span><span class="t">' + esc(x.title) + '</span>' + (x.note ? '<span class="d">' + esc(x.note) + '</span>' : '') + '</a>'; }); h += '</div>'; }
-      el.innerHTML = h + '</section>';
-    }).catch(function(){ loadFail(el, "videos.json"); });
   }
 
   /* ---------- gate screen ---------- */
@@ -162,7 +178,7 @@
     g.innerHTML = '<form autocomplete="off"><div class="ic" aria-hidden="true">🐬</div><h1>' + esc(CFG.gateTitle || "Phins Rugby") + '</h1>' +
       '<p>' + esc(CFG.gateHint || "") + '</p><label class="sr" for="gate-pw">Team password</label>' +
       '<input id="gate-pw" type="password" placeholder="Team password" required>' +
-      '<button class="btn" type="submit">Let me in 🏉</button><p class="err" role="alert"></p></form>';
+      '<button class="btn" type="submit">Let me in</button><p class="err" role="alert"></p></form>';
     document.body.appendChild(g);
     var f = g.querySelector("form"), inp = g.querySelector("input");
     f.addEventListener("submit", function(e){
@@ -192,9 +208,8 @@
   var started = false, readyFns = [];
   function start(){
     if (started) return; started = true;
-    header(); pager(); splitEmoji(); applyTheme(theme);
+    header(); pager(); tourBar(); splitEmoji(); applyTheme(theme);
     document.querySelectorAll("[data-quiz]").forEach(quiz);
-    document.querySelectorAll("[data-videos]").forEach(videos);
     readyFns.forEach(function(fn){ try{ fn(); }catch(e){ console.error(e); } });
   }
   function ready(fn){ if (started) fn(); else readyFns.push(fn); }

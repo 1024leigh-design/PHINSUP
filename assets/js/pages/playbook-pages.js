@@ -27,10 +27,10 @@ Phins.ready(function(){
     }).join("");
     if (el) el.querySelectorAll(".loplay").forEach(function(box){ PhinsPlay(box, loPlay(d.lineoutCalls[+box.getAttribute("data-i")])); });
     if ((el = document.getElementById("scrumcalls"))) el.innerHTML = d.scrumCalls.map(function(c){
-      return '<article class="dcard is-phins"><h3 class="term">🤝 ' + R(c.name) + '</h3><p><b>Means:</b> ' + R(c.means) + '</p><p><b>Who does what:</b> ' + R(c.who) + '</p></article>';
+      return '<article class="dcard is-phins"><h3 class="term">' + R(c.name) + '</h3><p><b>Means:</b> ' + R(c.means) + '</p><p><b>Who does what:</b> ' + R(c.who) + '</p></article>';
     }).join("");
     if ((el = document.getElementById("maulcalls"))) el.innerHTML = d.maulCalls.map(function(c){
-      return '<article class="dcard is-phins"><span class="tag' + (c.side === "Defense" ? " pink" : "") + '">' + E(c.side || "") + '</span><h3 class="term"><span class="ic" aria-hidden="true">' + E(c.icon || "🧱") + '</span>' + E(c.name) + '</h3>' +
+      return '<article class="dcard is-phins"><span class="tag' + (c.side === "Defense" ? " pink" : "") + '">' + E(c.side || "") + '</span><h3 class="term">' + E(c.name) + '</h3>' +
         (c.points ? '<ul>' + c.points.map(function(p){ return '<li>' + R(p) + '</li>'; }).join("") + '</ul>' : '<p>' + R(c.means || "") + '</p>') +
         (c.example ? '<p><b>Example call:</b> ' + E(c.example) + '</p>' : '') + (c.play ? '<div class="maulplay" data-play="' + E(c.play) + '"></div>' : '') + '</article>';
     }).join("");
