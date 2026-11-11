@@ -371,19 +371,19 @@
         "pos": {
           "d1": [
             109,
-            24
+            44
           ],
           "d2": [
             140,
-            24
+            44
           ],
           "d3": [
             170,
-            24
+            44
           ],
           "d4": [
             213,
-            24
+            44
           ],
           "nine": [
             82,
@@ -420,15 +420,23 @@
       },
       {
         "name": "Run through",
-        "text": "Lead and plus **always run through** to confuse the defense. **The lazy does NOT run through.** It's paramount that we stay out of the sacred channel.",
+        "text": "Lead and plus run **all the way through the holes in the defense**, NOT into contact (running into a defender is obstruction). **The lazy does NOT run through.** It's paramount that we stay out of the sacred channel. The 10 and the backs start moving forward.",
         "pos": {
           "lead": [
-            186,
-            120
+            192,
+            16
           ],
           "plus": [
-            226,
-            146
+            240,
+            20
+          ],
+          "ten": [
+            174,
+            200
+          ],
+          "backs": [
+            272,
+            212
           ]
         },
         "show": [
@@ -437,19 +445,19 @@
       },
       {
         "name": "Pass to 10",
-        "text": "The 9 passes to the 10 through the sacred channel. Lead and plus run **through the holes in the defense, NOT into contact**: running into a defender is obstruction.",
+        "text": "The 9 passes to the 10 through the sacred channel. **DO NOT BLOCK THE SACRED CHANNEL!**",
         "pos": {
           "ball": [
             170,
-            206
+            190
           ],
-          "lead": [
-            191,
-            52
+          "ten": [
+            172,
+            196
           ],
-          "plus": [
-            238,
-            70
+          "backs": [
+            274,
+            196
           ]
         },
         "show": [
@@ -458,19 +466,19 @@
       },
       {
         "name": "10 goes long",
-        "text": "The 10 throws a long pass, out to the backs. Lead and plus keep running through the holes.",
+        "text": "The 10 throws a long pass, out to the backs, who are running onto it.",
         "pos": {
           "ball": [
-            262,
-            224
+            276,
+            168
           ],
-          "lead": [
-            192,
-            4
+          "ten": [
+            176,
+            176
           ],
-          "plus": [
-            240,
-            10
+          "backs": [
+            278,
+            174
           ]
         },
         "show": [
@@ -484,6 +492,18 @@
           "lazy": [
             150,
             176
+          ],
+          "backs": [
+            280,
+            140
+          ],
+          "ball": [
+            280,
+            130
+          ],
+          "ten": [
+            180,
+            160
           ]
         }
       }
