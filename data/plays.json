@@ -299,34 +299,22 @@
         "name": "Fly half (10)",
         "kind": "back"
       },
-      "f1": {
-        "label": "F",
-        "name": "Next pod",
-        "kind": "next"
-      },
-      "f2": {
-        "label": "F",
-        "name": "Next pod",
-        "kind": "next"
-      },
-      "f3": {
-        "label": "F",
-        "name": "Next pod",
-        "kind": "next"
-      },
       "ball": {
         "kind": "ball"
+      },
+      "backs": {
+        "label": "B",
+        "name": "Our backs",
+        "kind": "back"
       }
     },
     "roles": {
-      "lead": "Run through anyway, to confuse the defense. Do not stop: that's obstruction.",
-      "plus": "Run through anyway, to confuse the defense. Do not stop: that's obstruction.",
-      "lazy": "WAIT until the ball goes to the 10 so you don't block the sacred channel.",
+      "lead": "Run through anyway, as a decoy, to confuse the defense. Do not stop: that's obstruction.",
+      "plus": "Run through anyway, as a decoy, to confuse the defense. Do not stop: that's obstruction.",
+      "lazy": "Do NOT run through. Stay out of the sacred channel until the ball has gone past. Then hit a ruck for the backs, or become the lazy for the next pod.",
       "nine": "Passes to the 10 through the sacred channel.",
-      "ten": "Gets the ball from the 9 on FLASH.",
-      "f1": "The next pod, setting up across and up.",
-      "f2": "The next pod, setting up across and up.",
-      "f3": "The next pod, setting up across and up."
+      "ten": "Gets the ball from the 9 on FLASH and passes it far, out to the backs.",
+      "backs": "Our backs, out wide. On FLASH the ball goes out to them."
     },
     "steps": [
       {
@@ -369,20 +357,12 @@
             176,
             216
           ],
-          "f1": [
-            26,
-            140
-          ],
-          "f2": [
-            16,
-            162
-          ],
-          "f3": [
-            40,
-            162
+          "backs": [
+            272,
+            230
           ],
           "ball": [
-            96,
+            94,
             98
           ]
         },
@@ -392,7 +372,7 @@
       },
       {
         "name": "Run through",
-        "text": "Lead and plus **always run through**, regardless of the call, to confuse the defense. **Lazy waits.**",
+        "text": "Lead and plus **always run through**, regardless of the call, to confuse the defense. **The lazy does NOT run through.** It's paramount that we stay out of the sacred channel.",
         "pos": {
           "lead": [
             176,
@@ -441,12 +421,12 @@
         ]
       },
       {
-        "name": "Lazy goes",
-        "text": "Ball's with the 10, so the channel is clear and lazy can go. Lead and plus never stop: stopping is obstruction.",
+        "name": "10 goes long",
+        "text": "The 10 throws a long pass, out to the backs. Lead and plus never stop: stopping is obstruction.",
         "pos": {
-          "lazy": [
-            124,
-            118
+          "ball": [
+            262,
+            224
           ],
           "lead": [
             176,
@@ -456,21 +436,28 @@
             194,
             72
           ],
-          "f1": [
+          "d4": [
+            236,
+            60
+          ]
+        },
+        "show": [
+          "channel"
+        ]
+      },
+      {
+        "name": "Lazy's next job",
+        "text": "The lazy doesn't go with the pod (the pod was the decoy). The lazy can **hit a ruck for the backs**, or **become the lazy for the next pod**.",
+        "pos": {
+          "lazy": [
             150,
-            116
-          ],
-          "f2": [
-            136,
-            134
-          ],
-          "f3": [
-            162,
-            134
+            176
           ]
         }
       }
-    ]
+    ],
+    "banana": false,
+    "lazyRun": false
   },
   "tango": {
     "title": "TANGO",

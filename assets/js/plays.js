@@ -19,8 +19,8 @@
     if (kind === "pod"){
       h += '<rect x="0" y="0" width="300" height="250" rx="12" class="pcfield"/>' +
         '<polygon points="82,30 58,72 106,72" class="pcruck"/><text x="82" y="64" text-anchor="middle" font-size="10" class="pcrt">Ruck</text>' +
-        '<path d="M72 184 C 95 250, 215 262, 252 196" class="pcno"/><text x="262" y="214" class="pcnot">NO!</text>' +
-        '<g class="guides"><path d="M92 132 L160 74"/><path d="M176 168 L176 40"/><path d="M214 196 L190 76"/><path d="M50 160 L258 84" class="next"/></g>';
+        (def.banana === false ? '' : '<path d="M72 184 C 95 250, 215 262, 252 196" class="pcno"/><text x="262" y="214" class="pcnot">NO!</text>') +
+        '<g class="guides">' + (def.lazyRun === false ? '' : '<path d="M92 132 L160 74"/>') + '<path d="M176 168 L176 40"/><path d="M214 196 L190 76"/>' + (def.banana === false ? '' : '<path d="M50 160 L258 84" class="next"/>') + '</g>';
       if (def.channel) h += '<g data-ov="channel" class="ov"><path d="M90 104 L166 200" class="channel" marker-end="url(#ah' + id + ')"/><text x="98" y="170" class="pcch" transform="rotate(60 98 170)">sacred channel</text></g>';
     } else if (kind === "phase"){
       h += '<rect x="0" y="0" width="400" height="260" rx="12" class="pcfield"/>' +

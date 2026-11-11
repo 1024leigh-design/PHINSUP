@@ -9,7 +9,7 @@ Phins.ready(function(){
       var from = z.from, to = z.to;
       if (from == null || to == null){ tbd = true; from = i * 100/3; to = (i+1) * 100/3; }
       h += '<rect class="zrect" data-id="' + z.id + '" x="' + (X0 + (10+from)*k) + '" y="' + Y0 + '" width="' + ((to-from)*k) + '" height="' + W + '" fill="' + z.color + '" tabindex="0" role="button" aria-label="' + Phins.esc(z.name) + '"/>' +
-        '<text x="' + (X0 + (10+(from+to)/2)*k) + '" y="' + (Y0 + W/2 + 6) + '" text-anchor="middle" class="zlab">' + Phins.esc(z.name.toUpperCase()) + '</text>';
+        '<text x="' + (X0 + (10+(from+to)/2)*k) + '" y="' + (Y0 + W/2 + 6) + '" text-anchor="middle" class="zlab">' + Phins.esc(z.name.split(' ')[0].toUpperCase()) + '</text>';
     });
     [10,110].forEach(function(m){ h += '<line x1="' + (X0+m*k) + '" y1="' + Y0 + '" x2="' + (X0+m*k) + '" y2="' + (Y0+W) + '" stroke="#fff" stroke-width="3"/>'; });
     h += '<text x="' + (X0 + 5*k) + '" y="' + (Y0 + W/2) + '" text-anchor="middle" class="zlab small" transform="rotate(-90 ' + (X0+5*k) + ' ' + (Y0+W/2) + ')">OUR IN-GOAL</text>';

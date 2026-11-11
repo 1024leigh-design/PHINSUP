@@ -35,34 +35,34 @@
     }
   ],
   "zones": {
-    "note": "[HANNAH TO PROVIDE: zone boundaries and what changes in each]",
+    "note": "[HANNAH TO PROVIDE: what changes in each zone]",
     "list": [
       {
         "id": "red",
         "name": "Red Zone",
         "color": "#d6455d",
-        "where": "[HANNAH TO PROVIDE: where the red zone starts and ends]",
+        "where": "In our own defensive 22.",
         "changes": "[HANNAH TO PROVIDE: how our shape and decisions change here]",
-        "from": null,
-        "to": null
+        "from": 0,
+        "to": 22
       },
       {
         "id": "yellow",
         "name": "Yellow Zone",
         "color": "#f2c200",
-        "where": "[HANNAH TO PROVIDE]",
+        "where": "From our 22 to their 22.",
         "changes": "[HANNAH TO PROVIDE]",
-        "from": null,
-        "to": null
+        "from": 22,
+        "to": 78
       },
       {
         "id": "green",
         "name": "Green Zone",
         "color": "#2fa866",
-        "where": "[HANNAH TO PROVIDE]",
+        "where": "Our offensive 22 (their 22).",
         "changes": "[HANNAH TO PROVIDE]",
-        "from": null,
-        "to": null
+        "from": 78,
+        "to": 100
       }
     ],
     "_howto": "from/to = meters from OUR try line (0) to THEIR try line (100). Leave null to show equal thirds."
