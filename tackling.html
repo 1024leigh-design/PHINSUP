@@ -7,10 +7,27 @@
 <title>Safe Tackling Basics · Phins</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;600&display=swap">
-<link rel="stylesheet" href="assets/css/phins.css?v=11111859">
-<script src="assets/js/config.js?v=11111859"></script>
-<script src="assets/js/core.js?v=11111859"></script>
+<link rel="stylesheet" href="assets/css/phins.css?v=11111908">
+<script src="assets/js/config.js?v=11111908"></script>
+<script src="assets/js/core.js?v=11111908"></script>
 
+<script src="assets/js/pages/tackling.js?v=11111908"></script>
+<style>
+.tksvg #tk-tackler,.tksvg .tkup,.tksvg #tk-carrier,.tksvg #tk-wrong,.tksvg .tkarms{transition:transform .8s ease, opacity .5s ease}
+.tksvg .tkup{transform-box:view-box; transform-origin:0 0}
+.tksvg #tk-carrier{transform-box:view-box}
+.tksvg .limb{stroke:var(--ink); stroke-width:7; stroke-linecap:round}
+.tksvg .torso.carrier,.tksvg .headc.carrier{fill:#1f3a5f}
+.tksvg .torso.tackler,.tksvg .headc.tackler{fill:var(--green); stroke:var(--ink); stroke-width:1.5}
+.tksvg .tkarms{fill:none; stroke:var(--pink); stroke-width:6; stroke-linecap:round}
+.tksvg .ballk{fill:var(--yellow); stroke:#7a6100; stroke-width:2}
+.tksvg .z{opacity:.55} .tksvg.zonesdim .z{opacity:.3}
+.zred{fill:#e0405e; background:#e0405e} .zyel{fill:#f2c200; background:#f2c200} .zgrn{fill:#2fb36b; background:#2fb36b}
+.tksvg .zl{font:700 10.5px var(--f-mono); fill:var(--ink)}
+.tksvg .wrongh{fill:none; stroke:#d6233a; stroke-width:2.5; stroke-dasharray:4 3} .tksvg .wrongx{stroke:#d6233a; stroke-width:3} .tksvg .wrongt{fill:#d6233a}
+.tklegend{display:flex; flex-wrap:wrap; gap:6px 14px; align-items:center; font-size:15px; color:var(--muted); margin:0}
+.tklegend .sw{display:inline-block; width:14px; height:14px; border-radius:4px; opacity:.8; margin-right:-8px}
+</style>
 </head>
 <body>
 <main class="wrap" id="main" data-page="tackling" data-section="1">
@@ -18,6 +35,12 @@
     <div class="eyebrow">Rugby Basics · 11</div>
     <h1>Safe Tackling Basics</h1>
   </header>
+
+  <section aria-labelledby="h-tk" style="margin-top:0">
+    <div class="sec"><h2 id="h-tk">A safe tackle, step by step</h2></div>
+    <div id="tackleplay"></div>
+  </section>
+
   <div class="cards">
     <article class="dcard"><h3 class="term">Cheek to cheek</h3><p class="def">Your head goes on the side of their butt/hip, never in front of their body.</p></article>
     <article class="dcard"><h3 class="term">Eyes open, chin up</h3><p class="def">See what you're hitting.</p></article>

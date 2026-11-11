@@ -15,8 +15,8 @@
     "1":[
       ["positions","Meet the Positions","🔢"],["vocab","Quick Vocab","📚"],["scrum","Set Pieces: Scrum","🤝"],
       ["lineout","Set Pieces: Lineout","🙌"],["openplay","Open Play","🏃"],["kickoffs","Kickoffs & Restarts","🦶"],
-      ["pitch","The Pitch","🟩"],["penalties","Penalties Cheat Sheet","🚩"],["scoring","Scoring & Kicking","🏉"],
-      ["lost","I'm Lost!","🆘"],["tackling","Safe Tackling Basics","💪"],["signals","Ref Signals","🙋"],
+      ["pitch","The Pitch","🟩"],["penalties","Penalties & Ref Signals","🚩"],["scoring","Scoring & Kicking","🏉"],
+      ["lost","I'm Lost!","🆘"],["tackling","Safe Tackling Basics","💪"],
       ["first-match","First Match Survival Guide","🌟"],["safety","Concussion & Safety","🧠"],["calls","Communication Calls","📣"]
     ],
     "2":[
@@ -27,7 +27,7 @@
   };
 
   /* ---------- "Through the field": guided Next, Next, Next through every page ---------- */
-  var TOUR = ["positions","vocab","scrum","lineout","openplay","kickoffs","pitch","penalties","scoring","tackling","signals","first-match","safety","calls",
+  var TOUR = ["positions","vocab","scrum","lineout","openplay","kickoffs","pitch","penalties","scoring","tackling","first-match","safety","calls",
               "playbook","shape","zones","lineout-calls","scrum-calls","mauls","kickoff-setup","exit-red-zone","whatif"];
   function pageTitle(id){ var all = PAGES["1"].concat(PAGES["2"]); for (var i = 0; i < all.length; i++) if (all[i][0] === id) return all[i][1]; return id; }
   function tourBar(){

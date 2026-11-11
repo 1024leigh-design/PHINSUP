@@ -339,6 +339,16 @@
       ],
       "answer": 1,
       "why": "Early engagement is a free kick."
+    },
+    {
+      "q": "The ref's arm is bent at a right angle with the forearm straight up. What's that?",
+      "options": [
+        "Penalty",
+        "Free kick",
+        "Scrum"
+      ],
+      "answer": 1,
+      "why": "Bent arm is a free kick. A straight arm angled up is a penalty."
     }
   ],
   "scoring": [
@@ -363,7 +373,7 @@
       "why": "A conversion is 2."
     },
     {
-      "q": "A penalty try is worth...",
+      "q": "A penalty try (in Learn More) is worth...",
       "options": [
         "5",
         "7, no kick needed",
@@ -413,38 +423,6 @@
       ],
       "answer": 1,
       "why": "Wrap with your arms. Drive with your legs."
-    }
-  ],
-  "signals": [
-    {
-      "q": "The ref holds an arm out at waist height. What's happening?",
-      "options": [
-        "Advantage",
-        "Try",
-        "Yellow card"
-      ],
-      "answer": 0,
-      "why": "Advantage means keep playing."
-    },
-    {
-      "q": "The ref raises an arm straight up. What's that?",
-      "options": [
-        "Knock-on",
-        "Try",
-        "Free kick"
-      ],
-      "answer": 1,
-      "why": "Straight up is a try."
-    },
-    {
-      "q": "Arm bent at a right angle, forearm straight up?",
-      "options": [
-        "Penalty",
-        "Free kick",
-        "Scrum"
-      ],
-      "answer": 1,
-      "why": "Bent arm is a free kick. Angled straight arm is a penalty."
     }
   ],
   "first-match": [

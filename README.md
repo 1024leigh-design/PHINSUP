@@ -41,7 +41,7 @@ Almost all the words live in the `data` folder. Open a file, change the text bet
 | `data/lineout.json` | The example lineout setup and what each number does |
 | `data/shape.json` | 1-3-3-1 settings, pod roles, HOT/FLASH rules, and backs spots for "Show backs". Fill `podA` / `podB` with numbers to label the pods |
 | `data/penalties.json` | Penalties cheat sheet and golden rules |
-| `data/signals.json` | Ref signal pictures (arm angles) and descriptions |
+| `data/signals.json` | Ref signal pictures for the Penalties page (arm angles, a second pose makes them move) |
 | `data/pitch.json` | What each line on The Pitch means |
 | `data/calls.json` | Communication calls |
 | `data/whatif.json` | What If? Lab scenarios, tags, and mini diagrams |

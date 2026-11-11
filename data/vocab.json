@@ -72,7 +72,7 @@
         {
           "term": "\"Use it!\"",
           "def": "Ref telling the 9 to play the ball now.",
-          "see": "signals.html"
+          "see": "penalties.html"
         },
         {
           "term": "\"Ball's out\"",
@@ -417,7 +417,7 @@
         {
           "term": "Advantage",
           "def": "Ref lets play continue after a foul if the non-offending team benefits. If no benefit, they go back to the foul.",
-          "see": "signals.html"
+          "see": "penalties.html"
         },
         {
           "term": "Knock-on",

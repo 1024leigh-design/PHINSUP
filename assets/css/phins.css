@@ -15,8 +15,8 @@
   color-scheme:light;
 }
 :root[data-theme="sparkle"]{
-  --bg:#05211a; --surface:#0b3427; --surface-2:#114433; --ink:#f4fff8; --muted:#bfdccb; --line:#2a6b52;
-  --green:#52e295; --green-soft:#12493a; --on-green:#03140d;
+  --bg:#0f3d2d; --surface:#17543f; --surface-2:#1e634b; --ink:#f6fff9; --muted:#d0e8da; --line:#4a9476;
+  --green:#6eeba8; --green-soft:#1f6a50; --on-green:#03140d;
   --pink:#ff8cc3; --pink-soft:#4b1d36; --yellow:#ffe066; --yellow-soft:#3d3610; --on-yellow:#2b2200;
   --good:#52e295; --good-soft:#12493a; --bad:#ff8a8a; --bad-soft:#4a1d1d;
   --hl:#ff8cc3; --hl-glow:rgba(255,224,102,.95);
@@ -228,7 +228,7 @@ html.locked body > :not(#gate){display:none!important}
   radial-gradient(1200px 600px at 10% -10%, rgba(255,140,195,.18), transparent 60%),
   radial-gradient(900px 500px at 110% 10%, rgba(255,224,102,.14), transparent 60%),
   var(--bg); background-attachment:fixed}
-:root[data-theme="sparkle"] .topbar{background:rgba(5,33,26,.92); backdrop-filter:blur(6px)}
+:root[data-theme="sparkle"] .topbar{background:rgba(15,61,45,.93); backdrop-filter:blur(6px)}
 :root[data-theme="sparkle"] .hero h1,
 :root[data-theme="sparkle"] .chant{background:linear-gradient(100deg,#ff8cc3 0%,#ffe066 25%,#ffffff 40%,#52e295 55%,#ff8cc3 75%,#ffe066 100%); background-size:250% 100%; -webkit-background-clip:text; background-clip:text; color:transparent; animation:shimmer 6s linear infinite}
 :root[data-theme="sparkle"] .hero h1 em{color:transparent}
