@@ -1,12 +1,71 @@
 {
   "_howto": "Each call: call, means, icon (optional), phins (true = Phins call).",
   "calls": [
-    {"call": "\"Ball's out!\"", "icon": "🏉", "means": "The ball has left the ruck. The ruck is over, so defenders can go."},
-    {"call": "\"Hold!\"", "icon": "✋", "means": "Stay where you are and hold your spot. [HANNAH: confirm the Phins meaning]"},
-    {"call": "\"Up!\"", "icon": "⬆️", "means": "Defense, move up together. Line speed!"},
-    {"call": "\"Folding!\"", "icon": "↩️", "means": "I'm running around behind the ruck to get back into the line."},
-    {"call": "\"Pod!\"", "icon": "🐬", "phins": true, "means": "Form a pod of 3 with me. Never go alone."},
-    {"call": "\"Lazy!\"", "icon": "😎", "phins": true, "means": "I'm the lazy in this pod, a few feet behind the 9."},
-    {"call": "[HANNAH TO PROVIDE: Phins calls]", "icon": "📝", "phins": true, "means": "Add more calls in data/calls.json."}
+    {
+      "call": "\"Ball's out!\"",
+      "icon": "🏉",
+      "means": "The ball has left the ruck. The ruck is over, so defenders can go."
+    },
+    {
+      "call": "\"Hold!\"",
+      "icon": "✋",
+      "means": "Stay where you are and hold your spot. [HANNAH: confirm the Phins meaning]"
+    },
+    {
+      "call": "\"Up!\"",
+      "icon": "⬆️",
+      "means": "Defense, move up together. Line speed!"
+    },
+    {
+      "call": "\"Folding!\"",
+      "icon": "↩️",
+      "means": "I'm running around behind the ruck to get back into the line."
+    },
+    {
+      "call": "\"Pod!\"",
+      "icon": "🐬",
+      "phins": true,
+      "means": "Form a pod of 3 with me. Never go alone."
+    },
+    {
+      "call": "\"Lazy!\"",
+      "icon": "😎",
+      "phins": true,
+      "means": "I'm the lazy in this pod, a few feet behind the 9."
+    },
+    {
+      "call": "\"HOT!\"",
+      "icon": "🔥",
+      "phins": true,
+      "means": "Pod call. The next pod sets up in the same formation while the first pod runs.",
+      "see": "shape.html"
+    },
+    {
+      "call": "\"FLASH!\"",
+      "icon": "⚡",
+      "phins": true,
+      "means": "Pod call. Ball to the 10 through the sacred channel. Lead and plus still run through.",
+      "see": "shape.html"
+    },
+    {
+      "call": "\"TANGO!\"",
+      "icon": "💃",
+      "phins": true,
+      "means": "Maul defense: do not engage, part the sea.",
+      "see": "mauls.html"
+    },
+    {
+      "call": "\"SALSA!\"",
+      "icon": "🌶️",
+      "phins": true,
+      "means": "Maul defense: ENGAGE! Stop the maul!",
+      "see": "mauls.html"
+    },
+    {
+      "call": "[HANNAH TO PROVIDE: more Phins calls]",
+      "icon": "📝",
+      "phins": true,
+      "means": "Add more calls in data/calls.json."
+    }
   ]
 }

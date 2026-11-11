@@ -28,7 +28,7 @@ Phins.ready(function(){
       if (s.placeholder) return '<div class="wcard soon"><p class="wq">' + R(s.q) + '</p><p class="def">' + R(s.fix) + '</p></div>';
       return '<div class="wcard" data-i="' + i + '"><button type="button" class="wflip" aria-expanded="false"><span class="wq">🧪 ' + R(s.q) + '</span><span class="whint">Tap to see the fix</span></button>' +
         '<div class="wback" hidden><p class="wfix">✅ ' + R(s.fix) + '</p>' +
-        ((s.before || s.after) ? '<div class="wpair">' + mini(s.before, "Before") + mini(s.after, "After") + '</div>' : '') +
+        ((s.before || s.after) ? '<div class="wpair">' + mini(s.before, "Before") + mini(s.after, "After") + '</div><p class="wlegend">' + E(data.legend || "") + '</p>' : '') +
         '<div class="wtags">' + s.tags.map(function(t){ return '<span class="tag">' + E(t) + '</span>'; }).join("") + '</div>' +
         '<p class="wfoot">' + R(data.footer) + '</p></div></div>';
     }).join("") : '<p class="count">No scenarios with that tag yet.</p>';

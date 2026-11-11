@@ -47,3 +47,27 @@ window.PhinsShape = function(svg, row, info){
     if (hl >= 1 && hl <= 15) pick(hl); else info.innerHTML = "<p>👆 Pick your number to see where you usually are.</p>";
   }).catch(function(){ Phins.loadFail(info, "shape.json"); });
 };
+
+/* HOT and FLASH pod call diagrams (redrawn from the forwards' slides). kind = "hot" or "flash". */
+window.PhinsPodCall = function(kind){
+  "use strict";
+  function c(x, y, label, cls, r){ return '<g class="' + cls + '"><circle cx="' + x + '" cy="' + y + '" r="' + (r || 15) + '"/><text x="' + x + '" y="' + (y + (label.length > 2 ? 3.5 : 5)) + '" text-anchor="middle" font-size="' + (label.length > 2 ? 9.5 : 13) + '">' + label + '</text></g>'; }
+  function run(d, cls){ return '<path d="' + d + '" class="' + (cls || "run") + '" marker-end="url(#pc-ah-' + kind + ')"/>'; }
+  var h = '<svg class="podcall" viewBox="0 0 300 250" role="img" aria-label="' + (kind === "hot" ? "HOT" : "FLASH") + ' pod call diagram">' +
+    '<defs><marker id="pc-ah-' + kind + '" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="context-stroke"/></marker></defs>' +
+    '<rect x="0" y="0" width="300" height="250" rx="12" class="pcfield"/>';
+  [109,135,166,213].forEach(function(x){ h += c(x, 20, "D", "pcd", 11); });
+  h += '<polygon points="82,30 58,72 106,72" class="pcruck"/><text x="82" y="64" text-anchor="middle" font-size="10" class="pcrt">Ruck</text>';
+  // the banana run we DON'T want
+  h += '<path d="M72 184 C 95 250, 215 262, 252 196" class="pcno"/><text x="262" y="214" class="pcnot">NO!</text>';
+  // runs
+  h += run("M92 132 L160 74");                               // lazy
+  h += kind === "hot" ? run("M176 168 L175 60 L183 36") : run("M176 168 L174 52"); // lead
+  h += run("M214 196 L190 76");                              // plus
+  h += run("M50 160 L258 84", "run next");                   // next pod sets up
+  if (kind === "flash") h += '<path d="M90 104 L166 214" class="channel" marker-end="url(#pc-ah-' + kind + ')"/><text x="102" y="178" class="pcch" transform="rotate(56 102 178)">sacred channel</text>';
+  h += '<ellipse cx="172" cy="112" rx="13" ry="8" transform="rotate(25 172 112)" class="pcball"/>';
+  h += c(82, 92, "9", "pcs") + c(82, 142, "Lazy", "pcp") + c(176, 183, "Lead", "pcp") + c(216, 211, "Plus", "pcp") + c(176, 232, "10", "pcs", 13);
+  h += c(26, 140, "F", "pcf", 10) + c(16, 162, "F", "pcf", 10) + c(40, 162, "F", "pcf", 10);
+  return h + '</svg>';
+};

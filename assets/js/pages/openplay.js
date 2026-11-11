@@ -3,13 +3,13 @@ Phins.ready(function(){
   PhinsShape(document.getElementById("shapesvg"), document.getElementById("shaperow"), document.getElementById("shapeinfo"));
 
   var svg = document.getElementById("phasesvg"), cap = document.getElementById("phasecap"), pills = document.getElementById("pills");
-  var ACT = {P:"P", S:"S", L:"L", N9:"9", D:"", NP:"P", NS:"S", NL:"L"};
+  var ACT = {P:"Lead", S:"Plus", L:"Lazy", N9:"9", D:"", NP:"Lead", NS:"Plus", NL:"Lazy"};
   var STEPS = [
-    {t:"Carry", c:"The point carries the ball into contact. Support and lazy are right there with them. <b>Never go alone.</b>",
+    {t:"Carry", c:"The lead carries the ball into contact. Plus and lazy are right there with them. <b>Never go alone.</b>",
       p:{P:[150,180],S:[122,206],L:[182,222],N9:[220,236],D:[150,66],NP:[292,192],NS:[268,214],NL:[318,222],ball:[164,172]}},
-    {t:"Tackle", c:"The point is tackled and goes to ground, then places the ball back toward our team.",
+    {t:"Tackle", c:"The lead is tackled and goes to ground, then places the ball back toward our team.",
       p:{P:[150,104],S:[134,150],L:[178,182],N9:[200,204],D:[150,82],NP:[292,192],NS:[268,214],NL:[318,222],ball:[150,128]}, down:true},
-    {t:"Ruck", c:"Support gets there first and drives over the ball. Lazy arrives to help. The 9 gets behind the ruck. <b>Never let someone go alone.</b>",
+    {t:"Ruck", c:"Plus gets there first and drives over the ball. Lazy arrives to help. The 9 gets behind the ruck. <b>Never let someone go alone.</b>",
       p:{P:[150,104],S:[150,134],L:[176,146],N9:[150,170],D:[150,84],NP:[292,192],NS:[268,214],NL:[318,222],ball:[150,120]}, down:true},
     {t:"Ball out", c:"The 9 plays the ball out to the next pod. Shout \"Ball's out!\"",
       p:{P:[150,104],S:[150,134],L:[176,146],N9:[154,168],D:[150,84],NP:[292,178],NS:[268,204],NL:[318,212],ball:[280,172]}, down:true},

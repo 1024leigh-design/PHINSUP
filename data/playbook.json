@@ -24,7 +24,7 @@
     {
       "title": "Stay out of the channel.",
       "icon": "🚫",
-      "text": "[HANNAH: one line on why]"
+      "text": "The sacred channel is the pass from the 9 to the 10. Don't block it."
     },
     {
       "title": "Flexibility over labels.",
@@ -72,11 +72,115 @@
   },
   "lineoutCalls": [
     {
-      "name": "[HANNAH TO PROVIDE: call name]",
-      "jumper": "",
-      "lifters": "",
-      "throw": "",
-      "after": "[HANNAH TO PROVIDE: what happens after]"
+      "letter": "P",
+      "pod": "Front pod",
+      "how": "Jumper and back lifter meet the front lifter. The front lifter does not move.",
+      "example": "Pepperoni Pizza!",
+      "players": [
+        {
+          "t": "L",
+          "x": 100
+        },
+        {
+          "t": "J",
+          "x": 130
+        },
+        {
+          "t": "L",
+          "x": 160
+        },
+        {
+          "t": "L",
+          "x": 230
+        }
+      ]
+    },
+    {
+      "letter": "H",
+      "pod": "Front pod",
+      "how": "The front lifter moves back to lift the jumper.",
+      "example": "",
+      "players": [
+        {
+          "t": "L",
+          "x": 100
+        },
+        {
+          "t": "J",
+          "x": 165
+        },
+        {
+          "t": "L",
+          "x": 198
+        },
+        {
+          "t": "L",
+          "x": 230
+        }
+      ],
+      "arrows": [
+        [
+          118,
+          147,
+          120
+        ]
+      ]
+    },
+    {
+      "letter": "I",
+      "pod": "Back pod",
+      "how": "The second person becomes a lifter and turns to lift the jumper.",
+      "example": "Ice Cream!",
+      "players": [
+        {
+          "t": "L",
+          "x": 100
+        },
+        {
+          "t": "L",
+          "x": 142
+        },
+        {
+          "t": "J",
+          "x": 177
+        },
+        {
+          "t": "L",
+          "x": 211
+        }
+      ]
+    },
+    {
+      "letter": "N",
+      "pod": "Back pod",
+      "how": "The second person becomes a lifter and turns to lift the jumper. The pod is farther back.",
+      "example": "",
+      "tbd": true,
+      "players": [
+        {
+          "t": "L",
+          "x": 100
+        },
+        {
+          "t": "L",
+          "x": 190
+        },
+        {
+          "t": "J",
+          "x": 220
+        },
+        {
+          "t": "L",
+          "x": 254
+        }
+      ],
+      "arrows": [
+        [
+          208,
+          232,
+          142
+        ]
+      ]
     }
   ],
   "scrumCalls": [
@@ -88,8 +192,35 @@
   ],
   "maulCalls": [
     {
-      "name": "[HANNAH TO PROVIDE: maul call]",
-      "means": "[HANNAH TO PROVIDE]"
+      "name": "TANGO",
+      "side": "Defense",
+      "icon": "💃",
+      "points": [
+        "Do not engage, part the sea.",
+        "Only move laterally, you cannot leave the line."
+      ]
+    },
+    {
+      "name": "SALSA",
+      "side": "Defense",
+      "icon": "🌶️",
+      "points": [
+        "ENGAGE! Stop the maul!",
+        "5 seconds of no forward progress by the opponent = turnover to PHINS!",
+        "Do NOT bring it down (i.e. attempt to tackle the ball carrier, be a human speed bump). That is dangerous play resulting in a penalty."
+      ]
+    },
+    {
+      "name": "Lineout call + M word",
+      "side": "Offense",
+      "icon": "🧱",
+      "example": "Pizza Margherita",
+      "points": [
+        "ENGAGE!",
+        "Recycle if you are not moving, getting pushed back, or turning.",
+        "5 seconds of no forward progress by us = turnover to THEM.",
+        "Present the ball to the scrum half to prevent that."
+      ]
     }
   ],
   "kickoff": {
@@ -114,5 +245,6 @@
     {
       "step": "[HANNAH TO PROVIDE: how we get out of our own 22]"
     }
-  ]
+  ],
+  "lineoutHowto": "x = left to right position on the diagram (touch line is at 27, the dashed 5m line at 82). arrows: [from x, to x, height]. Leave example empty to hide it."
 }

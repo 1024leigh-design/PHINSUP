@@ -276,3 +276,30 @@ html.locked body > :not(#gate){display:none!important}
 .mini .moff{fill:var(--surface-2); stroke:var(--line); stroke-width:2}
 .mini .mon{fill:var(--pink); stroke:var(--pink); stroke-width:2}
 .mini .mtoff{fill:var(--muted)} .mini .mton{fill:#fff}
+
+/* HOT / FLASH pod call diagrams */
+.podcall{width:100%; height:auto; display:block; max-width:420px; margin:0 auto}
+.podcall .pcfield{fill:var(--green-soft)}
+.podcall text{font-family:var(--f-display); font-weight:800; pointer-events:none}
+.podcall .pcd circle{fill:var(--ink)} .podcall .pcd text{fill:var(--bg)}
+.podcall .pcp circle{fill:var(--surface); stroke:var(--green); stroke-width:2.5} .podcall .pcp text{fill:var(--ink)}
+.podcall .pcs circle{fill:var(--pink)} .podcall .pcs text{fill:#fff}
+.podcall .pcf circle{fill:var(--yellow-soft); stroke:var(--yellow); stroke-width:2} .podcall .pcf text{fill:var(--ink)}
+.podcall .pcruck{fill:var(--surface-2); stroke:var(--muted); stroke-width:2} .podcall .pcrt{fill:var(--muted)}
+.podcall .run{fill:none; stroke:var(--ink); stroke-width:2; stroke-dasharray:5 4}
+.podcall .run.next{stroke:var(--pink)}
+.podcall .channel{stroke:var(--ink); stroke-width:3.5; fill:none}
+.podcall .pcch{font:700 9px var(--f-mono); fill:var(--ink)}
+.podcall .pcno{fill:none; stroke:#d6233a; stroke-width:2.5}
+.podcall .pcnot{font:800 18px var(--f-display); fill:#d6233a}
+.podcall .pcball{fill:var(--yellow); stroke:#7a6100; stroke-width:2}
+.lodia{width:100%; height:auto; display:block; background:var(--green-soft); border-radius:12px}
+.lodia text{font-family:var(--f-display); font-weight:800; pointer-events:none}
+.lodia .lo-l circle{fill:var(--surface); stroke:var(--green); stroke-width:2.5}
+.lodia .lo-j circle{fill:var(--pink); stroke:var(--pink); stroke-width:2.5} .lodia .lo-j text{fill:#fff}
+.lodia .lo-h circle{fill:var(--yellow-soft); stroke:var(--yellow); stroke-width:2.5}
+.lodia .lo-o{fill:var(--ink)}
+.lodia text{fill:var(--ink)}
+.bigletter{display:inline-flex; width:46px; height:46px; border-radius:12px; background:var(--pink); color:#fff; align-items:center; justify-content:center; font:800 28px var(--f-display)}
+:root[data-theme="sparkle"] .bigletter,:root[data-theme="sparkle"] .lodia .lo-j text,:root[data-theme="sparkle"] .podcall .pcs text{color:#2a0717; fill:#2a0717}
+.dcard ul{margin:0; padding-left:20px; display:grid; gap:6px}

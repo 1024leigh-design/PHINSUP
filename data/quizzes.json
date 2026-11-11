@@ -1,78 +1,516 @@
 {
   "_howto": "One list per page. answer = the number of the right option, counting from 0. why = the explanation shown after any pick.",
   "positions": [
-    {"q": "Which numbers are the props?", "options": ["1 and 3", "4 and 5", "6 and 7", "2 and 8"], "answer": 0, "why": "Props are 1 (loosehead) and 3 (tighthead), on each side of the hooker."},
-    {"q": "Who throws the ball in at every lineout?", "options": ["The 9", "The hooker (2)", "A lock", "The 8"], "answer": 1, "why": "The hooker throws in at every lineout. It's their signature skill."},
-    {"q": "In open play, where are the tight five?", "options": ["On the edges", "Always in a center pod", "Behind the backs", "Wherever they want"], "answer": 1, "why": "The tight five are always in a center pod and carry the ball in a pod of 3."},
-    {"q": "On the Phins, do locks always jump in the lineout?", "options": ["Yes, always", "No, they might jump OR lift", "No, locks never touch the lineout"], "answer": 1, "why": "Flexibility over labels! Locks might jump or lift depending on the call and who's on the field."},
-    {"q": "Who is the only player who can pick the ball up from the base of the scrum?", "options": ["The hooker", "Either flanker", "The 8", "The tighthead"], "answer": 2, "why": "That's the eight man pick."}
+    {
+      "q": "Which numbers are the props?",
+      "options": [
+        "1 and 3",
+        "4 and 5",
+        "6 and 7",
+        "2 and 8"
+      ],
+      "answer": 0,
+      "why": "Props are 1 (loosehead) and 3 (tighthead), on each side of the hooker."
+    },
+    {
+      "q": "Who throws the ball in at every lineout?",
+      "options": [
+        "The 9",
+        "The hooker (2)",
+        "A lock",
+        "The 8"
+      ],
+      "answer": 1,
+      "why": "The hooker throws in at every lineout. It's their signature skill."
+    },
+    {
+      "q": "In open play, where are the tight five?",
+      "options": [
+        "On the edges",
+        "Always in a center pod",
+        "Behind the backs",
+        "Wherever they want"
+      ],
+      "answer": 1,
+      "why": "The tight five are always in a center pod and carry the ball in a pod of 3."
+    },
+    {
+      "q": "On the Phins, do locks always jump in the lineout?",
+      "options": [
+        "Yes, always",
+        "No, they might jump OR lift",
+        "No, locks never touch the lineout"
+      ],
+      "answer": 1,
+      "why": "Flexibility over labels! Locks might jump or lift depending on the call and who's on the field."
+    },
+    {
+      "q": "Who is the only player who can pick the ball up from the base of the scrum?",
+      "options": [
+        "The hooker",
+        "Either flanker",
+        "The 8",
+        "The tighthead"
+      ],
+      "answer": 2,
+      "why": "That's the eight man pick."
+    }
   ],
   "vocab": [
-    {"q": "At a ruck, can you use your hands on the ball?", "options": ["Yes", "No", "Only the tackled player"], "answer": 1, "why": "A ruck means no hands allowed."},
-    {"q": "What is the \"gate\"?", "options": ["The try line", "Joining a ruck or tackle from directly behind it", "The gap in a lineout"], "answer": 1, "why": "You must join through the gate, not from the side."},
-    {"q": "In a Phins pod, who is the \"point\"?", "options": ["The first person to get the ball, the carrier", "The person behind the 9", "The flanker on the edge"], "answer": 0, "why": "Point carries. Support backs them up. Lazy is a few feet behind the 9."},
-    {"q": "What does \"sealing off\" mean?", "options": ["Kicking the ball out", "Diving or falling over the ball to protect it", "Stopping a maul legally"], "answer": 1, "why": "Sealing off is illegal. Stay on your feet."}
+    {
+      "q": "At a ruck, can you use your hands on the ball?",
+      "options": [
+        "Yes",
+        "No",
+        "Only the tackled player"
+      ],
+      "answer": 1,
+      "why": "A ruck means no hands allowed."
+    },
+    {
+      "q": "What is the \"gate\"?",
+      "options": [
+        "The try line",
+        "Joining a ruck or tackle from directly behind it",
+        "The gap in a lineout"
+      ],
+      "answer": 1,
+      "why": "You must join through the gate, not from the side."
+    },
+    {
+      "q": "In a Phins pod, who is the \"lead\"?",
+      "options": [
+        "The lead ball carrier, first to get the ball",
+        "The inside supporter near the ruck",
+        "The flanker on the edge"
+      ],
+      "answer": 0,
+      "why": "Lead carries. Plus is the outside supporter. Lazy is the inside supporter near the ruck."
+    },
+    {
+      "q": "What does \"sealing off\" mean?",
+      "options": [
+        "Kicking the ball out",
+        "Diving or falling over the ball to protect it",
+        "Stopping a maul legally"
+      ],
+      "answer": 1,
+      "why": "Sealing off is illegal. Stay on your feet."
+    }
   ],
   "scrum": [
-    {"q": "What are the ref's three scrum calls?", "options": ["Ready, Set, Go", "Crouch, Bind, Set", "Bind, Push, Hook"], "answer": 1, "why": "Crouch, Bind, Set. Engage only on Set."},
-    {"q": "What shape does a scrum make?", "options": ["3-4-1", "1-3-3-1", "4-4", "3-3-2"], "answer": 0, "why": "Front row of 3, then the locks and flankers (4), then the 8 (1)."},
-    {"q": "Where does the tighthead's (3) head go?", "options": ["Outside the opposing tighthead", "Between the opposing loosehead and hooker", "Between the two locks"], "answer": 1, "why": "That's why the tighthead takes pressure from both sides."},
-    {"q": "Where does the 8's head go?", "options": ["Between the two locks", "Next to the hooker", "Outside a flanker"], "answer": 0, "why": "The 8 packs between the locks and controls the ball at the base."}
+    {
+      "q": "What are the ref's three scrum calls?",
+      "options": [
+        "Ready, Set, Go",
+        "Crouch, Bind, Set",
+        "Bind, Push, Hook"
+      ],
+      "answer": 1,
+      "why": "Crouch, Bind, Set. Engage only on Set."
+    },
+    {
+      "q": "What shape does a scrum make?",
+      "options": [
+        "3-4-1",
+        "1-3-3-1",
+        "4-4",
+        "3-3-2"
+      ],
+      "answer": 0,
+      "why": "Front row of 3, then the locks and flankers (4), then the 8 (1)."
+    },
+    {
+      "q": "Where does the tighthead's (3) head go?",
+      "options": [
+        "Outside the opposing tighthead",
+        "Between the opposing loosehead and hooker",
+        "Between the two locks"
+      ],
+      "answer": 1,
+      "why": "That's why the tighthead takes pressure from both sides."
+    },
+    {
+      "q": "Where does the 8's head go?",
+      "options": [
+        "Between the two locks",
+        "Next to the hooker",
+        "Outside a flanker"
+      ],
+      "answer": 0,
+      "why": "The 8 packs between the locks and controls the ball at the base."
+    }
   ],
   "lineout": [
-    {"q": "When does a lineout happen?", "options": ["After a knock-on", "When the ball goes out of bounds (into touch)", "After a try"], "answer": 1, "why": "Lineouts restart play after the ball goes into touch."},
-    {"q": "Where does the throw have to go?", "options": ["Straight down the middle", "Toward your own team", "Anywhere past 5 meters"], "answer": 0, "why": "A not-straight throw gives the other team the choice of a lineout or scrum."},
-    {"q": "Where do lifters lift?", "options": ["Under the arms", "On the thighs/shorts", "On the feet"], "answer": 1, "why": "Lift on the thighs/shorts, hold, and bring the jumper down safely."},
-    {"q": "The forwards line up between which lines?", "options": ["The 5m and 15m lines", "The 10m and 22", "The try line and the 5m line"], "answer": 0, "why": "The lineout is between the 5m and 15m lines, two lines 1 meter apart."}
+    {
+      "q": "When does a lineout happen?",
+      "options": [
+        "After a knock-on",
+        "When the ball goes out of bounds (into touch)",
+        "After a try"
+      ],
+      "answer": 1,
+      "why": "Lineouts restart play after the ball goes into touch."
+    },
+    {
+      "q": "Where does the throw have to go?",
+      "options": [
+        "Straight down the middle",
+        "Toward your own team",
+        "Anywhere past 5 meters"
+      ],
+      "answer": 0,
+      "why": "A not-straight throw gives the other team the choice of a lineout or scrum."
+    },
+    {
+      "q": "Where do lifters lift?",
+      "options": [
+        "Under the arms",
+        "On the thighs/shorts",
+        "On the feet"
+      ],
+      "answer": 1,
+      "why": "Lift on the thighs/shorts, hold, and bring the jumper down safely."
+    },
+    {
+      "q": "The forwards line up between which lines?",
+      "options": [
+        "The 5m and 15m lines",
+        "The 10m and 22",
+        "The try line and the 5m line"
+      ],
+      "answer": 0,
+      "why": "The lineout is between the 5m and 15m lines, two lines 1 meter apart."
+    }
   ],
   "openplay": [
-    {"q": "What's the open play cycle?", "options": ["Kick, chase, lineout", "Carry, tackle, ruck, ball out, next phase", "Scrum, pass, try"], "answer": 1, "why": "Then it starts again for the next phase."},
-    {"q": "How big is a Phins pod?", "options": ["2", "3", "5", "8"], "answer": 1, "why": "Point, support, lazy."},
-    {"q": "Finish the Phins phrase: \"Never go alone...\"", "options": ["...unless you're fast", "...Never let someone go alone.", "...stay on the wing"], "answer": 1, "why": "Never go alone. Never let someone go alone."}
+    {
+      "q": "What's the open play cycle?",
+      "options": [
+        "Kick, chase, lineout",
+        "Carry, tackle, ruck, ball out, next phase",
+        "Scrum, pass, try"
+      ],
+      "answer": 1,
+      "why": "Then it starts again for the next phase."
+    },
+    {
+      "q": "How big is a Phins pod?",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "8"
+      ],
+      "answer": 1,
+      "why": "Lead, plus, lazy."
+    },
+    {
+      "q": "Finish the Phins phrase: \"Never go alone...\"",
+      "options": [
+        "...unless you're fast",
+        "...Never let someone go alone.",
+        "...stay on the wing"
+      ],
+      "answer": 1,
+      "why": "Never go alone. Never let someone go alone."
+    },
+    {
+      "q": "What is the sacred channel?",
+      "options": [
+        "The gap between two pods",
+        "The pass from the 9 to the 10",
+        "The space between the touch line and the 5m line"
+      ],
+      "answer": 1,
+      "why": "DO NOT BLOCK THE SACRED CHANNEL!"
+    }
   ],
   "kickoffs": [
-    {"q": "How far does a kickoff need to go?", "options": ["5 meters", "10 meters", "22 meters"], "answer": 1, "why": "It has to reach the 10m line."},
-    {"q": "Where is the kickoff taken from?", "options": ["The 22", "The center of halfway", "The try line"], "answer": 1, "why": "The center of halfway, at the start of each half and after scores."},
-    {"q": "Which restart happens when the ball is held up in your in-goal?", "options": ["22 drop out", "Goal line drop out", "Scrum at halfway"], "answer": 1, "why": "Held up in your in-goal means a goal line drop out."}
+    {
+      "q": "How far does a kickoff need to go?",
+      "options": [
+        "5 meters",
+        "10 meters",
+        "22 meters"
+      ],
+      "answer": 1,
+      "why": "It has to reach the 10m line."
+    },
+    {
+      "q": "Where is the kickoff taken from?",
+      "options": [
+        "The 22",
+        "The center of halfway",
+        "The try line"
+      ],
+      "answer": 1,
+      "why": "The center of halfway, at the start of each half and after scores."
+    },
+    {
+      "q": "Which restart happens when the ball is held up in your in-goal?",
+      "options": [
+        "22 drop out",
+        "Goal line drop out",
+        "Scrum at halfway"
+      ],
+      "answer": 1,
+      "why": "Held up in your in-goal means a goal line drop out."
+    }
   ],
   "pitch": [
-    {"q": "Where do you ground the ball to score a try?", "options": ["On the 5m line", "On or over the try line", "Past the dead ball line"], "answer": 1, "why": "On or over the try line, in the in-goal."},
-    {"q": "Kickoffs must go past which line?", "options": ["The 10m line", "The 22", "The 5m line"], "answer": 0, "why": "If it doesn't reach the 10m line, the other team gets options."},
-    {"q": "What's the closest a scrum can be set to the try line?", "options": ["5 meters", "10 meters", "15 meters"], "answer": 0, "why": "Scrums and lineouts can't be set closer than the 5m line."}
+    {
+      "q": "Where do you ground the ball to score a try?",
+      "options": [
+        "On the 5m line",
+        "On or over the try line",
+        "Past the dead ball line"
+      ],
+      "answer": 1,
+      "why": "On or over the try line, in the in-goal."
+    },
+    {
+      "q": "Kickoffs must go past which line?",
+      "options": [
+        "The 10m line",
+        "The 22",
+        "The 5m line"
+      ],
+      "answer": 0,
+      "why": "If it doesn't reach the 10m line, the other team gets options."
+    },
+    {
+      "q": "What's the closest a scrum can be set to the try line?",
+      "options": [
+        "5 meters",
+        "10 meters",
+        "15 meters"
+      ],
+      "answer": 0,
+      "why": "Scrums and lineouts can't be set closer than the 5m line."
+    }
   ],
   "penalties": [
-    {"q": "What can't you do with a free kick?", "options": ["Tap and go", "Kick at goal", "Kick to touch"], "answer": 1, "why": "That's the big difference between a free kick and a penalty."},
-    {"q": "A knock-on gives the other team a...", "options": ["Penalty", "Free kick", "Scrum"], "answer": 2, "why": "Accidental mistakes like knock-ons and forward passes are scrums, not penalties."},
-    {"q": "Which one is a golden rule?", "options": ["Stay on your feet", "Always dive on the ball", "Join the ruck from the side"], "answer": 0, "why": "Stay on your feet. Come through the gate. Release. Roll away. Stay onside."},
-    {"q": "Pushing before the ref says \"Set\" at a scrum gives away a...", "options": ["Penalty", "Free kick", "Yellow card"], "answer": 1, "why": "Early engagement is a free kick."}
+    {
+      "q": "What can't you do with a free kick?",
+      "options": [
+        "Tap and go",
+        "Kick at goal",
+        "Kick to touch"
+      ],
+      "answer": 1,
+      "why": "That's the big difference between a free kick and a penalty."
+    },
+    {
+      "q": "A knock-on gives the other team a...",
+      "options": [
+        "Penalty",
+        "Free kick",
+        "Scrum"
+      ],
+      "answer": 2,
+      "why": "Accidental mistakes like knock-ons and forward passes are scrums, not penalties."
+    },
+    {
+      "q": "Which one is a golden rule?",
+      "options": [
+        "Stay on your feet",
+        "Always dive on the ball",
+        "Join the ruck from the side"
+      ],
+      "answer": 0,
+      "why": "Stay on your feet. Come through the gate. Release. Roll away. Stay onside."
+    },
+    {
+      "q": "Pushing before the ref says \"Set\" at a scrum gives away a...",
+      "options": [
+        "Penalty",
+        "Free kick",
+        "Yellow card"
+      ],
+      "answer": 1,
+      "why": "Early engagement is a free kick."
+    }
   ],
   "scoring": [
-    {"q": "How many points is a try?", "options": ["3", "5", "7"], "answer": 1, "why": "A try is 5."},
-    {"q": "How many points is a conversion?", "options": ["1", "2", "3"], "answer": 1, "why": "A conversion is 2."},
-    {"q": "A penalty try is worth...", "options": ["5", "7, no kick needed", "5 plus a kick"], "answer": 1, "why": "Penalty tries are 7, no kick needed."},
-    {"q": "Why does scoring under the posts help?", "options": ["It's worth more points", "The conversion is easier", "The ref likes it"], "answer": 1, "why": "Conversions are taken in line with where the try was scored."}
+    {
+      "q": "How many points is a try?",
+      "options": [
+        "3",
+        "5",
+        "7"
+      ],
+      "answer": 1,
+      "why": "A try is 5."
+    },
+    {
+      "q": "How many points is a conversion?",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 1,
+      "why": "A conversion is 2."
+    },
+    {
+      "q": "A penalty try is worth...",
+      "options": [
+        "5",
+        "7, no kick needed",
+        "5 plus a kick"
+      ],
+      "answer": 1,
+      "why": "Penalty tries are 7, no kick needed."
+    },
+    {
+      "q": "Why does scoring under the posts help?",
+      "options": [
+        "It's worth more points",
+        "The conversion is easier",
+        "The ref likes it"
+      ],
+      "answer": 1,
+      "why": "Conversions are taken in line with where the try was scored."
+    }
   ],
   "tackling": [
-    {"q": "Where does your head go in a tackle?", "options": ["In front of their body", "On the side of their butt/hip (cheek to cheek)", "Down by their feet"], "answer": 1, "why": "Never in front of their body."},
-    {"q": "Where's your target?", "options": ["Head and neck", "Below the chest", "Their shoulders"], "answer": 1, "why": "Aim below the chest."},
-    {"q": "What do you tackle with?", "options": ["Just your shoulder", "Arms wrapped, legs driving", "Your head"], "answer": 1, "why": "Wrap with your arms. Drive with your legs."}
+    {
+      "q": "Where does your head go in a tackle?",
+      "options": [
+        "In front of their body",
+        "On the side of their butt/hip (cheek to cheek)",
+        "Down by their feet"
+      ],
+      "answer": 1,
+      "why": "Never in front of their body."
+    },
+    {
+      "q": "Where's your target?",
+      "options": [
+        "Head and neck",
+        "Below the chest",
+        "Their shoulders"
+      ],
+      "answer": 1,
+      "why": "Aim below the chest."
+    },
+    {
+      "q": "What do you tackle with?",
+      "options": [
+        "Just your shoulder",
+        "Arms wrapped, legs driving",
+        "Your head"
+      ],
+      "answer": 1,
+      "why": "Wrap with your arms. Drive with your legs."
+    }
   ],
   "signals": [
-    {"q": "The ref holds an arm out at waist height. What's happening?", "options": ["Advantage", "Try", "Yellow card"], "answer": 0, "why": "Advantage means keep playing."},
-    {"q": "The ref raises an arm straight up. What's that?", "options": ["Knock-on", "Try", "Free kick"], "answer": 1, "why": "Straight up is a try."},
-    {"q": "Arm bent at a right angle, forearm straight up?", "options": ["Penalty", "Free kick", "Scrum"], "answer": 1, "why": "Bent arm is a free kick. Angled straight arm is a penalty."}
+    {
+      "q": "The ref holds an arm out at waist height. What's happening?",
+      "options": [
+        "Advantage",
+        "Try",
+        "Yellow card"
+      ],
+      "answer": 0,
+      "why": "Advantage means keep playing."
+    },
+    {
+      "q": "The ref raises an arm straight up. What's that?",
+      "options": [
+        "Knock-on",
+        "Try",
+        "Free kick"
+      ],
+      "answer": 1,
+      "why": "Straight up is a try."
+    },
+    {
+      "q": "Arm bent at a right angle, forearm straight up?",
+      "options": [
+        "Penalty",
+        "Free kick",
+        "Scrum"
+      ],
+      "answer": 1,
+      "why": "Bent arm is a free kick. Angled straight arm is a penalty."
+    }
   ],
   "first-match": [
-    {"q": "Which item is required?", "options": ["Mouthguard", "Headband", "Gloves"], "answer": 0, "why": "No mouthguard, no play."},
-    {"q": "Is it ok to be nervous before your first match?", "options": ["Yes 💚", "No"], "answer": 0, "why": "Everyone gets nervous. Your team has your back."}
+    {
+      "q": "Which item is required?",
+      "options": [
+        "Mouthguard",
+        "Headband",
+        "Gloves"
+      ],
+      "answer": 0,
+      "why": "No mouthguard, no play."
+    },
+    {
+      "q": "Is it ok to be nervous before your first match?",
+      "options": [
+        "Yes 💚",
+        "No"
+      ],
+      "answer": 0,
+      "why": "Everyone gets nervous. Your team has your back."
+    }
   ],
   "safety": [
-    {"q": "Finish the rule: \"If in doubt...\"", "options": ["...play it out", "...sit them out", "...ask the other team"], "answer": 1, "why": "If in doubt, sit them out."},
-    {"q": "A teammate looks dazed after a hit. What do you do?", "options": ["Tell them to shake it off", "Tell a coach or the ref right away", "Wait until halftime"], "answer": 1, "why": "Speak up right away. You could be protecting their brain."},
-    {"q": "Can a player with a suspected concussion come back into the same match?", "options": ["Yes, after 10 minutes", "No", "Yes, if they feel fine"], "answer": 1, "why": "Suspected concussion means done for the day, and they follow a return-to-play plan."}
+    {
+      "q": "Finish the rule: \"If in doubt...\"",
+      "options": [
+        "...play it out",
+        "...sit them out",
+        "...ask the other team"
+      ],
+      "answer": 1,
+      "why": "If in doubt, sit them out."
+    },
+    {
+      "q": "A teammate looks dazed after a hit. What do you do?",
+      "options": [
+        "Tell them to shake it off",
+        "Tell a coach or the ref right away",
+        "Wait until halftime"
+      ],
+      "answer": 1,
+      "why": "Speak up right away. You could be protecting their brain."
+    },
+    {
+      "q": "Can a player with a suspected concussion come back into the same match?",
+      "options": [
+        "Yes, after 10 minutes",
+        "No",
+        "Yes, if they feel fine"
+      ],
+      "answer": 1,
+      "why": "Suspected concussion means done for the day, and they follow a return-to-play plan."
+    }
   ],
   "calls": [
-    {"q": "What does \"Ball's out!\" tell your team?", "options": ["The ball has left the ruck", "The ball went into touch", "Someone dropped it"], "answer": 0, "why": "The ruck is over and defenders can go."},
-    {"q": "Why do we talk on the field?", "options": ["So everyone knows where to be", "To distract the ref", "We don't need to"], "answer": 0, "why": "Talk! Communication keeps the chaos manageable."}
+    {
+      "q": "What does \"Ball's out!\" tell your team?",
+      "options": [
+        "The ball has left the ruck",
+        "The ball went into touch",
+        "Someone dropped it"
+      ],
+      "answer": 0,
+      "why": "The ruck is over and defenders can go."
+    },
+    {
+      "q": "Why do we talk on the field?",
+      "options": [
+        "So everyone knows where to be",
+        "To distract the ref",
+        "We don't need to"
+      ],
+      "answer": 0,
+      "why": "Talk! Communication keeps the chaos manageable."
+    }
   ]
 }

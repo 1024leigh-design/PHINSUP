@@ -25,16 +25,23 @@
   <div class="infopanel" id="shapeinfo" aria-live="polite"></div>
 
   <ul class="keys" style="margin-top:16px">
-    <li><b>1</b><span>A flanker on one edge.</span></li>
+    <li><b>1</b><span>A flanker on one edge (sideline to the 15m line).</span></li>
     <li><b>3</b><span>A center pod (tight five + 8).</span></li>
     <li><b>3</b><span>A center pod (tight five + 8).</span></li>
-    <li><b>1</b><span>A flanker on the other edge.</span></li>
+    <li><b>1</b><span>A flanker on the other edge (sideline to the 15m line).</span></li>
   </ul>
+  <p style="margin-top:10px" id="edges"></p>
   <div class="banner"><span class="ic" aria-hidden="true">🐬</span><div><b>The tight five are ALWAYS in a center pod.</b> You carry the ball in a pod of 3.</div></div>
 
   <section aria-labelledby="h-roles">
     <div class="sec"><h2 id="h-roles">Pod roles</h2></div>
     <div class="cards" id="roles"></div>
+  </section>
+
+  <section aria-labelledby="h-pc">
+    <div class="sec"><h2 id="h-pc">🔥 Pod calls</h2><p>9 = scrum half · F = the next pod · D = defenders</p></div>
+    <div class="cards" id="podcalls" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))"></div>
+    <div class="banner" style="border-color:#d6233a"><span class="ic" aria-hidden="true">🍌</span><div><b>NO bananas!</b><span id="nobanana"></span></div></div>
   </section>
 
   <details class="more"><summary>Learn More 🤓</summary><div class="body">

@@ -1,13 +1,53 @@
 {
-  "_howto": "Fill in pods with numbers once we know who usually goes where, for example \"podA\": [1, 2, 4]. Leave empty to show 'tight five + 8' with no numbers.",
+  "_howto": "Fill in podA/podB with numbers once we know who usually goes where, for example \"podA\": [1, 2, 4]. Leave empty to show 'tight five + 8' with no numbers. podCalls are the HOT/FLASH cards on the Our Shape page.",
   "edgeLeft": 6,
   "edgeRight": 7,
   "podA": [],
   "podB": [],
-  "note": "[HANNAH TO PROVIDE: details of our open play structure]",
+  "note": "Once the first pod begins to run, the second pod can begin moving to set up for the next pod in the same formation. Conserve energy by running across and up, not down and around (see HOT below).",
   "roles": [
-    {"role": "Point", "icon": "🎯", "text": "First to get the ball. The carrier."},
-    {"role": "Support", "icon": "🤝", "text": "Main supporter of the point. First to the ruck, or takes the pop pass."},
-    {"role": "Lazy", "icon": "😎", "text": "A few feet behind the 9. Least running to get there, still gets to the ruck and supports."}
-  ]
+    {
+      "role": "Lead",
+      "short": "Ld",
+      "icon": "🎯",
+      "text": "The lead ball carrier. First to get the ball."
+    },
+    {
+      "role": "Plus",
+      "short": "Pl",
+      "icon": "➕",
+      "text": "The outside supporter. Main supporter of the lead: first to the ruck, or takes the pop pass."
+    },
+    {
+      "role": "Lazy",
+      "short": "Lz",
+      "icon": "😎",
+      "text": "The inside supporter, close to the ruck and a few feet behind the 9. Least running to get there, still gets to the ruck and supports."
+    }
+  ],
+  "edges": "Flankers don't get into the pods as much. They hang out on the edges: from the sideline to the 15m line on either side.",
+  "podCalls": [
+    {
+      "name": "HOT",
+      "icon": "🔥",
+      "diagram": "hot",
+      "points": [
+        "Once the first pod begins to run, the second pod can begin moving to set up for the next pod in the same formation (the pink dashed line).",
+        "Conserve energy by running across and up, not down and around.",
+        "The ball shows where you should catch the ball on your run!"
+      ]
+    },
+    {
+      "name": "FLASH",
+      "icon": "⚡",
+      "diagram": "flash",
+      "points": [
+        "The black line to the 10 shows the **sacred channel**. DO NOT BLOCK THE SACRED CHANNEL!",
+        "Lazy must wait for the ball to go to the 10 so the channel is not blocked.",
+        "Lead and plus should always run through, regardless of the call, to confuse the defense.",
+        "Do not stop: this is obstruction (preventing defense from getting to the ball)!"
+      ]
+    }
+  ],
+  "noBanana": "Don't run in an arc or banana shape (the red line). That wastes time and energy. Instead, wait until the ball is passed out and then run a straight line. [HANNAH: this note was cut off, confirm the rest]"
 }

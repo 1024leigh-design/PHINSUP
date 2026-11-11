@@ -76,17 +76,23 @@ The header toggle switches between **Classic** and **✨ Sparkle**. The choice i
 
 Search the `data` folder for `HANNAH` to find every placeholder. The big ones:
 
-- Phins definition of "the channel" (vocab + principles)
-- Our open play structure and which numbers go in which pod
+- Which numbers go in which pod (`podA` / `podB` in `data/shape.json`) and how pods rotate
+- The rest of the "no bananas" note (it was cut off in the screenshot)
+- Lineout call N is marked "to be confirmed"
+- Example call words for H and N (the slide examples were player names, so they're left out of this public repo)
 - Zone boundaries and what changes in each zone
-- Lineout calls, scrum calls, maul calls
+- Scrum calls
 - Kickoff receiving/kicking setups and first phases
 - Exiting the red zone
-- More What If? scenarios, and where the 8 goes when J plays 8
+- More What If? scenarios, and where the 8 goes when someone new plays 8
 - Backs cards (9 to 15)
 - Club concussion protocol and contacts
 - Video links
-- Confirm: hooker brake foot rule, tackle height rule, "Hold!" meaning, lineout pod usage
+- Confirm: hooker brake foot rule, tackle height rule, "Hold!" meaning
+
+Already filled in from the forwards' slides: pod roles (lead, plus, lazy), the sacred channel, HOT and FLASH, lineout calls P, H, I, N, and maul calls (TANGO, SALSA, offense).
+
+**This repo is public.** Keep player names out of the data files.
 
 Before launch:
 - Check the official law links still work (USA Rugby Referee Resources, World Rugby Laws of the Game). They couldn't be checked from the build machine.
