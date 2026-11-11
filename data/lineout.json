@@ -1,52 +1,19 @@
 {
-  "_howto": "Our lineout setup. slots are drawn left (front, near touch) to right (back). Edit names and text here.",
-  "slots": [
-    {
-      "k": "fl",
-      "label": "FL",
-      "name": "Front lifter",
-      "text": "Lifts the jumper from the front. Lift on the thighs/shorts, hold, and bring the jumper down safely."
-    },
-    {
-      "k": "lj1",
-      "label": "L/J",
-      "name": "Lifter / jumper",
-      "text": "Hybrid spot. Depending on the call, you jump or you lift."
-    },
-    {
-      "k": "lj2",
-      "label": "L/J",
-      "name": "Lifter / jumper",
-      "text": "Hybrid spot. Depending on the call, you jump or you lift."
-    },
-    {
-      "k": "bl",
-      "label": "BL",
-      "name": "Back lifter",
-      "text": "Lifts the jumper from the back. Lift on the thighs/shorts, hold, and bring the jumper down safely."
-    },
-    {
-      "k": "p1",
-      "label": "Pod",
-      "name": "Back pod",
-      "text": "Everyone not lifting or jumping. In a pod at the back, ready to receive the ball or be a dummy."
-    },
-    {
-      "k": "p2",
-      "label": "Pod",
-      "name": "Back pod",
-      "text": "Everyone not lifting or jumping. In a pod at the back, ready to receive the ball or be a dummy."
-    },
-    {
-      "k": "p3",
-      "label": "Pod",
-      "name": "Back pod",
-      "text": "Everyone not lifting or jumping. In a pod at the back, ready to receive the ball or be a dummy."
-    }
-  ],
-  "hooker": "You throw in at every lineout. This is the one set job in our lineout. Straight down the middle!",
-  "nine": "Receiver. Wait just off the lineout for the ball from the jumper, or from the back of a maul.",
-  "backs": "Backs stand 10 meters back from the lineout until it's over.",
-  "anyForward": "On the Phins, any forward can be a lifter, a jumper, or in the back pod. Your spot comes from the call, not your number.",
-  "note": "Every call has a front lifter, a back lifter, and two lifter/jumpers in the middle. Everyone else is in the back pod. Maul calls change this setup."
+  "_howto": "General lineout info for the Lineout page. items = what shows when you tap a part of the diagram. good = the 'Good to know' cards.",
+  "items": {
+    "thrower": {"name": "The thrower", "text": "The hooker throws the ball in from touch. It has to go straight down the middle, between the two lines."},
+    "jumper": {"name": "Jumper", "text": "Gets lifted to catch the ball or tap it down to the receiver."},
+    "lifter": {"name": "Lifter", "text": "Lifts the jumper on the thighs/shorts, holds them up, and brings them down safely. Never drop the jumper."},
+    "them": {"name": "The other team's line", "text": "They line up 1 meter away and can lift and jump to compete for the throw."},
+    "gap": {"name": "The gap", "text": "The two lines stand about 1 meter apart, with a channel down the middle. The throw has to go straight down it."},
+    "zone": {"name": "Where it happens", "text": "The lineout is between the 5m line and the 15m line, in from where the ball went out."},
+    "receiver": {"name": "Receiver", "text": "Each team can have a receiver (usually the 9) standing about 2 meters back from their line, ready for the ball."},
+    "backs": {"name": "Everyone else", "text": "Players not in the lineout stand at least 10 meters back until the lineout is over."}
+  },
+  "good": [
+    {"term": "How many players?", "def": "At least 2 from each team. The throwing team decides how many. The defense can match that or use fewer, but not more."},
+    {"term": "Full lineout", "def": "Some teams we play use a full lineout, with all of their forwards in the line. Count their numbers so we can match them."},
+    {"term": "On defense", "def": "Line up across from their players, 1 meter apart, with the channel between you. Watch their jumpers and get ready to contest or defend the maul."},
+    {"term": "On offense", "def": "We have set calls, often called by a jumper or a vet. Be ready to listen for the call, or to make it."}
+  ]
 }

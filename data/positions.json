@@ -13,7 +13,6 @@
       "job": "You anchor the scrum, one on each side of the hooker. In the lineout you could be a lifter or in the back pod. In open play you're in a center pod and carry the ball in a pod of 3.",
       "where": [
         "scrum",
-        "lineout",
         "openplay"
       ],
       "more": {
@@ -58,7 +57,6 @@
       "job": "The engine room. You push straight through your props in the scrum. In the lineout you could lift, jump, or be in the back pod, depending on the call. In open play you're in a center pod and carry the ball in a pod of 3.",
       "where": [
         "scrum",
-        "lineout",
         "openplay"
       ],
       "more": {
@@ -93,7 +91,6 @@
       ],
       "where": [
         "scrum",
-        "lineout",
         "openplay"
       ],
       "more": {
@@ -116,7 +113,6 @@
       "job": "You control the ball at the base of the scrum and link the forwards with the backs. In open play you usually join the tight five in the center pods.",
       "where": [
         "scrum",
-        "lineout",
         "openplay"
       ],
       "more": {
@@ -138,7 +134,6 @@
       "placeholder": true,
       "where": [
         "scrum",
-        "lineout",
         "openplay"
       ]
     },

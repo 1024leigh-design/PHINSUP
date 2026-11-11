@@ -369,3 +369,7 @@ html.touring .lostbtn{bottom:96px}
 html.touring .pager{display:none}
 @media (max-width:560px){ html.touring .lostbtn{bottom:140px} }
 .linkbtn{border:0; background:none; padding:0; color:var(--green); font-weight:700; text-decoration:underline; cursor:pointer; font-size:inherit; font-family:inherit}
+
+.keys.cols4{grid-template-columns:repeat(2,minmax(0,1fr))}
+.keys.cols4 li{font-size:16.5px; padding:10px 12px}
+@media (min-width:700px){ .keys.cols4{grid-template-columns:repeat(4,minmax(0,1fr))} }

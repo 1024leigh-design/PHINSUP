@@ -7,11 +7,30 @@
 <title>Set Pieces: Lineout · Phins</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;600&display=swap">
-<link rel="stylesheet" href="assets/css/phins.css">
-<script src="assets/js/config.js"></script>
-<script src="assets/js/core.js"></script>
-<script src="assets/js/pages/lineout.js"></script>
-<style>#losvg .lab{font:600 12px var(--f-mono); fill:var(--muted)} #losvg .them rect,#losvg .them circle{fill:#1f3a5f; opacity:.85} #losvg .podp .body{fill:var(--yellow-soft)} #losvg .hook .body,#losvg .nine .body{fill:var(--pink-soft); stroke:var(--pink)} #losvg .pl.on .body{fill:var(--pink)} #losvg{max-width:780px; margin:0 auto}</style>
+<link rel="stylesheet" href="assets/css/phins.css?v=11111850">
+<script src="assets/js/config.js?v=11111850"></script>
+<script src="assets/js/core.js?v=11111850"></script>
+<script src="assets/js/pages/lineout.js?v=11111850"></script>
+<style>
+#lodia .losvg{display:block; width:100%; height:auto; max-height:64vh; max-width:780px; margin:0 auto}
+.losvg .lf{fill:var(--green-soft)}
+.losvg .lab{font:600 10.5px var(--f-mono); fill:var(--muted); letter-spacing:.04em}
+.losvg .tl{stroke:var(--ink); stroke-width:2} .losvg .tl.dash{stroke-dasharray:5 5; stroke-width:1.5}
+.losvg .zonebox{fill:var(--surface); opacity:.55}
+.losvg .gapbox{fill:var(--yellow-soft); stroke:var(--yellow); stroke-width:1.5; stroke-dasharray:4 3}
+.losvg .us{fill:var(--surface); stroke:var(--green); stroke-width:2.5}
+.losvg .us.jmp{fill:var(--pink); stroke:var(--pink)} .losvg .us.thr,.losvg .us.rec{fill:var(--yellow-soft); stroke:var(--yellow)}
+.losvg .opp{fill:#1f3a5f; stroke:#14263f; stroke-width:2} .losvg .ghosty{opacity:.75}
+.losvg .backsbox{fill:var(--surface); stroke:var(--green); stroke-width:1.5; stroke-dasharray:5 4} .losvg .backsbox.opp2{stroke:#1f3a5f}
+.losvg .t{font:800 11px var(--f-display); fill:var(--ink)} .losvg .t.w{fill:#fff}
+.losvg .ball{fill:var(--yellow); stroke:#7a6100; stroke-width:2}
+.losvg .throw{fill:none; stroke:var(--pink); stroke-width:2.5; stroke-dasharray:6 5}
+.losvg .arm{stroke:var(--pink); stroke-width:4; stroke-linecap:round}
+.losvg .hot{cursor:pointer} .losvg .hot:focus{outline:none}
+.losvg .hot:hover>*,.losvg .hot:focus-visible>*{filter:drop-shadow(0 0 3px var(--hl-glow))}
+.losvg .hot.on>*{filter:drop-shadow(0 0 5px var(--pink))}
+.losvg .hot.on .gapbox,.losvg .hot.on .zonebox,.losvg .hot.on .backsbox{stroke:var(--pink); stroke-width:3; stroke-dasharray:none}
+</style>
 </head>
 <body>
 <main class="wrap" id="main" data-page="lineout" data-section="1">
@@ -20,34 +39,37 @@
     <h1>The Lineout</h1>
   </header>
 
-  <ul class="keys">
+  <ul class="keys cols4">
     <li><b>When</b><span>The ball goes out of bounds (into touch).</span></li>
-    <li><b>Throw</b><span>Our hooker always throws, straight down the middle.</span></li>
-    <li><b>Setup</b><span>Front lifter, two lifter/jumpers, back lifter. Everyone else is in the back pod.</span></li>
-    <li><b>Ball</b><span>The jumper catches or taps it down to the 9, or we form a maul.</span></li>
+    <li><b>Throw</b><span>The hooker throws it in, straight down the middle.</span></li>
+    <li><b>Setup</b><span>Two lines, 1 meter apart, between the 5m and 15m lines.</span></li>
+    <li><b>Ball</b><span>The jumper catches or taps it down to the receiver, or the team forms a maul.</span></li>
   </ul>
 
   <section aria-labelledby="h-lo">
-    <div class="sec"><h2 id="h-lo">Who's where</h2><p id="lonote"></p></div>
-    <figure class="diagram">
-      <svg id="losvg" viewBox="0 0 560 270" role="group" aria-label="Side view of a lineout. Tap a player to see their job."></svg>
-      <figcaption>Side view, not to scale. Rounded box = a player, circle = their head. Our hooker (2) throws from touch on the left. Their line is dark blue.</figcaption>
-    </figure>
-    <div class="numrow" id="lorow" aria-label="Pick a number"></div>
+    <div class="sec"><h2 id="h-lo">How a lineout works</h2></div>
+    <div class="seg" role="group" aria-label="Diagram view" style="margin:0 0 10px"><button type="button" data-view="top" aria-pressed="true">From above</button><button type="button" data-view="side" aria-pressed="false">From the side</button></div>
+    <figure class="diagram"><div id="lodia"></div>
+      <figcaption>Not to scale. Green = us, navy = the other team, H = hooker (thrower), J = jumper, L = lifter.</figcaption></figure>
     <div class="infopanel" id="loinfo" aria-live="polite"></div>
+  </section>
+
+  <section aria-labelledby="h-good">
+    <div class="sec"><h2 id="h-good">Good to know</h2></div>
+    <div class="cards" id="logood"></div>
   </section>
 
   <details class="more"><summary>Learn More 🤓</summary><div class="body">
     <ul>
-      <li>The throw must be straight down the middle.</li>
       <li><b>Safe lifting:</b> lift on the thighs/shorts, hold, and bring the jumper down safely. Never drop the jumper.</li>
       <li><b>Front, middle, and back throws:</b> the call tells the hooker which jumper to aim for.</li>
       <li><b>Dummy jumps</b> fool the other team about where the throw is going.</li>
       <li><b>Lineout to maul:</b> the jumper lands with the ball, teammates bind on, and the group drives forward. <a href="mauls.html">Mauls &rarr;</a></li>
-      <li>On the Phins, any forward can lift, jump, or be in the back pod. The usual "locks jump, props lift" rule isn't us. <b>Flexibility over labels.</b></li>
+      <li><b>On the Phins:</b> any forward can lift, jump, or be in the back pod. The only set job is the hooker's throw. <b>Flexibility over labels.</b></li>
     </ul>
     <p><a class="btn small pink" href="lineout-calls.html">See it: Phins lineout calls</a></p>
   </div></details>
+
   <section><div data-quiz="lineout"></div></section>
 </main>
 </body>

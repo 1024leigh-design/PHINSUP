@@ -391,15 +391,6 @@
           "def": "A kick that rolls and bounces along the ground."
         },
         {
-          "term": "Up and under (Garryowen)",
-          "def": "A very high kick so your team can chase and compete for it."
-        },
-        {
-          "term": "Touch finder",
-          "def": "A kick aimed to go out of bounds to gain ground.",
-          "see": "pitch.html"
-        },
-        {
           "term": "Quick throw",
           "def": "Throwing the ball in fast from touch without waiting for a lineout."
         },
@@ -414,7 +405,7 @@
         },
         {
           "term": "Drop goal",
-          "def": "Drop kick through the posts in open play. Worth 3.",
+          "def": "Did you know you can kick for 3 points, kind of like a field goal in football? Drop the ball and kick it through the posts in open play. It's harder and less common, but it's an option!",
           "see": "scoring.html"
         }
       ]
