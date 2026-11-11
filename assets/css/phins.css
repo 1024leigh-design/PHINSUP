@@ -1,0 +1,278 @@
+/* Phins learning site. Shared styles for every page.
+   Layout and card patterns follow the bio112-module index and unit hub pages.
+   Two themes: Classic (default) and Sparkle (html[data-theme="sparkle"]). */
+
+:root{
+  --bg:#f5fbf7; --surface:#ffffff; --surface-2:#e8f4ed; --ink:#0f2b1d; --muted:#46604f; --line:#cde2d5;
+  --green:#15794a; --green-soft:#dbf0e3; --on-green:#ffffff;
+  --pink:#c2255c; --pink-soft:#fde3ee; --yellow:#f2c200; --yellow-soft:#fff5c7; --on-yellow:#2b2200;
+  --good:#15794a; --good-soft:#dbf0e3; --bad:#b4232c; --bad-soft:#fbe1e1;
+  --hl:#c2255c; --hl-glow:rgba(242,194,0,.85);
+  --f-display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --f-body:'Atkinson Hyperlegible','Segoe UI',system-ui,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  --r:16px;
+  color-scheme:light;
+}
+:root[data-theme="sparkle"]{
+  --bg:#05211a; --surface:#0b3427; --surface-2:#114433; --ink:#f4fff8; --muted:#bfdccb; --line:#2a6b52;
+  --green:#52e295; --green-soft:#12493a; --on-green:#03140d;
+  --pink:#ff8cc3; --pink-soft:#4b1d36; --yellow:#ffe066; --yellow-soft:#3d3610; --on-yellow:#2b2200;
+  --good:#52e295; --good-soft:#12493a; --bad:#ff8a8a; --bad-soft:#4a1d1d;
+  --hl:#ff8cc3; --hl-glow:rgba(255,224,102,.95);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--f-body); font-size:18px; line-height:1.55; overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--f-display); margin:0; letter-spacing:-.01em; text-wrap:balance; line-height:1.15}
+p{margin:0}
+a{color:var(--green)}
+button,select,input{font:inherit; color:inherit}
+:focus-visible{outline:3px solid var(--pink); outline-offset:2px; border-radius:6px}
+[hidden]{display:none!important}
+.sr{position:absolute!important; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+.wrap{max-width:1100px; margin:0 auto; padding:16px 16px 110px}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky; top:0; z-index:40; background:var(--bg); border-bottom:1px solid var(--line)}
+.topbar .in{max-width:1100px; margin:0 auto; padding:8px 16px; display:flex; flex-wrap:wrap; align-items:center; gap:8px 10px}
+.brand{font-family:var(--f-display); font-weight:800; font-size:20px; text-decoration:none; color:var(--ink); display:flex; align-items:center; gap:6px; white-space:nowrap}
+.brand span{color:var(--pink)}
+.navlinks{display:flex; gap:6px; flex-wrap:wrap}
+.navlinks a{text-decoration:none; color:var(--ink); font-weight:700; font-size:15px; padding:7px 12px; border-radius:999px; border:1.5px solid var(--line); background:var(--surface); white-space:nowrap}
+.navlinks a:hover,.navlinks a[aria-current="page"]{border-color:var(--green); color:var(--green)}
+.seg{margin-left:auto; display:inline-flex; padding:3px; border-radius:999px; background:var(--surface-2); border:1.5px solid var(--line)}
+.seg button{border:0; background:transparent; border-radius:999px; padding:6px 12px; font-weight:700; font-size:14px; cursor:pointer; color:var(--muted); white-space:nowrap; min-height:34px}
+.seg button[aria-pressed="true"]{background:var(--ink); color:var(--bg)}
+@media (max-width:700px){
+  .topbar{position:static}
+  .navlinks{order:3; width:100%}
+  .navlinks a{flex:1 1 0; text-align:center; padding:7px 6px}
+  .navlinks a .long,.seg .long{display:none}
+}
+
+/* ---------- I'm lost floating button ---------- */
+.lostbtn{position:fixed; right:14px; bottom:14px; z-index:50; display:inline-flex; align-items:center; gap:6px; padding:12px 18px; border-radius:999px; background:var(--pink); color:#fff; font-family:var(--f-display); font-weight:800; font-size:17px; text-decoration:none; box-shadow:0 6px 18px rgba(0,0,0,.22); border:2px solid #fff}
+:root[data-theme="sparkle"] .lostbtn{color:#2a0717}
+.lostbtn:hover{filter:brightness(1.08)}
+
+/* ---------- headings and hero ---------- */
+.eyebrow{font:600 13px var(--f-mono); letter-spacing:.08em; text-transform:uppercase; color:var(--pink); margin-bottom:6px}
+.hero{margin:12px 0 22px}
+.hero h1{font-size:clamp(34px,7vw,56px); line-height:1.02; font-weight:800}
+.hero h1 em{font-style:normal; color:var(--green)}
+.hero p{color:var(--muted); font-size:19px; margin-top:10px; max-width:52ch}
+section{margin-top:30px}
+.sec{display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 12px; margin-bottom:12px; padding-bottom:6px; border-bottom:2px solid var(--line)}
+.sec h2{font-size:26px}
+.sec p{color:var(--muted); font-size:16.5px}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:999px; padding:11px 18px; font-weight:700; font-size:17px; cursor:pointer; border:1.5px solid var(--green); background:var(--green); color:var(--on-green); text-decoration:none; min-height:44px}
+.btn:hover{filter:brightness(1.07)}
+.btn.ghost{background:var(--surface); color:var(--green)}
+.btn.pink{background:var(--pink); border-color:var(--pink); color:#fff}
+:root[data-theme="sparkle"] .btn.pink{color:#2a0717}
+.btn.small{padding:7px 13px; font-size:15px; min-height:38px}
+.btn:disabled{opacity:.45; cursor:not-allowed; filter:none}
+.btnrow{display:flex; flex-wrap:wrap; gap:8px; align-items:center}
+
+/* ---------- home big buttons ---------- */
+.bigbtns{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.bigbtn{display:flex; flex-direction:column; gap:6px; padding:22px; border-radius:22px; text-decoration:none; color:var(--ink); background:var(--surface); border:2px solid var(--line); border-top:8px solid var(--c,var(--green)); transition:transform .15s, box-shadow .15s}
+.bigbtn:hover{transform:translateY(-3px); box-shadow:0 12px 26px rgba(0,0,0,.12)}
+.bigbtn .ic{font-size:44px; line-height:1}
+.bigbtn .t{font-family:var(--f-display); font-weight:800; font-size:clamp(24px,5vw,30px); line-height:1.1}
+.bigbtn .d{color:var(--muted); font-size:17px}
+
+/* ---------- tiles (page links) ---------- */
+.grid{display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.tile{position:relative; display:flex; flex-direction:column; gap:5px; background:var(--surface); border:1.5px solid var(--line); border-top:6px solid var(--c,var(--green)); border-radius:18px; padding:15px; text-decoration:none; color:var(--ink); transition:transform .15s, box-shadow .15s}
+a.tile:hover{transform:translateY(-3px); box-shadow:0 12px 26px rgba(0,0,0,.12)}
+.tile .ic{font-size:30px; line-height:1}
+.tile .t{font-family:var(--f-display); font-weight:700; font-size:21px; line-height:1.15}
+.tile .d{color:var(--muted); font-size:16.5px}
+.tile.soon{background:var(--surface-2); border-style:dashed; border-top-style:solid}
+.tag{align-self:flex-start; font:600 12px var(--f-mono); text-transform:uppercase; letter-spacing:.05em; padding:3px 10px; border-radius:999px; background:var(--green-soft); color:var(--green)}
+.tag.pink{background:var(--pink-soft); color:var(--pink)}
+.tag.todo{background:var(--yellow-soft); color:var(--ink)}
+
+/* ---------- definition cards ---------- */
+.cards{display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.dcard{position:relative; display:flex; flex-direction:column; gap:6px; background:var(--surface); border:1.5px solid var(--line); border-left:6px solid var(--c,var(--green)); border-radius:16px; padding:14px 16px}
+.dcard .term{font-family:var(--f-display); font-weight:800; font-size:20px; display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+.dcard .ic{font-size:22px}
+.dcard .def{font-size:17px}
+.dcard .see{margin-top:auto; align-self:flex-start; font-weight:700; font-size:15px; text-decoration:none; padding-top:4px}
+.dcard .see:hover{text-decoration:underline}
+.dcard .from{font:600 11.5px var(--f-mono); text-transform:uppercase; letter-spacing:.05em; color:var(--muted)}
+.phins{display:inline-flex; align-items:center; gap:3px; font:700 11.5px var(--f-mono); text-transform:uppercase; letter-spacing:.04em; padding:2px 8px; border-radius:999px; background:var(--pink-soft); color:var(--pink)}
+.dcard.is-phins{--c:var(--pink)}
+
+/* ---------- main-view bullets ---------- */
+.keys{display:grid; gap:10px; margin:0; padding:0; list-style:none}
+.keys li{display:flex; gap:12px; align-items:flex-start; background:var(--surface); border:1.5px solid var(--line); border-radius:14px; padding:12px 14px; font-size:18px}
+.keys li b:first-child{font-family:var(--f-display); min-width:4.5em; color:var(--green)}
+.steps{counter-reset:s; display:grid; gap:12px; margin:0; padding:0; list-style:none}
+.steps li{counter-increment:s; display:flex; gap:14px; align-items:flex-start; background:var(--surface); border:1.5px solid var(--line); border-radius:16px; padding:14px 16px; font-size:19px}
+.steps li::before{content:counter(s); flex-shrink:0; width:36px; height:36px; border-radius:50%; background:var(--green); color:var(--on-green); display:inline-flex; align-items:center; justify-content:center; font:700 17px var(--f-mono)}
+
+/* ---------- Phins banners ---------- */
+.banner{display:flex; gap:12px; align-items:flex-start; background:var(--yellow-soft); border:2px solid var(--yellow); border-radius:18px; padding:14px 18px; margin:16px 0; font-size:18px}
+.banner .ic{font-size:28px; line-height:1}
+.banner b{font-family:var(--f-display); font-size:20px; display:block}
+.chant{text-align:center; font-family:var(--f-display); font-weight:800; font-size:clamp(24px,5vw,34px); color:var(--pink); margin:22px 0}
+
+/* ---------- Learn More panel ---------- */
+details.more{margin-top:18px; border:2px dashed var(--green); border-radius:16px; background:var(--green-soft)}
+details.more > summary{cursor:pointer; list-style:none; padding:12px 16px; font-family:var(--f-display); font-weight:800; font-size:19px; display:flex; align-items:center; gap:8px; min-height:48px}
+details.more > summary::-webkit-details-marker{display:none}
+details.more > summary::after{content:"+"; margin-left:auto; font-size:24px; line-height:1}
+details.more[open] > summary::after{content:"\2212"}
+details.more[open] > summary{border-bottom:1.5px solid var(--line)}
+details.more .body{padding:14px 16px; display:grid; gap:12px; background:var(--surface); border-radius:0 0 14px 14px}
+details.more .body h3{font-size:19px}
+details.more .body ul{margin:0; padding-left:20px; display:grid; gap:6px}
+
+/* ---------- placeholders for Hannah ---------- */
+.todo{border:2px dashed var(--yellow); background:var(--yellow-soft); border-radius:14px; padding:12px 14px; font-size:16.5px}
+.todo::before{content:"📝 To do: "; font-weight:700}
+
+/* ---------- tabs ---------- */
+.tabs{display:flex; flex-wrap:wrap; gap:8px; padding:2px 2px 10px; margin-bottom:8px}
+.tabs button{flex:0 0 auto; border:1.5px solid var(--line); background:var(--surface); border-radius:999px; padding:9px 15px; font-weight:700; cursor:pointer; font-size:16px; min-height:44px}
+.tabs button[aria-selected="true"]{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+
+/* ---------- search ---------- */
+.search{display:flex; align-items:center; gap:8px; background:var(--surface); border:2px solid var(--line); border-radius:999px; padding:4px 6px 4px 16px; margin:8px 0 14px}
+.search:focus-within{border-color:var(--green)}
+.search input{flex:1; min-width:0; border:0; background:transparent; font-size:18px; padding:10px 0; outline:none}
+.search button{border:0; background:var(--surface-2); border-radius:999px; padding:8px 12px; cursor:pointer; font-weight:700}
+.count{font:600 13px var(--f-mono); color:var(--muted); text-transform:uppercase; letter-spacing:.05em; margin-bottom:8px}
+
+/* ---------- diagrams ---------- */
+.diagram{background:var(--surface); border:1.5px solid var(--line); border-radius:20px; padding:10px; margin:0}
+.diagram svg{display:block; width:100%; height:auto; max-height:72vh}
+.diagram figcaption{font-size:15px; color:var(--muted); padding:6px 6px 2px; text-align:center}
+.pl{cursor:pointer}
+.pl .body{fill:var(--green-soft); stroke:var(--green); stroke-width:2.5; transition:fill .2s, stroke .2s}
+.pl .head{fill:var(--surface); stroke:var(--green); stroke-width:2.5}
+.pl text{fill:var(--ink); font-family:var(--f-display); font-weight:800; pointer-events:none}
+.pl:hover .body{fill:var(--yellow-soft)}
+.pl:focus{outline:none}
+.pl:focus-visible .body{stroke:var(--pink); stroke-width:4}
+.pl.on .body{fill:var(--pink); stroke:var(--hl); stroke-width:4; filter:drop-shadow(0 0 7px var(--hl-glow))}
+.pl.on .head{stroke:var(--hl)}
+.pl.on text{fill:#fff}
+:root[data-theme="sparkle"] .pl.on text{fill:#2a0717}
+.pl.dim{opacity:.35}
+.ghost .body,.ghost .head{fill:var(--surface-2); stroke:var(--line); stroke-dasharray:5 4}
+.ghost text{fill:var(--muted); font-family:var(--f-display); font-weight:700}
+.bindline{stroke:var(--pink); stroke-width:3; stroke-linecap:round; fill:none; opacity:.75}
+.fieldline{stroke:var(--line); stroke-width:2}
+.numrow{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0}
+.numrow button{min-width:44px; min-height:44px; border-radius:12px; border:1.5px solid var(--line); background:var(--surface); font:800 18px var(--f-display); cursor:pointer}
+.numrow button[aria-pressed="true"]{background:var(--pink); border-color:var(--pink); color:#fff}
+:root[data-theme="sparkle"] .numrow button[aria-pressed="true"]{color:#2a0717}
+.infopanel{background:var(--surface); border:2px solid var(--pink); border-radius:16px; padding:14px 16px; margin-top:12px; font-size:18px; min-height:72px}
+.infopanel h3{font-size:21px; margin-bottom:4px}
+.infopanel .num{display:inline-flex; width:34px; height:34px; border-radius:50%; background:var(--pink); color:#fff; align-items:center; justify-content:center; font:800 17px var(--f-display); margin-right:8px; vertical-align:middle}
+:root[data-theme="sparkle"] .infopanel .num{color:#2a0717}
+
+/* two column helper: diagram + text */
+.split{display:grid; gap:18px; grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){ .split{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); align-items:start} }
+
+/* ---------- quiz ---------- */
+.quiz{background:var(--surface); border:1.5px solid var(--line); border-radius:20px; padding:18px; display:grid; gap:16px}
+.quiz h2{font-size:24px}
+.q{display:grid; gap:8px}
+.q .qt{font-weight:700; font-size:18.5px}
+.q .opts{display:grid; gap:8px}
+.q .opts button{text-align:left; border:1.5px solid var(--line); background:var(--surface-2); border-radius:12px; padding:11px 14px; cursor:pointer; font-size:17px; min-height:46px}
+.q .opts button:hover:not(:disabled){border-color:var(--green)}
+.q .opts button.right{background:var(--good-soft); border-color:var(--good); font-weight:700}
+.q .opts button.wrong{background:var(--bad-soft); border-color:var(--bad)}
+.q .opts button:disabled{cursor:default}
+.fb{border-radius:12px; padding:10px 14px; font-size:16.5px; background:var(--surface-2)}
+.fb.good{background:var(--good-soft)} .fb.good b{color:var(--good)}
+.fb.bad{background:var(--bad-soft)} .fb.bad b{color:var(--bad)}
+.score{font-family:var(--f-display); font-weight:800; font-size:20px}
+
+/* ---------- pager ---------- */
+.pager{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-top:34px}
+.pager a{flex:1 1 220px; display:flex; flex-direction:column; gap:2px; text-decoration:none; color:var(--ink); border:1.5px solid var(--line); background:var(--surface); border-radius:var(--r); padding:12px 16px}
+.pager a:hover{border-color:var(--green)}
+.pager a.next{text-align:right}
+.pager small{font:600 12.5px var(--f-mono); color:var(--muted); text-transform:uppercase; letter-spacing:.05em}
+.pager b{font-family:var(--f-display); font-size:19px}
+.foot{text-align:center; color:var(--muted); font-size:15px; margin-top:30px}
+
+/* ---------- password gate ---------- */
+html.locked body > :not(#gate){display:none!important}
+#gate{min-height:100vh; display:flex; align-items:center; justify-content:center; padding:16px}
+#gate form{width:100%; max-width:380px; background:var(--surface); border:2px solid var(--line); border-top:8px solid var(--green); border-radius:22px; padding:24px; display:grid; gap:12px; text-align:center}
+#gate .ic{font-size:54px; line-height:1}
+#gate h1{font-size:30px}
+#gate input{border:2px solid var(--line); border-radius:12px; padding:12px 14px; font-size:18px; background:var(--bg); width:100%}
+#gate input:focus{border-color:var(--green); outline:none}
+#gate .err{color:var(--bad); font-weight:700; min-height:1.4em}
+
+/* =========================================================
+   SPARKLE THEME: pop-star tour glitter
+   ========================================================= */
+@property --ang{syntax:'<angle>'; initial-value:0deg; inherits:false}
+:root[data-theme="sparkle"] body{background:
+  radial-gradient(1200px 600px at 10% -10%, rgba(255,140,195,.18), transparent 60%),
+  radial-gradient(900px 500px at 110% 10%, rgba(255,224,102,.14), transparent 60%),
+  var(--bg); background-attachment:fixed}
+:root[data-theme="sparkle"] .topbar{background:rgba(5,33,26,.92); backdrop-filter:blur(6px)}
+:root[data-theme="sparkle"] .hero h1,
+:root[data-theme="sparkle"] .chant{background:linear-gradient(100deg,#ff8cc3 0%,#ffe066 25%,#ffffff 40%,#52e295 55%,#ff8cc3 75%,#ffe066 100%); background-size:250% 100%; -webkit-background-clip:text; background-clip:text; color:transparent; animation:shimmer 6s linear infinite}
+:root[data-theme="sparkle"] .hero h1 em{color:transparent}
+:root[data-theme="sparkle"] :is(.hero h1,.chant) .emo{display:inline-block; -webkit-text-fill-color:initial; color:initial; background:none; animation:none}
+@keyframes shimmer{to{background-position:-250% 0}}
+:root[data-theme="sparkle"] :is(.tile,.bigbtn,.dcard,.quiz,.diagram,.infopanel,.wcard){
+  border:2px solid transparent;
+  background:linear-gradient(var(--surface),var(--surface)) padding-box,
+    conic-gradient(from var(--ang),#ff8cc3,#ffe066,#ffffff,#52e295,#ff8cc3,#ffe066,#ff8cc3) border-box;
+  animation:spinborder 7s linear infinite}
+:root[data-theme="sparkle"] :is(.tile,.bigbtn){border-top-width:2px}
+@keyframes spinborder{to{--ang:360deg}}
+:root[data-theme="sparkle"] :is(a.tile,.bigbtn,.dcard,.btn,.wcard):hover{box-shadow:0 0 0 2px rgba(255,224,102,.35),0 0 22px rgba(255,140,195,.55),0 0 44px rgba(255,224,102,.3)}
+:root[data-theme="sparkle"] .banner{background:linear-gradient(120deg,rgba(255,224,102,.16),rgba(255,140,195,.16)); border-color:var(--yellow)}
+:root[data-theme="sparkle"] .btn{box-shadow:0 0 14px rgba(82,226,149,.35)}
+:root[data-theme="sparkle"] .lostbtn{box-shadow:0 0 18px rgba(255,140,195,.8),0 0 36px rgba(255,224,102,.4)}
+.sparkles{position:fixed; inset:0; pointer-events:none; z-index:45; overflow:hidden}
+.sparkles i{position:absolute; width:var(--s,10px); height:var(--s,10px); opacity:0;
+  background:radial-gradient(circle, #fff 0 18%, transparent 20%),
+    conic-gradient(from 45deg, transparent 0 20%, var(--col,#ffe066) 25%, transparent 30% 45%, var(--col,#ffe066) 50%, transparent 55% 70%, var(--col,#ffe066) 75%, transparent 80%);
+  clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);
+  animation:twinkle var(--d,3s) ease-in-out var(--dl,0s) infinite}
+@keyframes twinkle{0%,100%{opacity:0; transform:scale(.3) rotate(0)} 50%{opacity:1; transform:scale(1) rotate(90deg)}}
+
+/* ---------- reduced motion: no glitter, no movement ---------- */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important; transition:none!important; scroll-behavior:auto!important}
+  .sparkles{display:none}
+}
+@media (max-width:560px){ .lostbtn{padding:9px 14px; font-size:15px; right:10px; bottom:10px} }
+
+/* ref signal figures */
+.fig{width:100%; height:auto; max-width:120px}
+.fig .fp,.fig .fb,.fig .fh{stroke:var(--ink); stroke-width:4; stroke-linecap:round; stroke-linejoin:round; fill:none}
+.fig .fh{fill:var(--surface)}
+.fig .fa{stroke:var(--pink); stroke-width:4.5; stroke-linecap:round; stroke-linejoin:round; fill:none}
+.fig .fx{stroke:var(--green); stroke-width:2.5; stroke-linecap:round; fill:none}
+
+/* 1-3-3-1 diagram */
+.shape .lab{font:600 11px var(--f-mono); fill:var(--muted); letter-spacing:.06em}
+.shape .big{font:800 30px var(--f-display); fill:var(--pink)}
+.podbox{fill:var(--surface-2); stroke:var(--line); stroke-width:2; stroke-dasharray:6 5; transition:fill .2s, stroke .2s}
+.podbox.on{fill:var(--pink-soft); stroke:var(--pink); stroke-dasharray:none; stroke-width:3}
+.mini{width:100%; max-width:150px; height:auto}
+.mini .moff{fill:var(--surface-2); stroke:var(--line); stroke-width:2}
+.mini .mon{fill:var(--pink); stroke:var(--pink); stroke-width:2}
+.mini .mtoff{fill:var(--muted)} .mini .mton{fill:#fff}

@@ -1,0 +1,29 @@
+{
+  "_howto": "type sets the color and the ref signal picture: penalty, freekick, scrum, or choice. signal is the key of a picture in data/signals.json.",
+  "outcomes": [
+    {"type": "penalty", "name": "Penalty", "icon": "🚩", "text": "Serious foul. The other team chooses: kick at goal, kick to touch, tap and go, or scrum."},
+    {"type": "freekick", "name": "Free kick", "icon": "🦶", "text": "Smaller foul. Like a penalty, but they can't kick at goal."},
+    {"type": "scrum", "name": "Scrum", "icon": "🤝", "text": "Accidental mistake, like a knock-on. Scrum to the other team."}
+  ],
+  "golden": ["Stay on your feet.", "Come through the gate.", "Release.", "Roll away.", "Stay onside.", "Tackle below the shoulders."],
+  "cards": [
+    {"name": "Offside (general play)", "type": "penalty", "signal": "penalty", "what": "You're in front of a teammate who has the ball or just kicked it, and you get involved.", "avoid": "Get back behind the ball before you play.", "result": "Penalty"},
+    {"name": "Offside at the ruck or maul", "type": "penalty", "signal": "offside", "what": "You're in front of the hindmost foot of your team's players at the ruck or maul.", "avoid": "Get behind the back foot. If you're not in the ruck, stand behind it.", "result": "Penalty"},
+    {"name": "Not releasing (tackler)", "type": "penalty", "signal": "notreleasing-tackler", "what": "The tackler holds on to the tackled player after they're on the ground.", "avoid": "Let go right away, then get up before you play the ball.", "result": "Penalty"},
+    {"name": "Not releasing (tackled player / holding on)", "type": "penalty", "signal": "holdingon", "what": "The tackled player hangs on to the ball instead of placing or passing it.", "avoid": "Place or pass the ball the moment you hit the ground.", "result": "Penalty"},
+    {"name": "Not rolling away", "type": "penalty", "signal": "penalty", "what": "A player on the ground stays near the ball and gets in the way.", "avoid": "Roll away from the ball, fast.", "result": "Penalty"},
+    {"name": "Hands in the ruck", "type": "penalty", "signal": "penalty", "what": "Picking up or playing the ball with your hands once a ruck has formed.", "avoid": "No hands in the ruck. Use your feet, or wait for it to come out.", "result": "Penalty"},
+    {"name": "Coming in from the side", "type": "penalty", "signal": "penalty", "what": "Joining a ruck, maul, or tackle from the side instead of from behind.", "avoid": "Come through the gate, from directly behind.", "result": "Penalty"},
+    {"name": "Sealing off", "type": "penalty", "signal": "penalty", "what": "Diving or flopping over the ball so the other team can't get it.", "avoid": "Stay on your feet and bind on.", "result": "Penalty"},
+    {"name": "High tackle", "type": "penalty", "signal": "hightackle", "what": "Making contact above the line of the shoulders.", "avoid": "Aim low, below the chest. Cheek to cheek.", "result": "Penalty, and the ref may give a card"},
+    {"name": "Dangerous tackle (tip tackle, no arms, etc.)", "type": "penalty", "signal": "penalty", "what": "Tipping or dropping a player, tackling without using your arms, or tackling a player in the air.", "avoid": "Wrap with your arms, drive with your legs, and never lift and drop.", "result": "Penalty, and the ref may give a card"},
+    {"name": "Collapsing the scrum", "type": "penalty", "signal": "penalty", "what": "Pulling down, dropping, or letting the scrum go to ground on purpose.", "avoid": "Keep your bind and your body height. Hips just above knees, flat back.", "result": "Penalty"},
+    {"name": "Collapsing the maul", "type": "penalty", "signal": "penalty", "what": "Pulling the maul to the ground on purpose.", "avoid": "Stay on your feet and push, don't pull down.", "result": "Penalty"},
+    {"name": "Early engagement at the scrum", "type": "freekick", "signal": "freekick", "what": "Pushing into the scrum before the ref calls \"Set.\"", "avoid": "Wait for Crouch, Bind, Set. Engage only on Set.", "result": "Free kick"},
+    {"name": "Not straight at the lineout", "type": "choice", "signal": "scrum", "what": "The throw doesn't go straight down the middle of the lineout.", "avoid": "Hooker: practice a straight throw down the middle.", "result": "Other team chooses a lineout throw or a scrum"},
+    {"name": "Obstruction", "type": "penalty", "signal": "obstruction", "what": "Blocking a defender who is trying to get to the ball carrier.", "avoid": "Don't run in front of your ball carrier or block defenders.", "result": "Penalty"},
+    {"name": "Not retreating 10 meters at a penalty", "type": "penalty", "signal": "penalty", "what": "The team that gave away the penalty doesn't back off 10 meters.", "avoid": "Sprint back 10 meters right away, even if you're tired.", "result": "Penalty moves 10 meters forward"},
+    {"name": "Knock-on", "type": "scrum", "signal": "knockon", "what": "Dropping or knocking the ball forward.", "avoid": "Watch the ball into your hands. Hands up early.", "result": "Scrum to the other team (not a penalty)"},
+    {"name": "Forward pass", "type": "scrum", "signal": "forwardpass", "what": "Passing the ball forward.", "avoid": "Pass flat or backward. Run onto the ball.", "result": "Scrum to the other team (not a penalty)"}
+  ]
+}

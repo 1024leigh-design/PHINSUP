@@ -1,0 +1,60 @@
+{
+  "_howto": "Add a scenario by copying one block. Diagrams are optional. Coordinates: x 0 to 100 (left to right), y 0 to 60 (top = toward the other team). Player fields: t = label, hl = highlight (pink), ghost = empty spot, tired = shows a tired face. arrows: [fromX, fromY, toX, toY]. ruck: [x, y].",
+  "tags": ["Open Play", "Scrum", "Lineout", "Fatigue", "Lineup Changes"],
+  "footer": "Rugby is chaos. One heart, one beat.",
+  "scenarios": [
+    {
+      "q": "What if one of the tight five is tired and can't get to their pod?",
+      "fix": "A flanker slots into the pod. **Flexibility over labels.**",
+      "tags": ["Open Play", "Fatigue"],
+      "before": {"players": [
+        {"x": 8, "y": 30, "t": "6"}, {"x": 35, "y": 22, "t": "P"}, {"x": 29, "y": 36, "t": "S"}, {"x": 41, "y": 42, "t": "L"},
+        {"x": 65, "y": 22, "t": "P"}, {"x": 59, "y": 36, "t": "S"}, {"x": 71, "y": 42, "t": "?", "ghost": true},
+        {"x": 84, "y": 55, "t": "", "tired": true}, {"x": 92, "y": 30, "t": "7"}]},
+      "after": {"players": [
+        {"x": 8, "y": 30, "t": "6"}, {"x": 35, "y": 22, "t": "P"}, {"x": 29, "y": 36, "t": "S"}, {"x": 41, "y": 42, "t": "L"},
+        {"x": 65, "y": 22, "t": "P"}, {"x": 59, "y": 36, "t": "S"}, {"x": 71, "y": 42, "t": "7", "hl": true},
+        {"x": 92, "y": 30, "t": "", "ghost": true}], "arrows": [[90, 32, 74, 41]]}
+    },
+    {
+      "q": "What if J is playing 8?",
+      "fix": "A flanker goes into a center pod instead. [HANNAH: confirm where the 8 goes in this case]",
+      "tags": ["Lineup Changes", "Open Play"],
+      "before": {"players": [
+        {"x": 8, "y": 30, "t": "6"}, {"x": 35, "y": 22, "t": "P"}, {"x": 29, "y": 36, "t": "S"}, {"x": 41, "y": 42, "t": "L"},
+        {"x": 65, "y": 22, "t": "P"}, {"x": 59, "y": 36, "t": "S"}, {"x": 71, "y": 42, "t": "8"}, {"x": 92, "y": 30, "t": "7"}]},
+      "after": {"players": [
+        {"x": 8, "y": 30, "t": "", "ghost": true}, {"x": 35, "y": 22, "t": "P"}, {"x": 29, "y": 36, "t": "S"}, {"x": 41, "y": 42, "t": "L"},
+        {"x": 65, "y": 22, "t": "P"}, {"x": 59, "y": 36, "t": "S"}, {"x": 71, "y": 42, "t": "6", "hl": true}, {"x": 92, "y": 30, "t": "7"},
+        {"x": 50, "y": 55, "t": "8?", "ghost": true}], "arrows": [[11, 33, 67, 43]]}
+    },
+    {
+      "q": "What if the other team isn't counter rucking?",
+      "fix": "The lazy can skip that ruck and go straight to the next pod.",
+      "tags": ["Open Play"],
+      "before": {"ruck": [30, 24], "players": [
+        {"x": 30, "y": 34, "t": "S"}, {"x": 46, "y": 44, "t": "L", "hl": true},
+        {"x": 68, "y": 26, "t": "P"}, {"x": 62, "y": 38, "t": "S"}, {"x": 74, "y": 44, "t": "L"}], "arrows": [[44, 42, 34, 30]]},
+      "after": {"ruck": [30, 24], "players": [
+        {"x": 30, "y": 34, "t": "S"}, {"x": 82, "y": 30, "t": "L", "hl": true},
+        {"x": 68, "y": 26, "t": "P"}, {"x": 62, "y": 38, "t": "S"}, {"x": 74, "y": 44, "t": "L"}], "arrows": [[46, 44, 79, 32]]}
+    },
+    {
+      "q": "What if you can't get to the support position in time?",
+      "fix": "Make a pod of 3 with both players coming from the lazy side. You HAVE to get to that ruck.",
+      "tags": ["Open Play"],
+      "before": {"players": [
+        {"x": 50, "y": 22, "t": "P"}, {"x": 42, "y": 36, "t": "?", "ghost": true}, {"x": 60, "y": 40, "t": "L"},
+        {"x": 8, "y": 50, "t": "S"}], "arrows": [[12, 48, 40, 38]]},
+      "after": {"players": [
+        {"x": 50, "y": 22, "t": "P"}, {"x": 58, "y": 34, "t": "S", "hl": true}, {"x": 66, "y": 44, "t": "L", "hl": true}],
+        "arrows": [[78, 46, 62, 36], [86, 54, 70, 46]]}
+    },
+    {
+      "q": "[HANNAH TO PROVIDE: more scenarios]",
+      "fix": "Copy a block in data/whatif.json to add one.",
+      "tags": [],
+      "placeholder": true
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "_howto": "Each tab has a list of terms. Fields: term, def, icon (optional emoji), see (optional page link), phins (true = Phins team term, gets the dolphin badge).",
+  "tabs": [
+    {
+      "id": "breakdown", "label": "Breakdown", "icon": "🧱",
+      "terms": [
+        {"term": "Tackle", "icon": "💥", "def": "A player with the ball is held by an opponent and brought to ground.", "see": "tackling.html"},
+        {"term": "Tackler / Tackled player", "def": "The player who makes the tackle / the player with the ball who gets tackled. Both have jobs after the tackle."},
+        {"term": "Go to ground", "def": "When you're tackled and on the ground. You must place or release the ball right away."},
+        {"term": "Place the ball", "def": "Tackled player puts the ball back toward their own team so teammates can secure it."},
+        {"term": "Release", "def": "Tackler must let go of the tackled player right away. Tackled player must let go of the ball.", "see": "penalties.html"},
+        {"term": "Roll away", "def": "After a tackle, get out of the way. Players lying around the ball give away penalties.", "see": "penalties.html"},
+        {"term": "Ruck", "icon": "🧱", "def": "Ball is on the ground and at least one player from each team is on their feet, over the ball, in contact. No hands allowed.", "see": "openplay.html"},
+        {"term": "Breakdown", "def": "General term for everything that happens at the tackle and ruck."},
+        {"term": "Jackal / Pilfer", "icon": "🦊", "def": "A player on their feet grabbing the ball at the tackle before a ruck forms. Legal only before the ruck forms."},
+        {"term": "Clean out", "def": "Driving opponents away from the ball at the ruck."},
+        {"term": "Counter ruck", "def": "The defending team drives over the ball to win it back."},
+        {"term": "Seal off", "icon": "🚫", "def": "Diving or falling over the ball to protect it. Illegal. Stay on your feet.", "see": "penalties.html"},
+        {"term": "Hindmost foot", "icon": "🦶", "def": "The back foot of the last player in the ruck. It sets the offside line."},
+        {"term": "The gate", "icon": "🚪", "def": "You must join a ruck or tackle from directly behind it, \"through the gate,\" not from the side."},
+        {"term": "\"Use it!\"", "icon": "📣", "def": "Ref telling the 9 to play the ball now.", "see": "signals.html"},
+        {"term": "\"Ball's out\"", "icon": "📣", "def": "Ball has left the ruck, so the ruck is over and defenders can go.", "see": "calls.html"}
+      ]
+    },
+    {
+      "id": "attack", "label": "Attack & Open Play", "icon": "🏃",
+      "terms": [
+        {"term": "Open play", "def": "Everything that isn't a set piece. The ball is live and moving.", "see": "openplay.html"},
+        {"term": "Phase", "def": "Each new attack after a ruck. Phase 1, phase 2, and so on."},
+        {"term": "Pod", "icon": "🐬", "phins": true, "def": "A group of 3 forwards who work together to carry, support, and ruck. We have pods of 3: point, support, lazy.", "see": "shape.html"},
+        {"term": "Point", "phins": true, "def": "The first person in the pod to get the ball. The carrier.", "see": "shape.html"},
+        {"term": "Support", "phins": true, "def": "The main supporter of the point. In charge of getting to the ruck first or accepting a pop pass.", "see": "shape.html"},
+        {"term": "Lazy", "phins": true, "def": "The third person in a pod, standing a few feet behind the scrum half. You still get to the ruck and support. It's called \"lazy\" because it usually takes the least running to get there from the last breakdown and to the ruck you need to join.", "see": "shape.html"},
+        {"term": "1-3-3-1", "phins": true, "def": "Our forward shape across the field. A flanker on each edge (the 1s), and the tight five plus the 8 in two center pods of 3 (the 3s).", "see": "shape.html"},
+        {"term": "Channel", "phins": true, "def": "[HANNAH TO PROVIDE: Phins definition of \"the channel\" and why we stay out of it]"},
+        {"term": "Carry / Ball carrier", "def": "Running with the ball into contact."},
+        {"term": "Go forward / Front foot ball", "def": "Getting past the gain line so the next ruck is fast and easy."},
+        {"term": "Slow ball", "icon": "🐢", "def": "Ball that takes a long time to come out of the ruck. Gives the defense time to set."},
+        {"term": "Gain line", "def": "Imaginary line across the field where the last breakdown was. Getting past it = going forward."},
+        {"term": "Pick and go", "def": "Picking the ball up from the base of a ruck and charging straight forward."},
+        {"term": "Crash ball", "def": "A hard, straight carry aimed at the defense to suck in tacklers."},
+        {"term": "Pop pass", "def": "A short, soft pass to a teammate right next to you, usually in contact."},
+        {"term": "Offload", "def": "Passing the ball while being tackled."},
+        {"term": "Dummy", "def": "Pretending to pass to fool the defense."},
+        {"term": "Support runner", "def": "A player running close to the carrier, ready for a pass or to protect the ball."},
+        {"term": "Latch", "def": "A teammate binding onto the carrier to drive them forward."},
+        {"term": "Blindside / Openside", "def": "The short side of the field from a breakdown / the wide side."}
+      ]
+    },
+    {
+      "id": "defense", "label": "Defense", "icon": "🛡️",
+      "terms": [
+        {"term": "Offside line", "def": "The imaginary line you must be behind to be in the game. At a ruck it's the hindmost foot.", "see": "penalties.html"},
+        {"term": "Onside", "def": "You're behind the offside line and allowed to play."},
+        {"term": "Line speed", "icon": "⚡", "def": "How fast the defensive line moves up."},
+        {"term": "Drift defense", "def": "Defense that moves sideways to push attackers toward the touchline."},
+        {"term": "Rush / Blitz defense", "def": "Defense that sprints up fast to shut attackers down early."},
+        {"term": "Fold", "def": "Running around behind a ruck to get back into the defensive line."},
+        {"term": "Guard / Pillar", "def": "Defenders standing right next to the ruck to stop pick and go."},
+        {"term": "Hold the line", "def": "Stay connected with your teammates on defense. Don't leave gaps."},
+        {"term": "Numbers up", "def": "Having more players than the other team in an area."}
+      ]
+    },
+    {
+      "id": "setpiece", "label": "Set Piece", "icon": "🤝",
+      "terms": [
+        {"term": "Set piece", "def": "A planned restart: scrum or lineout."},
+        {"term": "Scrum", "icon": "🤝", "def": "8 forwards from each team bind and push to restart play after small mistakes like a knock-on.", "see": "scrum.html"},
+        {"term": "Front row", "def": "Props and hooker (1, 2, 3).", "see": "positions.html"},
+        {"term": "Second row", "def": "Locks (4, 5).", "see": "positions.html"},
+        {"term": "Back row / Loose forwards", "def": "Flankers and 8 (6, 7, 8).", "see": "positions.html"},
+        {"term": "Tight five", "def": "Props, hooker, and locks (1 to 5).", "see": "positions.html"},
+        {"term": "Bind", "def": "How players hold onto each other in a scrum, ruck, or maul."},
+        {"term": "Crouch, Bind, Set", "icon": "📣", "def": "The ref's three calls to set up a scrum.", "see": "scrum.html"},
+        {"term": "Lineout", "icon": "🙌", "def": "Restart after the ball goes out of bounds. Two lines of players, the hooker throws the ball in.", "see": "lineout.html"},
+        {"term": "Jumper", "def": "The player lifted to catch the throw.", "see": "lineout.html"},
+        {"term": "Lifter", "def": "Players who lift and hold up the jumper.", "see": "lineout.html"},
+        {"term": "Lineout pod", "phins": true, "def": "A jumper and their lifters working as a unit. [HANNAH: confirm our usage]", "see": "lineout-calls.html"},
+        {"term": "Dummy jump", "def": "Fake lift to fool the other team about where the throw is going."},
+        {"term": "Maul", "def": "Ball carrier on their feet, held by an opponent, with at least one teammate bound on. The group drives forward together.", "see": "mauls.html"},
+        {"term": "Drive", "def": "Pushing the maul forward."},
+        {"term": "Peel", "def": "A player breaking off the lineout or maul to run with the ball."},
+        {"term": "Eight man pick", "def": "The 8 picking up the ball from the base of the scrum and running.", "see": "scrum.html?highlight=8"}
+      ]
+    },
+    {
+      "id": "kicking", "label": "Kicking & Restarts", "icon": "🦶",
+      "terms": [
+        {"term": "Kickoff", "def": "Drop kick from the middle of halfway to start each half and after scores.", "see": "kickoffs.html"},
+        {"term": "22 drop out", "def": "Restart with a drop kick from the 22 when the attacking team kicks or carries the ball dead in your in-goal.", "see": "kickoffs.html"},
+        {"term": "Goal line drop out", "def": "Restart from your own goal line in certain situations, like when the ball is held up in your in-goal.", "see": "kickoffs.html"},
+        {"term": "Box kick", "def": "A high kick from the 9, usually from a ruck or scrum."},
+        {"term": "Grubber", "def": "A kick that rolls and bounces along the ground."},
+        {"term": "Up and under (Garryowen)", "def": "A very high kick so your team can chase and compete for it."},
+        {"term": "Touch finder", "def": "A kick aimed to go out of bounds to gain ground.", "see": "pitch.html"},
+        {"term": "Quick throw", "def": "Throwing the ball in fast from touch without waiting for a lineout."},
+        {"term": "Tap and go", "def": "Taking a penalty by tapping the ball with your foot and running."},
+        {"term": "Conversion", "def": "Kick at goal after a try. Worth 2.", "see": "scoring.html"},
+        {"term": "Drop goal", "def": "Drop kick through the posts in open play. Worth 3.", "see": "scoring.html"}
+      ]
+    },
+    {
+      "id": "ref", "label": "Ref & Game Flow", "icon": "🙋",
+      "terms": [
+        {"term": "Advantage", "def": "Ref lets play continue after a foul if the non-offending team benefits. If no benefit, they go back to the foul.", "see": "signals.html"},
+        {"term": "Knock-on", "def": "Dropping or knocking the ball forward. Scrum to the other team.", "see": "penalties.html"},
+        {"term": "Forward pass", "def": "Passing the ball forward. Scrum to the other team.", "see": "penalties.html"},
+        {"term": "Held up", "def": "The ball carrier is in the in-goal but can't ground the ball."},
+        {"term": "In-goal", "def": "The area behind the try line where you score.", "see": "pitch.html"},
+        {"term": "Dead ball", "def": "The ball has gone beyond the dead ball line or out of the in-goal.", "see": "pitch.html"},
+        {"term": "Sin bin / Yellow card", "icon": "🟨", "def": "10 minutes off the field. Your team plays a player down."},
+        {"term": "Red card", "icon": "🟥", "def": "Sent off for the rest of the match."},
+        {"term": "Penalty", "def": "Sanction for a serious foul. Options include kick at goal, kick to touch, tap and go, or scrum.", "see": "penalties.html"},
+        {"term": "Free kick", "def": "Sanction for a smaller foul. Can't kick at goal.", "see": "penalties.html"},
+        {"term": "\"Hands off!\" / \"Release!\" / \"Roll away!\"", "icon": "📣", "def": "Ref warnings. Do it immediately."}
+      ]
+    }
+  ]
+}

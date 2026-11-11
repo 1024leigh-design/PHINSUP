@@ -1,0 +1,20 @@
+{
+  "_howto": "Arm angles are in degrees: 0 = straight out to the right, 90 = straight up, -90 = straight down, 180 = straight out to the left. a = the ref's pointing arm (pink), b = the other arm. extra adds a prop: card, flag, ball, wave, arc, open, neck.",
+  "officialNote": "These pictures are simple guides. [HANNAH: check each one against the official World Rugby signals before launch]",
+  "signals": [
+    {"key": "penalty", "name": "Penalty", "desc": "Arm angled up, pointing to the team that gets the penalty.", "a": [50, 50], "b": [-100, -95]},
+    {"key": "freekick", "name": "Free kick", "desc": "Arm bent at a right angle: upper arm level, forearm straight up, toward the team that gets the free kick.", "a": [0, 90], "b": [-100, -95]},
+    {"key": "advantage", "name": "Advantage", "desc": "Arm held out at waist height toward the team that has the advantage. Keep playing!", "a": [-25, -25], "b": [-100, -95]},
+    {"key": "knockon", "name": "Knock-on", "desc": "Arm up above the head with an open hand, moved back and forth.", "a": [80, 95], "b": [-100, -95], "extra": "wave"},
+    {"key": "forwardpass", "name": "Forward pass", "desc": "Hands make a passing motion forward.", "a": [-40, 10], "b": [-110, -10], "extra": "ball"},
+    {"key": "try", "name": "Try", "desc": "Arm raised straight up, with the ref's back to the dead ball line.", "a": [90, 90], "b": [-100, -95]},
+    {"key": "offside", "name": "Offside (ruck, maul, scrum, lineout)", "desc": "Arm hanging straight down, swung along the offside line.", "a": [-80, -80], "b": [-100, -95], "extra": "arc"},
+    {"key": "notreleasing-tackler", "name": "Tackler not releasing", "desc": "Arms brought together as if grabbing a player, then opened as if letting go.", "a": [-30, -10], "b": [-150, -170], "extra": "open"},
+    {"key": "holdingon", "name": "Not releasing the ball (holding on)", "desc": "Both hands held close to the chest, as if hugging a ball.", "a": [-60, 160], "b": [-120, 20], "extra": "ball-chest"},
+    {"key": "hightackle", "name": "High tackle", "desc": "Hand moved flat across the front of the neck.", "a": [10, 175], "b": [-100, -95], "extra": "neck"},
+    {"key": "scrum", "name": "Scrum", "desc": "Arm held level, pointing to the team that gets the put in.", "a": [0, 0], "b": [-100, -95]},
+    {"key": "lineout", "name": "Lineout (touch)", "desc": "The assistant referee raises their flag, then points to the team that throws in.", "a": [0, 0], "b": [120, 100], "extra": "flag"},
+    {"key": "yellowcard", "name": "Yellow card", "desc": "Ref holds up a yellow card. The player goes to the sin bin for 10 minutes.", "a": [72, 88], "b": [-100, -95], "extra": "card"},
+    {"key": "obstruction", "name": "Obstruction", "desc": "Arms crossed in front of the chest.", "a": [-90, 135], "b": [-90, 45]}
+  ]
+}

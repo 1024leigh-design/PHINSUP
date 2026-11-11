@@ -1,0 +1,17 @@
+{
+  "_howto": "Callouts for the build-by-number scrum. side = where the callout sits on wide screens (left, right, top, bottom).",
+  "players": [
+    {"n": 1, "name": "Loosehead Prop", "side": "left", "text": "Head goes outside the opposing tighthead. Bind on your hooker."},
+    {"n": 2, "name": "Hooker", "side": "top", "text": "Head goes between your two props. Bind over both props. You hook the ball back."},
+    {"n": 3, "name": "Tighthead Prop", "side": "right", "text": "Head goes between the opposing loosehead and hooker. Bind on your hooker."},
+    {"n": 4, "name": "Lock", "side": "left", "text": "Head goes in the gap between your hooker and loosehead. Shoulders on the prop's and hooker's hips. Bind with the other lock."},
+    {"n": 5, "name": "Lock", "side": "right", "text": "Head goes in the gap between your hooker and tighthead. Shoulders on the hips. Bind with the other lock."},
+    {"n": 6, "name": "Flanker", "side": "left", "text": "Bind on the outside of a lock. Shoulder on the prop. Be ready to get off fast on defense."},
+    {"n": 7, "name": "Flanker", "side": "right", "text": "Same as 6 on the other side. Get off quickly and pressure the opposition."},
+    {"n": 8, "name": "Number Eight", "side": "bottom", "text": "Head goes between your two locks. You control the ball at the base."}
+  ],
+  "notInScrum": {
+    "9": "The 9 isn't bound in the scrum. They put the ball in, then follow it to the back to play it.",
+    "backs": "Backs aren't in the scrum. They stand back, at least 5 meters behind the back foot of the scrum, until the ball is out."
+  }
+}

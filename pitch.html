@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Pitch · Phins</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/css/phins.css">
+<script src="assets/js/config.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/pages/pitch.js"></script>
+<style>
+#pitchsvg{max-height:60vh}
+.pline .hit{stroke:transparent; stroke-width:16; cursor:pointer}
+.pline .vis{stroke:var(--green); stroke-width:3; pointer-events:none}
+.pline:hover .vis{stroke:var(--yellow)}
+.pline.on .vis{stroke:var(--pink); stroke-width:6; stroke-dasharray:none; filter:drop-shadow(0 0 4px var(--hl-glow))}
+.zone{fill:var(--surface-2); cursor:pointer}
+.zone.on{fill:var(--pink-soft); stroke:var(--pink); stroke-width:3}
+#prow button{padding:0 12px; font-size:15px}
+</style>
+</head>
+<body>
+<main class="wrap" id="main" data-page="pitch" data-section="1">
+  <header class="hero">
+    <div class="eyebrow">Rugby Basics · 7</div>
+    <h1>The Pitch 🟩</h1>
+    <p>Tap a line to see what it is.</p>
+  </header>
+  <div>
+    <figure class="diagram"><svg id="pitchsvg" role="group" aria-label="Rugby pitch from above. Lines are tappable. The buttons do the same thing."></svg><figcaption>Roughly to scale. Dashed lines are the 5m, 10m, and 15m lines.</figcaption></figure>
+    <div>
+      <div class="infopanel" id="pinfo" aria-live="polite"></div>
+      <div class="numrow" id="prow" aria-label="Lines and zones"></div>
+    </div>
+  </div>
+
+  <details class="more"><summary>Learn More 🤓</summary><div class="body">
+    <h3>Kicking into touch: inside vs outside your 22</h3>
+    <ul>
+      <li><b>From inside your own 22:</b> if the kick goes straight out (on the full), the lineout is where it went out. You gain ground.</li>
+      <li><b>From outside your 22:</b> if it goes out on the full, the lineout is back level with where you kicked it. No ground gained, so bounce it in first.</li>
+      <li>Penalty kicks to touch are different: the lineout is where it goes out, and the kicking team throws in.</li>
+    </ul>
+    <h3>The 50:22</h3>
+    <p>Kick from inside your own half, the ball bounces in the field and then goes out inside their 22: your team gets the throw. (The ball can't be passed or carried back into your half first.)</p>
+    <p><a class="btn small pink" href="zones.html">🐬 See it: Phins Zones</a></p>
+  </div></details>
+
+  <section><div data-quiz="pitch"></div></section>
+</main>
+</body>
+</html>

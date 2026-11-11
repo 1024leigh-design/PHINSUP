@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Quick Vocab · Phins</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/css/phins.css">
+<script src="assets/js/config.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/vocab-cards.js"></script><script src="assets/js/pages/vocab.js"></script>
+</head>
+<body>
+<main class="wrap" id="main" data-page="vocab" data-section="1">
+  <header class="hero">
+    <div class="eyebrow">Rugby Basics · 2</div>
+    <h1>Quick Vocab 📚</h1>
+    <p>Pick a tab or search every card. <span class="phins">🐬 Phins</span> means it's a Phins team word.</p>
+  </header>
+
+  <form class="search" id="searchform" role="search">
+    <label class="sr" for="q">Search all vocab</label>
+    <input id="q" type="search" placeholder="Search all tabs" autocomplete="off">
+    <button type="submit">Search</button>
+  </form>
+  <div class="tabs" id="tabs" role="tablist" aria-label="Vocab topics"></div>
+  <p class="count" id="count" aria-live="polite"></p>
+  <div class="cards" id="vcards" role="tabpanel"></div>
+
+  <section><div data-quiz="vocab"></div></section>
+</main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "_howto": "Fill in pods with numbers once we know who usually goes where, for example \"podA\": [1, 2, 4]. Leave empty to show 'tight five + 8' with no numbers.",
+  "edgeLeft": 6,
+  "edgeRight": 7,
+  "podA": [],
+  "podB": [],
+  "note": "[HANNAH TO PROVIDE: details of our open play structure]",
+  "roles": [
+    {"role": "Point", "icon": "🎯", "text": "First to get the ball. The carrier."},
+    {"role": "Support", "icon": "🤝", "text": "Main supporter of the point. First to the ruck, or takes the pop pass."},
+    {"role": "Lazy", "icon": "😎", "text": "A few feet behind the 9. Least running to get there, still gets to the ruck and supports."}
+  ]
+}

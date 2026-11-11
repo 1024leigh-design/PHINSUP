@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Set Pieces: Scrum · Phins</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/css/phins.css">
+<script src="assets/js/config.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/pages/scrum.js"></script>
+<style>
+.stage{position:relative; display:grid; gap:12px; grid-template-columns:minmax(0,1fr); grid-template-areas:"dia" "panel"; scroll-margin-top:70px}
+.stage .dia{grid-area:dia}
+.slots{display:none}
+#panel{grid-area:panel}
+#scrumsvg{max-height:58vh}
+#scrumsvg .lab{font:600 12px var(--f-mono); letter-spacing:.06em; fill:var(--muted)}
+#scrumsvg .ghosthead{fill:var(--surface-2); stroke:var(--line); stroke-width:2; stroke-dasharray:5 4}
+.sp{transition:opacity .45s ease, transform .45s ease; transform-box:fill-box; transform-origin:center}
+.sp.hidden{opacity:0; transform:translateY(16px) scale(.92); pointer-events:none}
+.sp .bindline{opacity:.8}
+.controls{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:6px 0 12px}
+.controls .status{font:600 13px var(--f-mono); text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin-left:auto}
+.callout{background:var(--surface); border:2px solid var(--pink); border-radius:16px; padding:12px 14px; box-shadow:0 0 0 4px var(--pink-soft)}
+.callout .ch{display:flex; align-items:center; gap:10px; margin-bottom:4px}
+.callout h3{font-size:20px}
+.callout p{font-size:17.5px}
+.num{flex-shrink:0; display:inline-flex; width:32px; height:32px; border-radius:50%; background:var(--pink); color:#fff; align-items:center; justify-content:center; font:800 16px var(--f-display)}
+:root[data-theme="sparkle"] .num{color:#2a0717}
+#panel .hint{background:var(--surface); border:1.5px dashed var(--line); border-radius:16px; padding:14px 16px}
+#panel{min-height:110px}
+#leader{display:none}
+@media (min-width:1000px){
+  .stage{grid-template-columns:minmax(200px,1fr) minmax(360px,460px) minmax(200px,1fr); grid-template-areas:". top ." "left dia right" ". bot ."; column-gap:28px; row-gap:10px; align-items:stretch}
+  .slots{display:flex; flex-direction:column; gap:10px; min-width:0}
+  #slots-left{grid-area:left; justify-content:space-around}
+  #slots-right{grid-area:right; justify-content:space-around}
+  #slots-top{grid-area:top; align-items:center; justify-content:flex-end; min-height:64px}
+  #slots-bottom{grid-area:bot; align-items:center; min-height:64px}
+  #slots-top .slot,#slots-bottom .slot{width:100%; max-width:380px; display:flex; justify-content:center}
+  #panel,.mchips{display:none}
+  #leader{display:block; position:absolute; inset:0; width:100%; height:100%; pointer-events:none; overflow:visible}
+  #leader line{stroke:var(--pink); stroke-width:2.5; stroke-dasharray:6 5}
+  #leader circle{fill:var(--pink)}
+  .chip{display:inline-flex; align-items:center; gap:8px; border:1.5px solid var(--line); background:var(--surface); border-radius:999px; padding:5px 12px 5px 5px; font-weight:700; font-size:15px; cursor:pointer; min-height:42px}
+  .chip .num{width:30px; height:30px; background:var(--green-soft); color:var(--green); font-size:15px}
+  .chip:hover{border-color:var(--pink)}
+  #slots-right .slot{display:flex; justify-content:flex-start}
+  #slots-left .slot{display:flex; justify-content:flex-end}
+  .slot.active{display:block!important}
+}
+</style>
+</head>
+<body>
+<main class="wrap" id="main" data-page="scrum" data-section="1">
+  <header class="hero">
+    <div class="eyebrow">Rugby Basics · Set Pieces</div>
+    <h1>The Scrum 🤝</h1>
+  </header>
+
+  <ul class="keys">
+    <li><b>Who</b><span>All 8 forwards from each team.</span></li>
+    <li><b>When</b><span>To restart after small mistakes (knock-on, forward pass) and some other stoppages.</span></li>
+    <li><b>Shape</b><span>3-4-1: front row, then locks + flankers, then the 8.</span></li>
+    <li><b>Calls</b><span>Crouch, Bind, Set (the ref calls these).</span></li>
+  </ul>
+
+  <section aria-labelledby="h-build">
+    <div class="sec"><h2 id="h-build">🔧 Build a scrum, one number at a time</h2></div>
+    <div class="controls" role="group" aria-label="Scrum animation controls">
+      <button class="btn" id="b-play" type="button">▶ Play</button>
+      <button class="btn ghost" id="b-next" type="button">⏭ Next player</button>
+      <button class="btn ghost small" id="b-replay" type="button">↺ Replay</button>
+      <button class="btn ghost small" id="b-all" type="button">Show all</button>
+      <span class="status" id="status" aria-live="polite"></span>
+    </div>
+    <div class="stage" id="stage">
+      <div class="slots" id="slots-top"></div>
+      <div class="slots" id="slots-left"></div>
+      <figure class="diagram dia">
+        <svg id="scrumsvg" viewBox="60 175 380 340" role="group" aria-label="Top-down scrum diagram. Tap a player to see their job."></svg>
+      </figure>
+      <div class="slots" id="slots-right"></div>
+      <div class="slots" id="slots-bottom"></div>
+      <div id="panel" aria-live="polite"></div>
+      <svg id="leader" aria-hidden="true"></svg>
+    </div>
+    <div class="numrow mchips" id="chips" aria-label="Players shown so far"></div>
+  </section>
+
+  <details class="more"><summary>Learn More 🤓</summary><div class="body">
+    <h3>Loosehead vs tighthead</h3>
+    <p>The loosehead (1) has one opponent's head next to theirs. The tighthead (3) has two, so they take pressure from both sides. <a href="positions.html?n=1">See the Prop card &rarr;</a></p>
+    <h3>Binding by position</h3>
+    <ul>
+      <li><b>Props:</b> bind on your hooker.</li>
+      <li><b>Hooker:</b> bind over both props.</li>
+      <li><b>Locks:</b> bind with each other, shoulders on the front row's hips.</li>
+      <li><b>Flankers:</b> bind on the outside of a lock, and stay bound with your arm until the ball is out.</li>
+      <li><b>8:</b> pack between the locks.</li>
+    </ul>
+    <h3>Body height and flat backs</h3>
+    <p>Hips just above knees, back flat, chin up.</p>
+    <h3>Hooking vs channeling to the 8</h3>
+    <p>The hooker hooks the ball back with their foot. It then travels back through the scrum to the base, where the 8 controls it until it's time to play.</p>
+    <h3>When can each player break off?</h3>
+    <ul><li>Flankers stay bound until the ball is out.</li><li>The 8 can pick the ball up from the base (the eight man pick).</li></ul>
+    <h3>Hooker brake foot rule</h3>
+    <p><span class="tag todo">HANNAH: confirm</span></p>
+    <p><a class="btn small pink" href="scrum-calls.html">🐬 See it: Phins scrum calls</a></p>
+  </div></details>
+
+  <div data-videos="scrum"></div>
+  <section><div data-quiz="scrum"></div></section>
+</main>
+</body>
+</html>

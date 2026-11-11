@@ -1,0 +1,101 @@
+{
+  "forwardsBanner": "**Flexibility over labels.** On the Phins, roles shift with the game. Learn your main job, then be ready to do everything.",
+  "backsBanner": "Backs cards are coming soon. [HANNAH TO PROVIDE: backs content]",
+  "positions": [
+    {
+      "id": "prop",
+      "numbers": [1, 3],
+      "group": "forwards",
+      "name": "Prop",
+      "job": "Front row. You anchor the scrum, lift in lineouts, and carry and clean in tight. In open play you're part of the tight five, so you're always in a center pod and you carry the ball in a pod of 3.",
+      "tags": ["scrum", "lineout lifting", "rucks", "pod carries", "tackles"],
+      "where": ["scrum", "lineout", "openplay"],
+      "more": {
+        "title": "Loosehead (1) vs Tighthead (3)",
+        "points": [
+          "**Loosehead (1):** Left side of the scrum. Your head goes on the outside of the opposing tighthead, so you have only one opponent's head next to you. You keep your side stable and give your hooker a clear view of the ball.",
+          "**Tighthead (3):** Right side of the scrum. Your head goes between the opposing loosehead and hooker, so you take pressure from both sides. This is the cornerstone of the scrum. If the tighthead goes backward, the scrum goes backward.",
+          "Both props lift in the lineout and both live in the center pods in open play."
+        ]
+      }
+    },
+    {
+      "id": "hooker",
+      "numbers": [2],
+      "group": "forwards",
+      "name": "Hooker",
+      "job": "Center of the front row. You hook the ball back in the scrum and throw in at every lineout. In open play you're part of the tight five, so you're in a center pod carrying in a pod of 3.",
+      "tags": ["scrum hooking", "lineout throwing", "rucks", "pod carries"],
+      "where": ["scrum", "lineout", "openplay"],
+      "more": {
+        "title": "Hooker details",
+        "points": [
+          "The throw is your signature skill. It has to go straight down the middle of the lineout, and the call tells you the target.",
+          "In the scrum you're strike-ready: your props hold you up so you can hook the ball back with your foot.",
+          "Check with your coach about the current \"brake foot\" scrum rule for hookers (a recent World Rugby law trial). [HANNAH: confirm whether it applies in our competition]"
+        ]
+      }
+    },
+    {
+      "id": "locks",
+      "numbers": [4, 5],
+      "group": "forwards",
+      "name": "Locks",
+      "job": "Second row, the engine room. You push straight through your props in the scrum. In the lineout you might jump OR lift depending on the call and who's on the field. In open play you're part of the tight five, so you're in a center pod and you carry in a pod of 3.",
+      "tags": ["scrum power", "lineout (jump or lift)", "rucks", "mauls", "pod carries"],
+      "where": ["scrum", "lineout", "openplay"],
+      "more": {
+        "title": "Lock details",
+        "points": [
+          "In textbook rugby, locks are always the main jumpers. On the Phins, locks don't always jump. Know both jobs: jumping and lifting.",
+          "In the scrum your head goes in the gap between your hooker and a prop, and your shoulders push on the props' hips. Your power goes straight forward.",
+          "Flexibility over labels!"
+        ]
+      }
+    },
+    {
+      "id": "flankers",
+      "numbers": [6, 7],
+      "group": "forwards",
+      "name": "Flankers",
+      "job": "Back row, the edge of our shape. On defense in the scrum, your main job is to get off quickly and put pressure on the opposition. In open play you're usually the \"1\" on each edge of our 1-3-3-1.",
+      "subroles": [
+        {"label": "Blindside (6)", "text": "Covers the short side of the field. Watch for the pick and go and the eight man pick from the scrum."},
+        {"label": "Openside (7)", "text": "Covers the open (wide) side. Usually going after their backs on defense."}
+      ],
+      "tags": ["tackling", "getting off the scrum fast", "rucks", "turnovers", "support running", "lineout"],
+      "where": ["scrum", "lineout", "openplay"],
+      "more": {
+        "title": "Flanker details",
+        "points": [
+          "Some teams use openside/blindside and some use left/right flankers (each flanker stays on one side of the scrum no matter where the play is).",
+          "Talk to the flanker you're working with to see if they prefer a specific side.",
+          "But be prepared to do everything!"
+        ]
+      }
+    },
+    {
+      "id": "eight",
+      "numbers": [8],
+      "group": "forwards",
+      "name": "Number Eight",
+      "job": "Back of the scrum. You control the ball at the base and link the forwards with the backs. In open play you usually join the tight five in the center pods (the 3-3 of 1-3-3-1).",
+      "tags": ["scrum base control", "eight man pick", "carries", "defense"],
+      "where": ["scrum", "lineout", "openplay"],
+      "more": {
+        "title": "Number Eight details",
+        "points": [
+          "Only the 8 can pick the ball up from the base of the scrum (the \"eight man pick\").",
+          "You and the 9 decide together when the ball comes out and what happens next.",
+          "Note: if the usual 8 is out, the shape can shift (see the What If? Lab)."
+        ]
+      }
+    },
+    {"id": "scrumhalf", "numbers": [9], "group": "backs", "name": "Scrum Half", "placeholder": true, "where": ["scrum", "lineout", "openplay"]},
+    {"id": "flyhalf", "numbers": [10], "group": "backs", "name": "Fly Half", "placeholder": true, "where": []},
+    {"id": "wings", "numbers": [11, 14], "group": "backs", "name": "Wings", "placeholder": true, "where": []},
+    {"id": "insidecenter", "numbers": [12], "group": "backs", "name": "Inside Center", "placeholder": true, "where": []},
+    {"id": "outsidecenter", "numbers": [13], "group": "backs", "name": "Outside Center", "placeholder": true, "where": []},
+    {"id": "fullback", "numbers": [15], "group": "backs", "name": "Fullback", "placeholder": true, "where": []}
+  ]
+}

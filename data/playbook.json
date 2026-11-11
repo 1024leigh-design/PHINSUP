@@ -1,0 +1,118 @@
+{
+  "_howto": "Text for the Phins Playbook pages. Anything marked HANNAH is a placeholder to replace.",
+  "principles": [
+    {
+      "title": "Be adjustable.",
+      "icon": "🔄",
+      "text": "Plans break. Adjust and keep going."
+    },
+    {
+      "title": "Work together.",
+      "icon": "🤝",
+      "text": "Nobody wins a ruck alone."
+    },
+    {
+      "title": "Never go alone.",
+      "icon": "🐬",
+      "text": "Always have support."
+    },
+    {
+      "title": "Never let someone go alone.",
+      "icon": "💚",
+      "text": "If a teammate carries, you're there."
+    },
+    {
+      "title": "Stay out of the channel.",
+      "icon": "🚫",
+      "text": "[HANNAH: one line on why]"
+    },
+    {
+      "title": "Flexibility over labels.",
+      "icon": "🏷️",
+      "text": "Your number is a starting point, not a cage."
+    },
+    {
+      "title": "Get to the ruck.",
+      "icon": "🏃",
+      "text": "No matter where you're coming from."
+    }
+  ],
+  "zones": {
+    "note": "[HANNAH TO PROVIDE: zone boundaries and what changes in each]",
+    "list": [
+      {
+        "id": "red",
+        "name": "Red Zone",
+        "color": "#d6455d",
+        "where": "[HANNAH TO PROVIDE: where the red zone starts and ends]",
+        "changes": "[HANNAH TO PROVIDE: how our shape and decisions change here]",
+        "from": null,
+        "to": null
+      },
+      {
+        "id": "yellow",
+        "name": "Yellow Zone",
+        "color": "#f2c200",
+        "where": "[HANNAH TO PROVIDE]",
+        "changes": "[HANNAH TO PROVIDE]",
+        "from": null,
+        "to": null
+      },
+      {
+        "id": "green",
+        "name": "Green Zone",
+        "color": "#2fa866",
+        "where": "[HANNAH TO PROVIDE]",
+        "changes": "[HANNAH TO PROVIDE]",
+        "from": null,
+        "to": null
+      }
+    ],
+    "_howto": "from/to = meters from OUR try line (0) to THEIR try line (100). Leave null to show equal thirds."
+  },
+  "lineoutCalls": [
+    {
+      "name": "[HANNAH TO PROVIDE: call name]",
+      "jumper": "",
+      "lifters": "",
+      "throw": "",
+      "after": "[HANNAH TO PROVIDE: what happens after]"
+    }
+  ],
+  "scrumCalls": [
+    {
+      "name": "[HANNAH TO PROVIDE: call name]",
+      "means": "[HANNAH TO PROVIDE: what it means]",
+      "who": "[HANNAH TO PROVIDE: who does what]"
+    }
+  ],
+  "maulCalls": [
+    {
+      "name": "[HANNAH TO PROVIDE: maul call]",
+      "means": "[HANNAH TO PROVIDE]"
+    }
+  ],
+  "kickoff": {
+    "receiving": "[HANNAH TO PROVIDE: our receiving setup]",
+    "kicking": "[HANNAH TO PROVIDE: our kicking setup]",
+    "phases": [
+      {
+        "name": "Phase 1",
+        "text": "[HANNAH TO PROVIDE]"
+      },
+      {
+        "name": "Phase 2",
+        "text": "[HANNAH TO PROVIDE]"
+      },
+      {
+        "name": "Phase 3",
+        "text": "[HANNAH TO PROVIDE]"
+      }
+    ]
+  },
+  "redZoneExit": [
+    {
+      "step": "[HANNAH TO PROVIDE: how we get out of our own 22]"
+    }
+  ]
+}

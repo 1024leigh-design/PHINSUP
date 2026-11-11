@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Meet the Positions · Phins</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/css/phins.css">
+<script src="assets/js/config.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/pages/positions.js"></script>
+<style>
+.poscard{gap:10px; scroll-margin-top:70px}
+.poscard h2{font-size:30px}
+.bignums{display:flex; align-items:center; gap:10px; font-family:var(--f-display); font-weight:800}
+.bignums span{width:62px; height:62px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:32px; background:var(--green-soft); color:var(--green); border:3px solid var(--green)}
+.bignums span.me{background:var(--pink); color:#fff; border-color:var(--pink)}
+:root[data-theme="sparkle"] .bignums span.me{color:#2a0717}
+.bignums i{font-style:normal; color:var(--muted)}
+.lbl{font:600 13px var(--f-mono)!important; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-top:4px}
+.chips{display:flex; flex-wrap:wrap; gap:6px}
+.subroles{display:grid; gap:8px}
+.subroles div{background:var(--surface-2); border-radius:12px; padding:10px 12px}
+.pl.back .body{fill:var(--surface-2); stroke-dasharray:5 4}
+#teamsvg{max-height:60vh}
+</style>
+</head>
+<body>
+<main class="wrap" id="main" data-page="positions" data-section="1">
+  <header class="hero">
+    <div class="eyebrow">Rugby Basics · 1</div>
+    <h1>Meet the Positions 🔢</h1>
+    <p>15 players, 15 numbers. Tap a number to see what that player does.</p>
+  </header>
+
+  <div class="btnrow" role="group" aria-label="Show forwards or backs">
+    <div class="seg" style="margin-left:0"><button type="button" data-group="forwards" aria-pressed="true">Forwards 1 to 8</button><button type="button" data-group="backs" aria-pressed="false">Backs 9 to 15</button></div>
+  </div>
+  <div class="banner" id="banner"></div>
+
+  <div class="split">
+    <figure class="diagram">
+      <svg id="teamsvg" viewBox="0 0 360 425" role="group" aria-label="Team diagram. Each number is a button."></svg>
+      <figcaption>Forwards up front, backs behind.</figcaption>
+    </figure>
+    <div id="poscard"></div>
+  </div>
+
+  <div data-videos="positions"></div>
+  <section><div data-quiz="positions"></div></section>
+</main>
+</body>
+</html>
