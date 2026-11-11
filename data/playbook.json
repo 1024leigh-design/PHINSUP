@@ -202,8 +202,9 @@
       "name": "TANGO",
       "side": "Defense",
       "points": [
-        "Do not engage, part the sea.",
-        "Only move laterally, you cannot leave the line."
+        "Don't engage. Move to the side so we don't get touched (\"part the sea\") and let their maul go through.",
+        "Only move laterally: you can't leave the line.",
+        "**If we DO get touched, it's a maul**, and the whole play falls apart."
       ],
       "play": "tango"
     },
@@ -212,8 +213,10 @@
       "side": "Defense",
       "points": [
         "ENGAGE! Stop the maul!",
+        "The two players closest go in first. Our jumper tries to tie up the ball with their jumper.",
+        "Everyone else folds around from the back and engages. The hooker is in last.",
         "5 seconds of no forward progress by the opponent = turnover to PHINS!",
-        "Do NOT bring it down (i.e. attempt to tackle the ball carrier, be a human speed bump). That is dangerous play resulting in a penalty."
+        "Do NOT bring it down (don't try to tackle the ball carrier). That's dangerous play and a penalty."
       ],
       "play": "salsa"
     },
@@ -223,10 +226,12 @@
       "example": "Pizza Margherita, Hannah's Mom",
       "points": [
         "ENGAGE!",
-        "Recycle if you are not moving, getting pushed back, or turning.",
-        "5 seconds of no forward progress by us = turnover to THEM.",
-        "Present the ball to the scrum half to prevent that."
-      ]
+        "We bring our jumper down. The jumper and two lifters are the first three in, staying tight.",
+        "Everyone else folds in, binding on the back, and drives forward.",
+        "Recycle if we're not moving, getting pushed back, or turning.",
+        "5 seconds of no forward progress by us = turnover to THEM. Present the ball to the 9 to prevent that."
+      ],
+      "play": "maulattack"
     }
   ],
   "kickoff": {

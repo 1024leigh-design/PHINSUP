@@ -517,12 +517,12 @@
       }
     },
     "roles": {
-      "l1": "Move sideways with your pod. You cannot leave the line.",
-      "j1": "Move sideways with your pod. You cannot leave the line.",
-      "l2": "Move sideways with your pod. You cannot leave the line.",
-      "l3": "Move sideways with your pod. You cannot leave the line.",
-      "j2": "Move sideways with your pod. You cannot leave the line.",
-      "l4": "Move sideways with your pod. You cannot leave the line."
+      "l1": "Move to the side so you don't get touched. If you get touched, it's a maul. You can't leave the line.",
+      "j1": "Move to the side so you don't get touched. If you get touched, it's a maul. You can't leave the line.",
+      "l2": "Move to the side so you don't get touched. If you get touched, it's a maul. You can't leave the line.",
+      "l3": "Move to the side so you don't get touched. If you get touched, it's a maul. You can't leave the line.",
+      "j2": "Move to the side so you don't get touched. If you get touched, it's a maul. You can't leave the line.",
+      "l4": "Move to the side so you don't get touched. If you get touched, it's a maul. You can't leave the line."
     },
     "steps": [
       {
@@ -585,7 +585,7 @@
       },
       {
         "name": "TANGO!",
-        "text": "**Do not engage. Part the sea.** Only move laterally: you cannot leave the line.",
+        "text": "**Don't engage.** Move to the side so we don't get touched (\"part the sea\") and let their maul go through. Only move laterally: you can't leave the line.",
         "pos": {
           "l1": [
             42,
@@ -615,7 +615,7 @@
       },
       {
         "name": "Let it through",
-        "text": "Their maul goes through the gap. Stay in your line.",
+        "text": "Their maul goes through the gap. **If we DO get touched, it's a maul**, and the whole play falls apart.",
         "pos": {
           "m1": [
             134,
@@ -682,7 +682,7 @@
       },
       "j1": {
         "label": "J",
-        "name": "Jumper",
+        "name": "Our jumper",
         "kind": "jump"
       },
       "l2": {
@@ -710,21 +710,18 @@
         "name": "Hooker",
         "kind": "hook"
       },
-      "sh": {
-        "label": "9",
-        "name": "Scrum half",
-        "kind": "back"
+      "ball": {
+        "kind": "ball"
       }
     },
     "roles": {
-      "l1": "ENGAGE! Bind on and stop the maul. Stay on your feet.",
-      "j1": "ENGAGE! Bind on and stop the maul. Stay on your feet.",
-      "l2": "ENGAGE! Bind on and stop the maul. Stay on your feet.",
-      "l3": "ENGAGE! Bind on and stop the maul. Stay on your feet.",
-      "j2": "ENGAGE! Bind on and stop the maul. Stay on your feet.",
-      "l4": "ENGAGE! Bind on and stop the maul. Stay on your feet.",
-      "h": "Behind the pods in the maul (as drawn on the forwards' slide).",
-      "sh": "Behind the maul (as drawn on the forwards' slide)."
+      "j1": "One of the two closest. Engage first and try to tie up the ball with their jumper.",
+      "l2": "One of the two closest. Engage first, right with our jumper.",
+      "l1": "Fold around from the back and engage.",
+      "l3": "Fold around from the back and engage.",
+      "j2": "Fold around from the back and engage.",
+      "l4": "Fold around from the back and engage.",
+      "h": "In last. Fold around and engage."
     },
     "steps": [
       {
@@ -759,6 +756,10 @@
             158,
             86
           ],
+          "ball": [
+            146,
+            96
+          ],
           "l1": [
             75,
             132
@@ -785,83 +786,91 @@
           ],
           "h": [
             36,
-            170
-          ],
-          "sh": [
-            150,
-            186
+            172
           ]
         }
       },
       {
-        "name": "SALSA!",
-        "text": "**ENGAGE! Stop the maul!**",
+        "name": "First two in",
+        "text": "**SALSA: ENGAGE!** The two players closest go in first. **Our jumper tries to tie up the ball** with their jumper.",
         "pos": {
-          "l1": [
-            124,
-            106
-          ],
           "j1": [
             146,
-            108
+            110
           ],
           "l2": [
             168,
-            106
+            108
+          ]
+        }
+      },
+      {
+        "name": "Fold in",
+        "text": "Everyone else **folds around from the back** and engages.",
+        "pos": {
+          "l1": [
+            124,
+            110
           ],
           "l3": [
-            128,
-            128
+            136,
+            130
           ],
           "j2": [
-            150,
+            158,
             130
           ],
           "l4": [
-            172,
+            180,
             128
-          ],
+          ]
+        }
+      },
+      {
+        "name": "Hooker last",
+        "text": "The hooker is the last one in.",
+        "pos": {
           "h": [
-            150,
-            151
-          ],
-          "sh": [
-            150,
-            178
+            148,
+            150
           ]
         }
       },
       {
         "name": "Hold it",
-        "text": "5 seconds of no forward progress by the opponent = **turnover to PHINS!** Do NOT bring it down (i.e. attempt to tackle the ball carrier, be a human speed bump). That is dangerous play resulting in a penalty.",
+        "text": "Stop the maul! 5 seconds of no forward progress by the opponent = **turnover to PHINS!** Do NOT bring it down (don't try to tackle the ball carrier). That's dangerous play and a penalty.",
         "pos": {
           "m1": [
             134,
-            42
+            40
           ],
           "m2": [
             156,
-            40
+            38
           ],
           "m3": [
             124,
-            62
+            60
           ],
           "m4": [
             146,
-            60
+            58
           ],
           "m5": [
             168,
-            62
+            60
           ],
           "m6": [
             136,
-            82
+            80
           ],
           "m7": [
             158,
-            82
+            80
+          ],
+          "ball": [
+            146,
+            90
           ]
         }
       }
@@ -1159,6 +1168,265 @@
           "nlead": [
             276,
             164
+          ]
+        }
+      }
+    ]
+  },
+  "maulattack": {
+    "title": "Our maul",
+    "bg": "maul",
+    "viewBox": "0 0 300 200",
+    "actors": {
+      "m1": {
+        "kind": "them"
+      },
+      "m2": {
+        "kind": "them"
+      },
+      "m3": {
+        "kind": "them"
+      },
+      "m4": {
+        "kind": "them"
+      },
+      "m5": {
+        "kind": "them"
+      },
+      "l1": {
+        "label": "L",
+        "name": "Front lifter",
+        "kind": "lift"
+      },
+      "j1": {
+        "label": "J",
+        "name": "Jumper",
+        "kind": "jump"
+      },
+      "l2": {
+        "label": "L",
+        "name": "Back lifter",
+        "kind": "lift"
+      },
+      "p1": {
+        "label": "F",
+        "name": "Forward",
+        "kind": "next"
+      },
+      "p2": {
+        "label": "F",
+        "name": "Forward",
+        "kind": "next"
+      },
+      "p3": {
+        "label": "F",
+        "name": "Forward",
+        "kind": "next"
+      },
+      "h": {
+        "label": "H",
+        "name": "Hooker",
+        "kind": "hook"
+      },
+      "nine": {
+        "label": "9",
+        "name": "Scrum half",
+        "kind": "back"
+      },
+      "ball": {
+        "kind": "ball"
+      }
+    },
+    "roles": {
+      "j1": "Catch it, come down, and stay tight with your two lifters. You're one of the first three in.",
+      "l1": "Bring the jumper down and stay tight. One of the first three in.",
+      "l2": "Bring the jumper down and stay tight. One of the first three in.",
+      "p1": "Fold in and bind on the back. Drive forward.",
+      "p2": "Fold in and bind on the back. Drive forward.",
+      "p3": "Fold in and bind on the back. Drive forward.",
+      "h": "After the throw, fold in and bind on the back. Drive forward.",
+      "nine": "Stay behind the maul, ready for the ball."
+    },
+    "steps": [
+      {
+        "name": "Catch",
+        "text": "Our jumper catches the throw.",
+        "pos": {
+          "m1": [
+            110,
+            56
+          ],
+          "m2": [
+            135,
+            52
+          ],
+          "m3": [
+            160,
+            52
+          ],
+          "m4": [
+            185,
+            56
+          ],
+          "m5": [
+            148,
+            32
+          ],
+          "l1": [
+            126,
+            112
+          ],
+          "j1": [
+            150,
+            104
+          ],
+          "l2": [
+            174,
+            112
+          ],
+          "ball": [
+            150,
+            92
+          ],
+          "p1": [
+            220,
+            150
+          ],
+          "p2": [
+            244,
+            164
+          ],
+          "p3": [
+            96,
+            156
+          ],
+          "h": [
+            30,
+            120
+          ],
+          "nine": [
+            150,
+            186
+          ]
+        }
+      },
+      {
+        "name": "First three",
+        "text": "We bring our jumper down. **The jumper and the two lifters are the first three in**, staying tight.",
+        "pos": {
+          "l1": [
+            134,
+            100
+          ],
+          "j1": [
+            150,
+            106
+          ],
+          "l2": [
+            166,
+            100
+          ],
+          "ball": [
+            150,
+            118
+          ]
+        }
+      },
+      {
+        "name": "Fold in",
+        "text": "Everyone else **folds in, binding on the back**.",
+        "pos": {
+          "p1": [
+            140,
+            124
+          ],
+          "p2": [
+            160,
+            124
+          ],
+          "p3": [
+            150,
+            140
+          ],
+          "h": [
+            150,
+            156
+          ]
+        }
+      },
+      {
+        "name": "Drive",
+        "text": "**Drive forward together.** Recycle if we're not moving, getting pushed back, or turning.",
+        "pos": {
+          "l1": [
+            134,
+            76
+          ],
+          "j1": [
+            150,
+            82
+          ],
+          "l2": [
+            166,
+            76
+          ],
+          "ball": [
+            150,
+            94
+          ],
+          "p1": [
+            140,
+            100
+          ],
+          "p2": [
+            160,
+            100
+          ],
+          "p3": [
+            150,
+            116
+          ],
+          "h": [
+            150,
+            132
+          ],
+          "nine": [
+            150,
+            162
+          ],
+          "m1": [
+            112,
+            40
+          ],
+          "m2": [
+            136,
+            34
+          ],
+          "m3": [
+            162,
+            34
+          ],
+          "m4": [
+            186,
+            40
+          ],
+          "m5": [
+            148,
+            16
+          ]
+        }
+      },
+      {
+        "name": "Use it",
+        "text": "5 seconds of no forward progress by us = **turnover to them**. Present the ball to the 9 to prevent that.",
+        "pos": {
+          "ball": [
+            150,
+            150
+          ],
+          "nine": [
+            150,
+            160
           ]
         }
       }
