@@ -51,6 +51,7 @@ Phins.ready(function(){
     Object.keys(F).forEach(function(n){ actors["p" + n] = {label:String(n), name:"Number " + n, kind:(n == 9 || n == 10 || n == 15) ? "back" : "lift"}; set["p" + n] = F[n]; });
     for (var t = 0; t < 6; t++){ actors["t" + t] = {kind:"them"}; set["t" + t] = [60 + t*56, 16]; }
     actors.ball = {kind:"ball"}; set.ball = [200, 10];
+    actors = Object.assign({ruck:{kind:"ruck"}}, actors);
     actors.ruck = {kind:"ruck"}; set.ruck = [L[0], L[1] - (L[1] > 180 ? 56 : 24), 0];
     // catcher = closest of all but 9 and 10; ruckers = next two closest forwards
     var pool = Object.keys(F).map(Number).filter(function(n){ return n !== 9 && n !== 10; }).sort(function(a, b){ return d2(F[a], L) - d2(F[b], L); });
@@ -66,7 +67,7 @@ Phins.ready(function(){
     roles["p" + catcher] = "Closest to the ball, so you catch it and go in.";
     ruckers.forEach(function(n){ roles["p" + n] = "One of the two ruckers. Before kickoff, confirm with the catcher that you'll ruck for them."; });
     var s2 = {}; s2["p" + catcher] = L; s2.ball = [L[0], L[1] - 8];
-    var s3 = {ruck:[C[0], C[1], 1]}; s3["p" + catcher] = [C[0], C[1], 0]; s3.ball = [C[0] + 6, C[1] + 14];
+    var s3 = {ruck:[C[0], C[1], 1]}; s3["p" + catcher] = [C[0], C[1] - 6]; s3.ball = [C[0] - 10, C[1] + 8];
     s3["p" + ruckers[0]] = [C[0] - 14, C[1] + 14]; s3["p" + ruckers[1]] = [C[0] + 14, C[1] + 14];
     for (var t2 = 0; t2 < 6; t2++) s3["t" + t2] = [C[0] - 40 + t2*16 + (t2 > 2 ? 30 : 0) - 20, C[1] - 26];
     var s4 = {p9:[C[0], C[1] + 20], p10:TEN, ball:[C[0] + 8, C[1] + 22]}, rel = {};

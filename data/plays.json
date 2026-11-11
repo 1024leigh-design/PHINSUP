@@ -5,6 +5,9 @@
     "bg": "pod",
     "viewBox": "0 0 300 250",
     "actors": {
+      "ruck2": {
+        "kind": "ruck"
+      },
       "d1": {
         "label": "D",
         "kind": "def"
@@ -67,17 +70,22 @@
       "lead": "Receives the ball right in front of the fly half (10) and carries hard and straight.",
       "plus": "Outside supporter. Runs hard with the lead: first to the ruck, or takes the pop pass.",
       "lazy": "Inside supporter, close to the ruck. Gets there to support the lead's carry.",
-      "nine": "Passes to the lead.",
-      "ten": "Stands right behind the lead. On HOT the ball goes to the lead, right in front of you.",
-      "f1": "The next pod. Once the first pod runs, move across and up to set up in the same formation.",
-      "f2": "The next pod. Once the first pod runs, move across and up to set up in the same formation.",
-      "f3": "The next pod. Once the first pod runs, move across and up to set up in the same formation."
+      "nine": "Passes to the lead. After the tackle, get behind the new ruck.",
+      "ten": "Stands right behind the lead. After the tackle, move across with the play to stay behind the next lead.",
+      "f1": "The next pod. Once the first pod runs, move across and up, then set up as lead, right in front of the 10.",
+      "f2": "The next pod. Move across and up, then set up as lazy, behind the new ruck.",
+      "f3": "The next pod. Move across and up, then set up as plus, on the far side of the lead."
     },
     "steps": [
       {
         "name": "Set",
         "text": "Pod sets up. **Lead (point) is right in front of the fly half (10)**, plus is outside, lazy is inside by the ruck.",
         "pos": {
+          "ruck2": [
+            176,
+            58,
+            0
+          ],
           "d1": [
             109,
             20
@@ -155,24 +163,24 @@
         }
       },
       {
-        "name": "Go",
-        "text": "Lead carries hard and straight with plus and lazy right there. No bananas!",
+        "name": "Carry!",
+        "text": "**Carry!** The lead carries hard and straight, with plus and lazy right there. Once the first pod runs, the next pod starts moving **across and up**.",
         "pos": {
           "lead": [
             176,
-            104
+            66
           ],
           "ball": [
             176,
-            92
+            54
           ],
           "lazy": [
-            132,
-            104
+            150,
+            86
           ],
           "plus": [
-            204,
-            132
+            200,
+            94
           ],
           "d1": [
             109,
@@ -180,79 +188,137 @@
           ],
           "d2": [
             140,
-            30
+            32
           ],
           "d3": [
-            170,
-            30
+            172,
+            40
           ],
           "d4": [
             213,
             28
+          ],
+          "f1": [
+            112,
+            140
+          ],
+          "f2": [
+            98,
+            156
+          ],
+          "f3": [
+            126,
+            156
           ]
         }
       },
       {
-        "name": "Carry",
-        "text": "Lead carries into contact. Once the first pod runs, the next pod starts moving **across and up**.",
+        "name": "Tackle",
+        "text": "The lead is tackled and plus and lazy win the ruck **right there**. The 9 gets behind the new ruck, and the 10 moves across with the play.",
         "pos": {
+          "ruck2": [
+            176,
+            58,
+            1
+          ],
           "lead": [
             176,
-            58
-          ],
-          "ball": [
-            176,
-            46
-          ],
-          "lazy": [
-            156,
-            74
-          ],
-          "plus": [
-            194,
-            82
-          ],
-          "d2": [
-            150,
-            38
+            56
           ],
           "d3": [
+            184,
+            40
+          ],
+          "plus": [
+            168,
+            70
+          ],
+          "lazy": [
+            188,
+            74
+          ],
+          "ball": [
+            164,
+            72
+          ],
+          "nine": [
             176,
-            34
+            98
+          ],
+          "ten": [
+            240,
+            156
           ],
           "f1": [
-            118,
+            176,
             128
           ],
           "f2": [
-            104,
-            146
+            160,
+            142
           ],
           "f3": [
-            130,
-            146
+            192,
+            142
           ]
         }
       },
       {
         "name": "Next pod set",
-        "text": "The next pod is set in the same formation, ready to go again. Conserve energy: across and up, not down and around.",
+        "text": "The next pod sets up off the new ruck, in the same shape: **lazy** behind the ruck, **lead** in front of the 10, **plus** on the far side. Across and up, not down and around: NO bananas!",
         "pos": {
           "f1": [
-            244,
-            104
+            240,
+            112
           ],
           "f2": [
-            226,
-            122
+            176,
+            126
           ],
           "f3": [
-            258,
-            128
+            278,
+            124
+          ]
+        },
+        "relabel": {
+          "f1": [
+            "Lead",
+            "next"
+          ],
+          "f2": [
+            "Lazy",
+            "next"
+          ],
+          "f3": [
+            "Plus",
+            "next"
+          ]
+        },
+        "show": [
+          "banana"
+        ]
+      },
+      {
+        "name": "Go again",
+        "text": "The 9 passes to the new lead, right in front of the 10, and we go again.",
+        "pos": {
+          "ball": [
+            240,
+            100
+          ],
+          "f1": [
+            240,
+            108
           ]
         }
       }
-    ]
+    ],
+    "bananaPath": "M30 172 C 50 250, 235 255, 244 132",
+    "bananaText": [
+      150,
+      244
+    ],
+    "nextPath": "M50 160 L236 112"
   },
   "flash": {
     "title": "FLASH",
@@ -309,8 +375,8 @@
       }
     },
     "roles": {
-      "lead": "Run through anyway, as a decoy, to confuse the defense. Do not stop: that's obstruction.",
-      "plus": "Run through anyway, as a decoy, to confuse the defense. Do not stop: that's obstruction.",
+      "lead": "Run THROUGH the holes in the defense as a decoy, NOT into contact. Running into a defender is obstruction.",
+      "plus": "Run THROUGH the holes in the defense as a decoy, NOT into contact. Running into a defender is obstruction.",
       "lazy": "Do NOT run through. Stay out of the sacred channel until the ball has gone past. Then hit a ruck for the backs, or become the lazy for the next pod.",
       "nine": "Passes to the 10 through the sacred channel.",
       "ten": "Gets the ball from the 9 on FLASH and passes it far, out to the backs.",
@@ -319,23 +385,23 @@
     "steps": [
       {
         "name": "Set",
-        "text": "Same setup as HOT. The black line from the 9 to the 10 is the **sacred channel**.",
+        "text": "Same setup as HOT. The shaded lane between the 9 and the 10 is the **sacred channel**.",
         "pos": {
           "d1": [
             109,
-            20
+            24
           ],
           "d2": [
-            135,
-            20
+            140,
+            24
           ],
           "d3": [
-            166,
-            20
+            170,
+            24
           ],
           "d4": [
             213,
-            20
+            24
           ],
           "nine": [
             82,
@@ -372,23 +438,15 @@
       },
       {
         "name": "Run through",
-        "text": "Lead and plus **always run through**, regardless of the call, to confuse the defense. **The lazy does NOT run through.** It's paramount that we stay out of the sacred channel.",
+        "text": "Lead and plus **always run through** to confuse the defense. **The lazy does NOT run through.** It's paramount that we stay out of the sacred channel.",
         "pos": {
           "lead": [
-            176,
-            130
+            186,
+            120
           ],
           "plus": [
-            206,
-            150
-          ],
-          "d2": [
-            140,
-            30
-          ],
-          "d3": [
-            170,
-            32
+            226,
+            146
           ]
         },
         "show": [
@@ -397,23 +455,19 @@
       },
       {
         "name": "Pass to 10",
-        "text": "The 9 passes to the 10. **DO NOT BLOCK THE SACRED CHANNEL!**",
+        "text": "The 9 passes to the 10 through the sacred channel. Lead and plus run **through the holes in the defense, NOT into contact**: running into a defender is obstruction.",
         "pos": {
           "ball": [
             170,
             206
           ],
           "lead": [
-            176,
-            84
+            191,
+            52
           ],
           "plus": [
-            198,
-            108
-          ],
-          "d4": [
-            200,
-            46
+            238,
+            70
           ]
         },
         "show": [
@@ -422,23 +476,19 @@
       },
       {
         "name": "10 goes long",
-        "text": "The 10 throws a long pass, out to the backs. Lead and plus never stop: stopping is obstruction.",
+        "text": "The 10 throws a long pass, out to the backs. Lead and plus keep running through the holes.",
         "pos": {
           "ball": [
             262,
             224
           ],
           "lead": [
-            176,
-            52
+            192,
+            4
           ],
           "plus": [
-            194,
-            72
-          ],
-          "d4": [
-            236,
-            60
+            240,
+            10
           ]
         },
         "show": [
@@ -881,6 +931,12 @@
     "bg": "phase",
     "viewBox": "0 0 400 260",
     "actors": {
+      "ruck1": {
+        "kind": "ruck"
+      },
+      "ruck2": {
+        "kind": "ruck"
+      },
       "d1": {
         "label": "D",
         "kind": "def"
@@ -900,12 +956,6 @@
       "d5": {
         "label": "D",
         "kind": "def"
-      },
-      "ruck1": {
-        "kind": "ruck"
-      },
-      "ruck2": {
-        "kind": "ruck"
       },
       "nine": {
         "label": "9",
@@ -1090,7 +1140,7 @@
       },
       {
         "name": "New ruck",
-        "text": "Plus and lazy get there and win the ruck. The 9 gets behind it. **Never let someone go alone.**",
+        "text": "Right where the tackle happened: plus gets there first and drives over the ball, lazy joins, and the 9 gets behind it. **Never let someone go alone.**",
         "pos": {
           "ruck2": [
             196,
@@ -1099,22 +1149,19 @@
           ],
           "lead": [
             196,
-            98,
-            0
+            96
           ],
           "d3": [
-            204,
-            84,
-            0
+            206,
+            80
           ],
           "plus": [
-            196,
-            104,
-            0
+            194,
+            116
           ],
           "lazy": [
             216,
-            132
+            122
           ],
           "ruck1": [
             110,
@@ -1123,11 +1170,11 @@
           ],
           "nine": [
             196,
-            138
+            146
           ],
           "ball": [
-            208,
-            136
+            184,
+            118
           ]
         }
       },
@@ -1152,7 +1199,7 @@
             226
           ],
           "lazy": [
-            150,
+            160,
             150
           ]
         }

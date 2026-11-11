@@ -8,11 +8,11 @@ Phins.ready(function(){
     var P = {Lazy:[30,66], Lead:[80,52], Plus:[110,70]};
     var h = '<svg class="mini podmini" viewBox="0 0 130 100" role="img" aria-label="Pod around the ruck: ruck, 9 behind it, lazy behind the ruck, lead in front of the 10, plus on the far side. ' + on + ' is highlighted.">' +
       '<polygon points="30,4 16,26 44,26" class="mruck"/><text x="30" y="22" text-anchor="middle" font-size="7.5" class="mrt">Ruck</text>' +
-      '<circle cx="30" cy="40" r="8" class="mback"/><text x="30" y="43" text-anchor="middle" font-size="9" font-weight="800" class="mbt">9</text>' +
-      '<circle cx="80" cy="88" r="8" class="mback"/><text x="80" y="91" text-anchor="middle" font-size="8" font-weight="800" class="mbt">10</text>';
+      '<circle cx="30" cy="40" r="6" class="mback"/><text x="30" y="42.5" text-anchor="middle" font-size="7" font-weight="800" class="mbt">9</text>' +
+      '<circle cx="80" cy="88" r="6" class="mback"/><text x="80" y="90.5" text-anchor="middle" font-size="6" font-weight="800" class="mbt">10</text>';
     Object.keys(P).forEach(function(k){
       var p = P[k], o = k === on;
-      h += '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="11.5" class="' + (o ? "mon" : "moff") + '"/><text x="' + p[0] + '" y="' + (p[1]+3) + '" text-anchor="middle" font-size="8" font-weight="800" class="' + (o ? "mton" : "mtoff") + '">' + k + '</text>';
+      h += '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="7" class="' + (o ? "mon" : "moff") + '"/><text x="' + p[0] + '" y="' + (p[1]+13.5) + '" text-anchor="middle" font-size="6.5" font-weight="800" class="' + (o ? "mton" : "mtoff") + '">' + k + '</text>';
     });
     return h + '</svg>';
   }

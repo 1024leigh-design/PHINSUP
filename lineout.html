@@ -7,10 +7,10 @@
 <title>Set Pieces: Lineout · Phins</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;600&display=swap">
-<link rel="stylesheet" href="assets/css/phins.css?v=11111935">
-<script src="assets/js/config.js?v=11111935"></script>
-<script src="assets/js/core.js?v=11111935"></script>
-<script src="assets/js/pages/lineout.js?v=11111935"></script>
+<link rel="stylesheet" href="assets/css/phins.css?v=11111943">
+<script src="assets/js/config.js?v=11111943"></script>
+<script src="assets/js/core.js?v=11111943"></script>
+<script src="assets/js/pages/lineout.js?v=11111943"></script>
 <style>
 #lodia .losvg{display:block; width:100%; height:auto; max-height:64vh; max-width:780px; margin:0 auto}
 .losvg .lf{fill:var(--green-soft)}
@@ -26,6 +26,7 @@
 .losvg .ball{fill:var(--yellow); stroke:#7a6100; stroke-width:2}
 .losvg .throw{fill:none; stroke:var(--pink); stroke-width:2.5; stroke-dasharray:6 5}
 .losvg .arm{stroke:var(--pink); stroke-width:4; stroke-linecap:round}
+.losvg .mv{transition:transform .8s ease, opacity .5s ease} .losvg.instant .mv{transition:none}
 .losvg .hot{cursor:pointer} .losvg .hot:focus{outline:none}
 .losvg .hot:hover>*,.losvg .hot:focus-visible>*{filter:drop-shadow(0 0 3px var(--hl-glow))}
 .losvg .hot.on>*{filter:drop-shadow(0 0 5px var(--pink))}
@@ -48,7 +49,13 @@
 
   <section aria-labelledby="h-lo">
     <div class="sec"><h2 id="h-lo">How a lineout works</h2></div>
-    <div class="seg" role="group" aria-label="Diagram view" style="margin:0 0 10px"><button type="button" data-view="top" aria-pressed="true">From above</button><button type="button" data-view="side" aria-pressed="false">From the side</button></div>
+    <div class="btnrow" style="margin:0 0 10px">
+      <div class="seg" role="group" aria-label="Diagram view" style="margin:0"><button type="button" data-view="top" aria-pressed="true">From above</button><button type="button" data-view="side" aria-pressed="false">From the side</button></div>
+    </div>
+    <div class="btnrow" style="margin:0 0 10px"><span class="lbl" style="font:600 12.5px var(--f-mono); text-transform:uppercase; color:var(--muted)">Players in the line:</span>
+      <div class="numrow" style="margin:0"><button type="button" data-n="4" aria-pressed="false">4</button><button type="button" data-n="5" aria-pressed="false">5</button><button type="button" data-n="6" aria-pressed="false">6</button><button type="button" data-n="7" aria-pressed="true">7</button></div>
+      <button type="button" class="btn small ghost" id="locycle">Show 4 to 7</button></div>
+    <p class="sr" id="locount" aria-live="polite"></p>
     <figure class="diagram"><div id="lodia"></div>
       <figcaption>Not to scale. Green = us, navy = the other team, H = hooker (thrower), J = jumper, L = lifter.</figcaption></figure>
     <div class="infopanel" id="loinfo" aria-live="polite"></div>

@@ -128,7 +128,7 @@
         {
           "term": "Sacred channel",
           "phins": true,
-          "def": "The passing line from the scrum half (9) to the 10. DO NOT BLOCK THE SACRED CHANNEL! The lazy waits for the ball to reach the 10 so the channel stays clear.",
+          "def": "The lane between the scrum half (9) and the 10, where the pass goes. DO NOT BLOCK THE SACRED CHANNEL! The lazy waits for the ball to reach the 10 so the channel stays clear.",
           "see": "shape.html"
         },
         {
@@ -140,7 +140,7 @@
         {
           "term": "FLASH",
           "phins": true,
-          "def": "Pod call. The ball goes to the 10 through the sacred channel. Lead and plus still run through to confuse the defense.",
+          "def": "Pod call. The ball goes to the 10 through the sacred channel. Lead and plus run through the holes in the defense as decoys, not into contact.",
           "see": "shape.html"
         },
         {

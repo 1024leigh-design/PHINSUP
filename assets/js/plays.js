@@ -19,9 +19,11 @@
     if (kind === "pod"){
       h += '<rect x="0" y="0" width="300" height="250" rx="12" class="pcfield"/>' +
         '<polygon points="82,30 58,72 106,72" class="pcruck"/><text x="82" y="64" text-anchor="middle" font-size="10" class="pcrt">Ruck</text>' +
-        (def.banana === false ? '' : '<path d="M72 184 C 95 250, 215 262, 252 196" class="pcno"/><text x="262" y="214" class="pcnot">NO!</text>') +
-        '<g class="guides">' + (def.lazyRun === false ? '' : '<path d="M92 132 L160 74"/>') + '<path d="M176 168 L176 40"/><path d="M214 196 L190 76"/>' + (def.banana === false ? '' : '<path d="M50 160 L258 84" class="next"/>') + '</g>';
-      if (def.channel) h += '<g data-ov="channel" class="ov"><path d="M90 104 L166 200" class="channel" marker-end="url(#ah' + id + ')"/><text x="98" y="170" class="pcch" transform="rotate(60 98 170)">sacred channel</text></g>';
+        (def.banana === false ? '' : '<g data-ov="banana" class="ov"><path d="' + (def.bananaPath || "M72 184 C 95 250, 215 262, 252 196") + '" class="pcno"/><text x="' + (def.bananaText || [262,214])[0] + '" y="' + (def.bananaText || [262,214])[1] + '" class="pcnot">NO! \uD83C\uDF4C</text></g>') +
+        '<g class="guides">' + (def.lazyRun === false ? '' : '<path d="M92 132 L160 74"/>') + '<path d="M176 168 L176 40"/><path d="M214 196 L190 76"/>' + (def.banana === false ? '' : '<path d="' + (def.nextPath || "M50 160 L258 84") + '" class="next"/>') + '</g>';
+      if (def.channel) h += '<g data-ov="channel" class="ov"><polygon points="101,92 177,188 155,206 79,110" class="chband"/>' +
+        '<path d="M90 104 L166 200" class="channel" marker-end="url(#ah' + id + ')"/>' +
+        '<text x="0" y="0" class="pcch" transform="translate(124 118) rotate(51.6)">SACRED CHANNEL</text></g>';
     } else if (kind === "phase"){
       h += '<rect x="0" y="0" width="400" height="260" rx="12" class="pcfield"/>' +
         '<line x1="10" y1="34" x2="390" y2="34" class="tline dash"/><text x="200" y="24" text-anchor="middle" class="tlab">THEIR DEFENSE ↑</text>';
@@ -46,7 +48,7 @@
   }
 
   function actorSvg(key, a){
-    if (a.kind === "ruck") return '<g class="actor k-ruck" data-a="' + key + '" aria-hidden="true"><rect x="-26" y="-13" width="52" height="26" rx="9"/><text x="0" y="4" text-anchor="middle" font-size="11">Ruck</text></g>';
+    if (a.kind === "ruck") return '<g class="actor k-ruck" data-a="' + key + '" aria-hidden="true"><rect x="-30" y="-24" width="60" height="48" rx="14"/><text x="-34" y="-14" text-anchor="end" font-size="10">Ruck</text></g>';
     if (a.kind === "ball") return '<g class="actor ball" data-a="' + key + '"><ellipse cx="0" cy="0" rx="8" ry="5.5"/></g>';
     var r = a.r || R[a.kind] || 13, lab = a.label || "", long = lab.length > 2;
     return '<g class="actor k-' + a.kind + '" data-a="' + key + '"' + (a.kind === "them" || a.kind === "def" ? ' aria-hidden="true"' : ' tabindex="0" role="button" aria-label="' + Phins.esc(lab) + '"') + '>' +

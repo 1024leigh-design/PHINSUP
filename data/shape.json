@@ -29,20 +29,21 @@
       "diagram": "hot",
       "points": [
         "Our lead (point) receives the ball **right in front of the fly half (10)**.",
-        "Once the first pod begins to run, the second pod can begin moving to set up for the next pod in the same formation (the pink dashed line).",
-        "Conserve energy by running across and up, not down and around.",
-        "The ball shows where you should catch the ball on your run!"
+        "Carry! The lead carries hard and straight, with plus and lazy right there.",
+        "Once the first pod begins to run, the second pod can begin moving to set up for the next pod in the same formation: lazy, lead, plus.",
+        "After the tackle, the 9 gets behind the new ruck and the 10 moves across with the play.",
+        "Conserve energy by running across and up, not down and around."
       ]
     },
     {
       "name": "FLASH",
       "diagram": "flash",
       "points": [
-        "The black line to the 10 shows the **sacred channel**. DO NOT BLOCK THE SACRED CHANNEL!",
+        "The sacred channel is the lane between the 9 and the 10. DO NOT BLOCK THE SACRED CHANNEL!",
         "Lazy must wait for the ball to go to the 10 so the channel is not blocked.",
         "**The lazy does NOT run through.** It's paramount that we stay out of the sacred channel.",
-        "Lead and plus should always run through, regardless of the call, to confuse the defense.",
-        "Do not stop: this is obstruction (preventing defense from getting to the ball)!",
+        "Lead and plus always run through, regardless of the call, to confuse the defense.",
+        "Lead and plus run **through the holes in the defense, NOT into contact**. Running into a defender is obstruction.",
         "The 10 passes far, out to the backs. Then the lazy can hit a ruck for the backs, or become the lazy for the next pod."
       ]
     }
@@ -53,48 +54,48 @@
     {
       "n": 9,
       "x": 200,
-      "y": 206,
+      "y": 200,
       "name": "Scrum half",
       "where": "At the ruck."
     },
     {
       "n": 10,
       "x": 112,
-      "y": 206,
+      "y": 196,
       "name": "Fly half",
       "where": "A bridge between the pods."
     },
     {
       "n": 12,
       "x": 288,
-      "y": 206,
+      "y": 196,
       "name": "Inside center",
       "where": "A bridge between the pods."
     },
     {
       "n": 11,
-      "x": 18,
+      "x": 26,
       "y": 176,
       "name": "Wing",
       "where": "On the edge, in a line of three with the 6 and 13."
     },
     {
       "n": 13,
-      "x": 48,
+      "x": 50,
       "y": 176,
       "name": "Outside center",
       "where": "On the edge, in a line of three with the 6 and 11."
     },
     {
       "n": 14,
-      "x": 382,
+      "x": 374,
       "y": 176,
       "name": "Wing",
       "where": "On the edge, in a line of three with the 7 and 15."
     },
     {
       "n": 15,
-      "x": 352,
+      "x": 350,
       "y": 176,
       "name": "Fullback",
       "where": "On the edge, in a line of three with the 7 and 14."

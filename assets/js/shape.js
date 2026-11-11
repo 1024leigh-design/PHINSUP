@@ -6,19 +6,19 @@ window.PhinsShape = function(svg, row, info){
   Phins.load("shape").then(function(d){
     var A = d.podA || [], B = d.podB || [], backs = d.backs || [], showBacks = false, picked = 0;
     // Edges (sideline to the 15m line) are shaded. Flankers sit out there, in line with the backs. Pods are in the middle.
-    var spots = {edgeL:[78,176], edgeR:[322,176]}, tri = [[0,-22],[-24,18],[24,18]];
+    var spots = {edgeL:[74,176], edgeR:[326,176]}, tri = [[0,-14],[-14,10],[14,10]];
     var h = '<rect x="8" y="30" width="78" height="202" class="edgezone"/><rect x="314" y="30" width="78" height="202" class="edgezone"/>' +
       '<text x="47" y="46" text-anchor="middle" class="lab">EDGE</text><text x="353" y="46" text-anchor="middle" class="lab">EDGE</text>' +
       '<line x1="8" y1="20" x2="8" y2="232" class="fieldline"/><line x1="392" y1="20" x2="392" y2="232" class="fieldline"/>' +
       '<text x="200" y="22" text-anchor="middle" class="lab">ATTACKING THIS WAY ↑</text>';
     function dot(cls, x, y, label, n){
-      return '<g class="pl ' + cls + '"' + (n ? ' data-n="' + n + '"' : '') + '><circle class="body" cx="' + x + '" cy="' + y + '" r="' + (cls === "inpod" ? 16 : 14) + '"/>' +
-        (label !== "" ? '<text x="' + x + '" y="' + (y + 5) + '" text-anchor="middle" font-size="14">' + E(label) + '</text>' : '') + '</g>';
+      return '<g class="pl ' + cls + '"' + (n ? ' data-n="' + n + '"' : '') + '><circle class="body" cx="' + x + '" cy="' + y + '" r="8"/>' +
+        (label !== "" ? '<text x="' + x + '" y="' + (y + 3.5) + '" text-anchor="middle" font-size="9.5">' + E(label) + '</text>' : '') + '</g>';
     }
     h += dot("edge", spots.edgeL[0], spots.edgeL[1], d.edgeLeft, d.edgeLeft) + dot("edge", spots.edgeR[0], spots.edgeR[1], d.edgeRight, d.edgeRight);
     h += '<text x="200" y="62" text-anchor="middle" class="podlab">' + E(d.podLabel || "1, 2, 3, 4, 5 and 8") + '</text>';
     [[152,"A",A],[248,"B",B]].forEach(function(p){
-      h += '<rect class="podbox" data-pod="' + p[1] + '" x="' + (p[0]-44) + '" y="72" width="88" height="88" rx="24"/>';
+      h += '<rect class="podbox" data-pod="' + p[1] + '" x="' + (p[0]-30) + '" y="90" width="60" height="50" rx="16"/>';
       tri.forEach(function(t, i){ var n = p[2][i]; h += dot("inpod", p[0]+t[0], 116+t[1], n || "", n || 0); });
     });
     h += '<g class="fnums">';

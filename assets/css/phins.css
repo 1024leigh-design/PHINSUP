@@ -373,7 +373,7 @@ html.touring .pager{display:none}
 .keys.cols4{grid-template-columns:repeat(2,minmax(0,1fr))}
 .keys.cols4 li{font-size:16.5px; padding:10px 12px}
 @media (min-width:700px){ .keys.cols4{grid-template-columns:repeat(4,minmax(0,1fr))} }
-.playsvg .k-ruck rect{fill:var(--surface-2); stroke:var(--muted); stroke-width:2} .playsvg .k-ruck text{fill:var(--muted)} .playsvg .k-ruck{cursor:default}
+.playsvg .k-ruck rect{fill:var(--yellow-soft); fill-opacity:.55; stroke:var(--muted); stroke-width:2; stroke-dasharray:5 4} .playsvg .k-ruck text{fill:var(--muted)} .playsvg .k-ruck{cursor:default}
 .playsvg .k-next text{font-size:8.5px}
 @media (min-width:600px){ .keys.cols3{grid-template-columns:repeat(3,minmax(0,1fr))} }
 .shape .edgezone{fill:var(--yellow-soft); opacity:.7}
@@ -386,3 +386,7 @@ html.touring .pager{display:none}
 .techcards{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))} .techcards ul{font-size:16.5px}
 .kchip{display:inline-flex; width:26px; height:26px; border-radius:50%; align-items:center; justify-content:center; font:800 12px var(--f-display); border:2px solid var(--green); background:var(--surface)}
 .kchip.W{border-color:var(--pink); background:var(--pink-soft)} .kchip.P{border-color:#7a6100; background:var(--yellow)} .kchip.K{border-color:var(--pink); background:var(--pink); color:#fff}
+.playsvg .ov .chband{fill:var(--pink); opacity:.22; stroke:var(--pink); stroke-width:1.5; stroke-dasharray:4 3}
+.playsvg .ov .pcch{font:800 9px var(--f-mono); fill:var(--ink); letter-spacing:.06em}
+.podmini .mtoff{fill:var(--muted)} .podmini .mton{fill:var(--pink)}
+.shape .pl .body{stroke-width:2}
