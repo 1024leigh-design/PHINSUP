@@ -213,8 +213,8 @@
         }
       },
       {
-        "name": "Tackle",
-        "text": "The lead is tackled and plus and lazy win the ruck **right there**. The 9 gets behind the new ruck, and the 10 moves across with the play.",
+        "name": "Tackle + next pod set",
+        "text": "At the same time: the lead is tackled and plus and lazy win the ruck **right there**, the 9 gets behind it, the 10 moves across, and **the next pod sets up** off the new ruck as lazy, lead, plus. Across and up, not down and around: NO bananas!",
         "pos": {
           "ruck2": [
             176,
@@ -249,24 +249,6 @@
             240,
             156
           ],
-          "f1": [
-            176,
-            128
-          ],
-          "f2": [
-            160,
-            142
-          ],
-          "f3": [
-            192,
-            142
-          ]
-        }
-      },
-      {
-        "name": "Next pod set",
-        "text": "The next pod sets up off the new ruck, in the same shape: **lazy** behind the ruck, **lead** in front of the 10, **plus** on the far side. Across and up, not down and around: NO bananas!",
-        "pos": {
           "f1": [
             240,
             112
