@@ -1,6 +1,6 @@
 {
   "_howto": "Arm angles are in degrees: 0 = straight out to the right, 90 = straight up, -90 = straight down, 180 = straight out to the left. a = the ref's pointing arm (pink), b = the other arm. extra adds a prop: card, flag, ball, wave, arc, open, neck. a2/b2 = a second pose; the picture moves between the two. hold = the arm moves into place and holds (for the main signals).",
-  "officialNote": "These pictures are simple guides. [HANNAH: check each one against the official World Rugby signals before launch]",
+  "officialNote": "These pictures are simple guides. Official list: passport.world.rugby (Match official signals).",
   "signals": [
     {
       "key": "penalty",

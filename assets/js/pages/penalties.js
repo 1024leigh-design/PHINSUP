@@ -22,6 +22,5 @@ Phins.ready(function(){
     }
     tabs.addEventListener("click", function(e){ var b = e.target.closest("[data-tab]"); if (b){ cur = b.getAttribute("data-tab"); show(); } });
     show();
-    document.getElementById("signote").innerHTML = R(r[1].officialNote);
   }).catch(function(){ Phins.loadFail(cards, "penalties.json"); });
 });

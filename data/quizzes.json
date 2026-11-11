@@ -463,6 +463,16 @@
       ],
       "answer": 1,
       "why": "Both teams hang out after. It's a rugby tradition, and part of being a Phin."
+    },
+    {
+      "q": "You're subbed off. Can you go back on later?",
+      "options": [
+        "Yes, anytime",
+        "No, unless it's a blood sub or all our props are injured",
+        "Only at halftime"
+      ],
+      "answer": 1,
+      "why": "Once you're off, you're off, with those two exceptions."
     }
   ],
   "safety": [

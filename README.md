@@ -95,4 +95,4 @@ Already filled in from the forwards' slides: pod roles (lead, plus, lazy), the s
 
 Before launch:
 - Check the official law links still work (USA Rugby Referee Resources, World Rugby Laws of the Game). They couldn't be checked from the build machine.
-- Check the ref signal pictures against the official World Rugby signals.
+- Check the ref signal pictures against the official World Rugby signals (linked on the Penalties page).
