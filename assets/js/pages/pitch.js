@@ -6,8 +6,11 @@ Phins.ready(function(){
   function L(m){ return X0 + m*k; }   // meters from the left dead ball line
   function T(m){ return Y0 + m*k; }   // meters from the top touch line
   var h = '<rect x="' + X0 + '" y="' + Y0 + '" width="' + LEN + '" height="' + W + '" fill="var(--green-soft)"/>';
-  [[0,10],[110,120]].forEach(function(z){ h += '<rect class="zone" data-id="ingoal" x="' + L(z[0]) + '" y="' + Y0 + '" width="' + (10*k) + '" height="' + W + '"/>'; });
-  function seg(id, x1, y1, x2, y2, dash){ return '<g class="pline" data-id="' + id + '"><line class="hit" x1="' + x1 + '" x2="' + x2 + '" y1="' + y1 + '" y2="' + y2 + '"/><line class="vis" x1="' + x1 + '" x2="' + x2 + '" y1="' + y1 + '" y2="' + y2 + '"' + (dash ? ' stroke-dasharray="7 6"' : '') + '/></g>'; }
+  [[0,10],[110,120]].forEach(function(z){ h += '<rect class="zone static" x="' + L(z[0]) + '" y="' + Y0 + '" width="' + (10*k) + '" height="' + W + '"/>'; });
+  var STATIC = {ingoal:1, dead:1, fifteen:1};   // drawn, but explained in Learn More instead of tapped
+  function seg(id, x1, y1, x2, y2, dash){
+    if (STATIC[id]) return '<line class="pstatic" x1="' + x1 + '" x2="' + x2 + '" y1="' + y1 + '" y2="' + y2 + '"' + (dash ? ' stroke-dasharray="7 6"' : '') + '/>';
+    return '<g class="pline" data-id="' + id + '"><line class="hit" x1="' + x1 + '" x2="' + x2 + '" y1="' + y1 + '" y2="' + y2 + '"/><line class="vis" x1="' + x1 + '" x2="' + x2 + '" y1="' + y1 + '" y2="' + y2 + '"' + (dash ? ' stroke-dasharray="7 6"' : '') + '/></g>'; }
   function across(id, m, dash){ return seg(id, L(m), Y0, L(m), Y0 + W, dash); }        // lines across the field
   function along(id, w, dash){ return seg(id, L(10), T(w), L(110), T(w), dash); }       // lines parallel to touch
   h += along("fivetouch", 5, true) + along("fivetouch", 65, true);
@@ -24,7 +27,9 @@ Phins.ready(function(){
   svg.innerHTML = h;
   Phins.load("pitch").then(function(d){
     var by = {}; d.items.forEach(function(i){ by[i.id] = i; });
-    row.innerHTML = d.items.map(function(i){ return '<button type="button" data-id="' + i.id + '" aria-pressed="false">' + Phins.esc(i.name) + '</button>'; }).join("");
+    var main = d.items.filter(function(i){ return !i.more; });
+    document.getElementById("pmore").innerHTML = d.items.filter(function(i){ return i.more; }).map(function(i){ return '<li><b>' + Phins.esc(i.name) + ':</b> ' + Phins.rich(i.text) + '</li>'; }).join("");
+    row.innerHTML = main.map(function(i){ return '<button type="button" data-id="' + i.id + '" aria-pressed="false">' + Phins.esc(i.name) + '</button>'; }).join("");
     function pick(id){
       var els = svg.querySelectorAll("[data-id]");
       for (var i = 0; i < els.length; i++) els[i].classList.toggle("on", els[i].getAttribute("data-id") === id);

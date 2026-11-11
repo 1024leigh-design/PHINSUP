@@ -1,15 +1,58 @@
 {
-  "_howto": "Text shown when a line or zone on The Pitch is tapped.",
+  "_howto": "Text shown when a line or zone on The Pitch is tapped. more: true = not tappable, listed in Learn More instead.",
   "items": [
-    {"id": "try", "name": "Try line", "text": "Ground the ball on or over it to score."},
-    {"id": "ingoal", "name": "In-goal", "text": "Scoring area behind the try line."},
-    {"id": "dead", "name": "Dead ball line", "text": "Back edge of the in-goal."},
-    {"id": "five", "name": "5m line", "text": "5 meters from the try line. Scrums and lineouts can't be set closer than this."},
-    {"id": "fivetouch", "name": "5m line (from touch)", "text": "5 meters in from the touch line. The front of the lineout."},
-    {"id": "fifteen", "name": "15m line", "text": "Edge of the lineout area."},
-    {"id": "twentytwo", "name": "22", "text": "22 meters from the try line. Important for kicking and restarts."},
-    {"id": "ten", "name": "10m line", "text": "Kickoffs must go past it."},
-    {"id": "half", "name": "Halfway", "text": "Kickoffs start here."},
-    {"id": "touch", "name": "Touch / Touch line", "text": "Out of bounds on the sides."}
+    {
+      "id": "try",
+      "name": "Try line",
+      "text": "Ground the ball on or over it to score."
+    },
+    {
+      "id": "ingoal",
+      "name": "In-goal",
+      "text": "Scoring area behind the try line.",
+      "more": true
+    },
+    {
+      "id": "dead",
+      "name": "Dead ball line",
+      "text": "Back edge of the in-goal.",
+      "more": true
+    },
+    {
+      "id": "five",
+      "name": "5m line",
+      "text": "5 meters from the try line. Scrums and lineouts can't be set closer than this."
+    },
+    {
+      "id": "fivetouch",
+      "name": "5m line (from touch)",
+      "text": "5 meters in from the touch line. The front of the lineout."
+    },
+    {
+      "id": "fifteen",
+      "name": "15m line",
+      "text": "Edge of the lineout area.",
+      "more": true
+    },
+    {
+      "id": "twentytwo",
+      "name": "22",
+      "text": "22 meters from the try line. Important for kicking and restarts."
+    },
+    {
+      "id": "ten",
+      "name": "10m line",
+      "text": "Kickoffs must go past it."
+    },
+    {
+      "id": "half",
+      "name": "Halfway",
+      "text": "Kickoffs start here."
+    },
+    {
+      "id": "touch",
+      "name": "Touch / Touch line",
+      "text": "Out of bounds on the sides."
+    }
   ]
 }
