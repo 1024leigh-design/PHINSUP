@@ -35,14 +35,14 @@
       "why": "The tight five are in a center pod and carry the ball in a pod of 3."
     },
     {
-      "q": "On the Phins, do locks always jump in the lineout?",
+      "q": "On the Phins, who lifts and jumps in the lineout?",
       "options": [
-        "Yes, always",
-        "No, they might jump OR lift",
-        "No, locks never touch the lineout"
+        "Only the locks",
+        "Any forward, depending on the call",
+        "Only the props"
       ],
       "answer": 1,
-      "why": "Flexibility over labels! Locks might jump or lift depending on the call and who's on the field."
+      "why": "Flexibility over labels! The only set job is the hooker's throw."
     },
     {
       "q": "Who is the only player who can pick the ball up from the base of the scrum?",

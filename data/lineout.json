@@ -1,18 +1,52 @@
 {
-  "_howto": "Order of players in the example lineout (front to back) and what each number does. [HANNAH: swap in our usual setup if you want]",
-  "order": [1, 4, 3, 5, 8, 6, 7],
-  "lifted": 5,
-  "note": "One example setup. On the Phins, jumpers and lifters rotate. Flexibility over labels.",
-  "roles": {
-    "1": "Front lifter in this example. Lift on the thighs/shorts, hold, and bring the jumper down safely.",
-    "2": "You throw. Straight down the middle, to the target the call gives you.",
-    "3": "Lifter in this example. You can lift the jumper in front of you or behind you.",
-    "4": "Front jumper in this example. On the Phins you might lift instead.",
-    "5": "The jumper being lifted in this example. Catch or tap the ball down to the 9.",
-    "6": "Toward the back in this example. Ready to jump, lift, or peel depending on the call.",
-    "7": "Tail of the lineout in this example. Ready to defend or peel.",
-    "8": "Back lifter in this example, lifting the 5.",
-    "9": "Receiver. Wait just off the lineout for the ball from the jumper or the back of a maul.",
-    "backs": "Backs stand 10 meters back from the lineout until it's over."
-  }
+  "_howto": "Our lineout setup. slots are drawn left (front, near touch) to right (back). Edit names and text here.",
+  "slots": [
+    {
+      "k": "fl",
+      "label": "FL",
+      "name": "Front lifter",
+      "text": "Lifts the jumper from the front. Lift on the thighs/shorts, hold, and bring the jumper down safely."
+    },
+    {
+      "k": "lj1",
+      "label": "L/J",
+      "name": "Lifter / jumper",
+      "text": "Hybrid spot. Depending on the call, you jump or you lift."
+    },
+    {
+      "k": "lj2",
+      "label": "L/J",
+      "name": "Lifter / jumper",
+      "text": "Hybrid spot. Depending on the call, you jump or you lift."
+    },
+    {
+      "k": "bl",
+      "label": "BL",
+      "name": "Back lifter",
+      "text": "Lifts the jumper from the back. Lift on the thighs/shorts, hold, and bring the jumper down safely."
+    },
+    {
+      "k": "p1",
+      "label": "Pod",
+      "name": "Back pod",
+      "text": "Everyone not lifting or jumping. In a pod at the back, ready to receive the ball or be a dummy."
+    },
+    {
+      "k": "p2",
+      "label": "Pod",
+      "name": "Back pod",
+      "text": "Everyone not lifting or jumping. In a pod at the back, ready to receive the ball or be a dummy."
+    },
+    {
+      "k": "p3",
+      "label": "Pod",
+      "name": "Back pod",
+      "text": "Everyone not lifting or jumping. In a pod at the back, ready to receive the ball or be a dummy."
+    }
+  ],
+  "hooker": "You throw in at every lineout. This is the one set job in our lineout. Straight down the middle!",
+  "nine": "Receiver. Wait just off the lineout for the ball from the jumper, or from the back of a maul.",
+  "backs": "Backs stand 10 meters back from the lineout until it's over.",
+  "anyForward": "On the Phins, any forward can be a lifter, a jumper, or in the back pod. Your spot comes from the call, not your number.",
+  "note": "Every call has a front lifter, a back lifter, and two lifter/jumpers in the middle. Everyone else is in the back pod. Maul calls change this setup."
 }

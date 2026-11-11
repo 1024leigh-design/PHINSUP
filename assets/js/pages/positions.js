@@ -56,7 +56,6 @@ Phins.ready(function(){
     } else {
       h += '<h3 class="lbl">Your job</h3><p>' + R(p.job) + '</p>';
       if (p.subroles) h += '<div class="subroles">' + p.subroles.map(function(s){ return '<div><b>' + E(s.label) + ':</b> ' + R(s.text) + '</div>'; }).join("") + '</div>';
-      h += '<h3 class="lbl">You\'re involved in</h3><div class="chips">' + p.tags.map(function(t){ return '<span class="tag">' + E(t) + '</span>'; }).join("") + '</div>';
     }
     if (p.where && p.where.length){
       h += '<h3 class="lbl">Where am I?</h3><div class="btnrow">' + p.where.map(function(w){ return '<a class="btn small ghost" href="' + WHERE[w][0] + '.html?highlight=' + n + '">' + WHERE[w][1] + '</a>'; }).join("") + '</div>';

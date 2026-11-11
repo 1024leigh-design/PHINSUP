@@ -11,26 +11,27 @@
 <script src="assets/js/config.js"></script>
 <script src="assets/js/core.js"></script>
 <script src="assets/js/pages/lineout.js"></script>
-<style>#losvg .lab{font:600 12px var(--f-mono); fill:var(--muted)} .armline{stroke:var(--green); stroke-width:4; stroke-linecap:round} .pl.on .armline{stroke:var(--pink)}</style>
+<style>#losvg .lab{font:600 12px var(--f-mono); fill:var(--muted)} #losvg .them rect,#losvg .them circle{fill:#1f3a5f; opacity:.85} #losvg .podp .body{fill:var(--yellow-soft)} #losvg .hook .body,#losvg .nine .body{fill:var(--pink-soft); stroke:var(--pink)} #losvg .pl.on .body{fill:var(--pink)} #losvg{max-width:780px; margin:0 auto}</style>
 </head>
 <body>
 <main class="wrap" id="main" data-page="lineout" data-section="1">
   <header class="hero">
-  <div class="eyebrow">Rugby Basics · Set Pieces</div>
-  <h1>The Lineout</h1>
+    <div class="eyebrow">Rugby Basics · Set Pieces</div>
+    <h1>The Lineout</h1>
   </header>
 
   <ul class="keys">
-  <li><b>When</b><span>The ball goes out of bounds (into touch).</span></li>
-  <li><b>Who</b><span>The hooker throws. Forwards line up in two lines, 1 meter apart, between the 5m and 15m lines. The 9 waits as the receiver.</span></li>
-  <li><b>How</b><span>A call tells everyone where the throw is going. Lifters lift the jumper, jumper catches or taps, and the ball goes to the 9 or into a maul.</span></li>
+    <li><b>When</b><span>The ball goes out of bounds (into touch).</span></li>
+    <li><b>Throw</b><span>Our hooker always throws, straight down the middle.</span></li>
+    <li><b>Setup</b><span>Front lifter, two lifter/jumpers, back lifter. Everyone else is in the back pod.</span></li>
+    <li><b>Ball</b><span>The jumper catches or taps it down to the 9, or we form a maul.</span></li>
   </ul>
 
   <section aria-labelledby="h-lo">
-  <div class="sec"><h2 id="h-lo">Who's where</h2><p id="lonote"></p></div>
+    <div class="sec"><h2 id="h-lo">Who's where</h2><p id="lonote"></p></div>
     <figure class="diagram">
-      <svg id="losvg" viewBox="0 0 520 260" role="group" aria-label="Side view of a lineout. Tap a player to see their job."></svg>
-      <figcaption>Side view, not to scale. The hooker throws from touch on the left.</figcaption>
+      <svg id="losvg" viewBox="0 0 560 270" role="group" aria-label="Side view of a lineout. Tap a player to see their job."></svg>
+      <figcaption>Side view, not to scale. Rounded box = a player, circle = their head. Our hooker (2) throws from touch on the left. Their line is dark blue.</figcaption>
     </figure>
     <div class="numrow" id="lorow" aria-label="Pick a number"></div>
     <div class="infopanel" id="loinfo" aria-live="polite"></div>
@@ -38,14 +39,14 @@
 
   <details class="more"><summary>Learn More 🤓</summary><div class="body">
     <ul>
-   <li>The throw must be straight down the middle.</li>
-   <li><b>Safe lifting:</b>lift on the thighs/shorts, hold, and bring the jumper down safely. Never drop the jumper.</li>
-   <li><b>Front, middle, and back throws:</b>the call tells the hooker which jumper to aim for.</li>
-   <li><b>Dummy jumps</b>fool the other team about where the throw is going.</li>
-   <li><b>Lineout to maul:</b>the jumper lands with the ball, teammates bind on, and the group drives forward. <a href="mauls.html">Mauls &rarr;</a></li>
-   <li>On the Phins, jumpers and lifters rotate. <b>Flexibility over labels.</b></li>
+      <li>The throw must be straight down the middle.</li>
+      <li><b>Safe lifting:</b> lift on the thighs/shorts, hold, and bring the jumper down safely. Never drop the jumper.</li>
+      <li><b>Front, middle, and back throws:</b> the call tells the hooker which jumper to aim for.</li>
+      <li><b>Dummy jumps</b> fool the other team about where the throw is going.</li>
+      <li><b>Lineout to maul:</b> the jumper lands with the ball, teammates bind on, and the group drives forward. <a href="mauls.html">Mauls &rarr;</a></li>
+      <li>On the Phins, any forward can lift, jump, or be in the back pod. The usual "locks jump, props lift" rule isn't us. <b>Flexibility over labels.</b></li>
     </ul>
-  <p><a class="btn small pink" href="lineout-calls.html">See it: Phins lineout calls</a></p>
+    <p><a class="btn small pink" href="lineout-calls.html">See it: Phins lineout calls</a></p>
   </div></details>
   <section><div data-quiz="lineout"></div></section>
 </main>

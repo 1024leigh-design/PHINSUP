@@ -112,9 +112,9 @@ a.tile:hover{transform:translateY(-3px); box-shadow:0 12px 26px rgba(0,0,0,.12)}
 .dcard.is-phins{--c:var(--pink)}
 
 /* ---------- main-view bullets ---------- */
-.keys{display:grid; gap:10px; margin:0; padding:0; list-style:none}
-.keys li{display:flex; gap:12px; align-items:flex-start; background:var(--surface); border:1.5px solid var(--line); border-radius:14px; padding:12px 14px; font-size:18px}
-.keys li b:first-child{font-family:var(--f-display); min-width:4.5em; color:var(--green)}
+.keys{display:grid; gap:10px; margin:0; padding:0; list-style:none; grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr))}
+.keys li{display:flex; flex-direction:column; gap:4px; background:var(--surface); border:1.5px solid var(--line); border-top:5px solid var(--green); border-radius:14px; padding:12px 14px; font-size:17.5px}
+.keys li b:first-child{font:600 12.5px var(--f-mono); text-transform:uppercase; letter-spacing:.06em; color:var(--green)}
 .steps{counter-reset:s; display:grid; gap:12px; margin:0; padding:0; list-style:none}
 .steps li{counter-increment:s; display:flex; gap:14px; align-items:flex-start; background:var(--surface); border:1.5px solid var(--line); border-radius:16px; padding:14px 16px; font-size:19px}
 .steps li::before{content:counter(s); flex-shrink:0; width:36px; height:36px; border-radius:50%; background:var(--green); color:var(--on-green); display:inline-flex; align-items:center; justify-content:center; font:700 17px var(--f-mono)}
