@@ -79,12 +79,11 @@ Search the `data` folder for `HANNAH` to find every placeholder. The big ones:
 - Which numbers go in which pod (`podA` / `podB` in `data/shape.json`) and how pods rotate
 - The rest of the "no bananas" note (it was cut off in the screenshot)
 - Lineout call N is marked "to be confirmed"
-- Example call words for H and N (the slide examples were player names, so they're left out of this public repo)
 - Zone boundaries and what changes in each zone
 - Scrum calls
 - Kickoff receiving/kicking setups and first phases
 - Exiting the red zone
-- More What If? scenarios, and where the 8 goes when someone new plays 8
+- More What If? scenarios, and where the 8 goes when J plays 8
 - Backs cards (9 to 15)
 - Club concussion protocol and contacts
 - Video links
@@ -92,7 +91,7 @@ Search the `data` folder for `HANNAH` to find every placeholder. The big ones:
 
 Already filled in from the forwards' slides: pod roles (lead, plus, lazy), the sacred channel, HOT and FLASH, lineout calls P, H, I, N, and maul calls (TANGO, SALSA, offense).
 
-**This repo is public.** Keep player names out of the data files.
+**This repo is public.** Use initials for player names (for example "J" or "N!"), except Hannah's.
 
 Before launch:
 - Check the official law links still work (USA Rugby Referee Resources, World Rugby Laws of the Game). They couldn't be checked from the build machine.

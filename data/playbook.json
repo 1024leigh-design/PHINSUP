@@ -99,7 +99,7 @@
       "letter": "H",
       "pod": "Front pod",
       "how": "The front lifter moves back to lift the jumper.",
-      "example": "",
+      "example": "Hannah Hartman!",
       "players": [
         {
           "t": "L",
@@ -154,7 +154,7 @@
       "letter": "N",
       "pod": "Back pod",
       "how": "The second person becomes a lifter and turns to lift the jumper. The pod is farther back.",
-      "example": "",
+      "example": "N!",
       "tbd": true,
       "players": [
         {
@@ -214,7 +214,7 @@
       "name": "Lineout call + M word",
       "side": "Offense",
       "icon": "🧱",
-      "example": "Pizza Margherita",
+      "example": "Pizza Margherita, Hannah's Mom",
       "points": [
         "ENGAGE!",
         "Recycle if you are not moving, getting pushed back, or turning.",
@@ -246,5 +246,5 @@
       "step": "[HANNAH TO PROVIDE: how we get out of our own 22]"
     }
   ],
-  "lineoutHowto": "x = left to right position on the diagram (touch line is at 27, the dashed 5m line at 82). arrows: [from x, to x, height]. Leave example empty to hide it."
+  "lineoutHowto": "x = left to right position on the diagram (touch line is at 27, the dashed 5m line at 82). arrows: [from x, to x, height]. Leave example empty to hide it. Player names: use initials (except Hannah), since this repo is public."
 }

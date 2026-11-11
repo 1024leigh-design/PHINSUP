@@ -123,7 +123,7 @@
       }
     },
     {
-      "q": "What if someone new is playing 8?",
+      "q": "What if J is playing 8?",
       "fix": "A flanker goes into a center pod instead. [HANNAH: confirm where the 8 goes in this case]",
       "tags": [
         "Lineup Changes",
