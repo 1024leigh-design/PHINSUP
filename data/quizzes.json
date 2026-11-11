@@ -467,34 +467,34 @@
   ],
   "safety": [
     {
-      "q": "Finish the rule: \"If in doubt...\"",
+      "q": "What's the number one way to prevent concussions?",
       "options": [
-        "...play it out",
-        "...sit them out",
-        "...ask the other team"
+        "Tackling and running with proper form",
+        "Playing less hard",
+        "Wearing a headband"
       ],
-      "answer": 1,
-      "why": "If in doubt, sit them out."
+      "answer": 0,
+      "why": "Proper form is the #1 prevention."
     },
     {
-      "q": "A teammate looks dazed after a hit. What do you do?",
+      "q": "You feel a little weird after a hit, but you're not sure. What do you do?",
       "options": [
-        "Tell them to shake it off",
-        "Tell a coach or the ref right away",
+        "Keep playing until you're sure",
+        "Come off and see the trainer",
         "Wait until halftime"
       ],
       "answer": 1,
-      "why": "Speak up right away. You could be protecting their brain."
+      "why": "You don't have to be sure. We want you safe and healthy."
     },
     {
-      "q": "Can a player with a suspected concussion come back into the same match?",
+      "q": "You have a headache after a hard hit. Who do you see?",
       "options": [
-        "Yes, after 10 minutes",
-        "No",
-        "Yes, if they feel fine"
+        "The ref",
+        "The trainer",
+        "Nobody, shake it off"
       ],
       "answer": 1,
-      "why": "Suspected concussion means done for the day, and they follow a return-to-play plan."
+      "why": "Dizzy, headache, or a hard hit: see the trainer."
     }
   ],
   "calls": [

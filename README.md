@@ -86,7 +86,6 @@ Search the `data` folder for `HANNAH` to find every placeholder. The big ones:
 - Exiting the red zone
 - More What If? scenarios, and where the 8 goes when J plays 8
 - Backs cards (9 to 15) and our real backs spots ("Show backs" uses a standard backline for now)
-- Club concussion protocol and contacts
 - Video links
 - Confirm: hooker brake foot rule, tackle height rule, "Hold!" meaning
 
