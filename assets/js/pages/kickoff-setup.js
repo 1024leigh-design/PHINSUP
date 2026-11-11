@@ -82,7 +82,8 @@ Phins.ready(function(){
       {name:"First one in", text:"The catcher takes it into contact, and their **two ruckers** are right there. Before every kickoff, confirm with two people that they'll be your ruckers.", pos:s3},
       {name:"Pod forms", text:"A pod forms like always: lazy behind the ruck, lead in front of the 10, plus on the far side. **It's very likely a flanker subs into one of these pods.**", pos:s4, relabel:rel},
       {name:"Pass", text:"The 9 passes to the lead.", pos:s5},
-      {name:"Into contact", text:"The pod takes it into contact. On to the next phase!", pos:s6}]};
+      {name:"Into contact", text:"The pod takes it into contact. On to the next phase!", pos:s6},
+      {name:"Back to our shape", text:"A flanker can be in the first pod or two, but **by the second phase off the kickoff we're back in our normal shape**: tight five and 8 in the center pods, and the flankers released out to the edges.", pos:{p6:[28, 120], p7:[372, 120]}, relabel:{p6:["6","lift"], p7:["7","lift"]}}]};
   }
   var cur = "sl";
   tabs.innerHTML = Object.keys(LAND).map(function(k){ return '<button type="button" role="tab" data-k="' + k + '">' + LAND[k].name + '</button>'; }).join("");
