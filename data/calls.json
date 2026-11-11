@@ -53,6 +53,12 @@
       "see": "mauls.html"
     },
     {
+      "call": "\"ROCKET!\"",
+      "phins": true,
+      "means": "Green zone call (their 22). Push hard and fast on the gain line to get into the in-goal, but NOT FRANTIC.",
+      "see": "zones.html"
+    },
+    {
       "call": "[HANNAH TO PROVIDE: more Phins calls]",
       "phins": true,
       "means": "Add more calls in data/calls.json."

@@ -3,7 +3,7 @@ Phins.ready(function(){
   var svg = document.getElementById("zsvg"), info = document.getElementById("zinfo"), row = document.getElementById("zrow"), note = document.getElementById("znote");
   Phins.load("playbook").then(function(d){
     var Z = d.zones, k = 3.6, X0 = 16, Y0 = 16, W = 70*k, tbd = false;
-    note.innerHTML = Phins.rich(Z.note);
+    note.innerHTML = Z.note ? Phins.rich(Z.note) : ""; note.hidden = !Z.note;
     var h = '<rect x="' + X0 + '" y="' + Y0 + '" width="' + (120*k) + '" height="' + W + '" fill="var(--surface-2)"/>';
     Z.list.forEach(function(z, i){
       var from = z.from, to = z.to;
@@ -22,7 +22,7 @@ Phins.ready(function(){
       var z = Z.list.filter(function(x){ return x.id === id; })[0];
       var rs = svg.querySelectorAll(".zrect"); for (var i = 0; i < rs.length; i++) rs[i].classList.toggle("on", rs[i].getAttribute("data-id") === id);
       var bs = row.querySelectorAll("button"); for (var j = 0; j < bs.length; j++) bs[j].setAttribute("aria-pressed", bs[j].getAttribute("data-id") === id ? "true" : "false");
-      info.innerHTML = '<h3>' + Phins.esc(z.name) + '</h3><p><b>Where:</b> ' + Phins.rich(z.where) + '</p><p><b>What changes:</b> ' + Phins.rich(z.changes) + '</p>';
+      info.innerHTML = '<h3>' + Phins.esc(z.name) + '</h3><p><b>Where:</b> ' + Phins.rich(z.where) + '</p><p><b>What we do:</b> ' + Phins.rich(z.changes) + '</p>' + (z.link ? '<p style="margin-top:8px"><a class="btn small ghost" href="' + Phins.esc(z.link) + '">' + Phins.esc(z.linkText || "See it") + ' &rarr;</a></p>' : '');
     }
     function hit(e){ var t = e.target.closest("[data-id]"); if (t) pick(t.getAttribute("data-id")); }
     svg.addEventListener("click", hit); row.addEventListener("click", hit);
