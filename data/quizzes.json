@@ -444,6 +444,25 @@
       ],
       "answer": 0,
       "why": "Everyone gets nervous. Your team has your back."
+    },
+    {
+      "q": "Who is allowed to talk to the ref?",
+      "options": [
+        "Anyone who disagrees with a call",
+        "Only the captains",
+        "The loudest player"
+      ],
+      "answer": 1,
+      "why": "NO ONE talks to the ref except the captains."
+    },
+    {
+      "q": "Is the post-match social optional?",
+      "options": [
+        "Yes",
+        "No, showing up is part of being a Phin"
+      ],
+      "answer": 1,
+      "why": "Both teams hang out after. It's a rugby tradition, and part of being a Phin."
     }
   ],
   "safety": [
